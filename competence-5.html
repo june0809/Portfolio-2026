@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
+<title>Compétence 5 — Conduire un projet — Hawa M'Bodj</title>
+<meta name="description" content="Compétence 5 du BUT Informatique : conduire un projet, illustrée par les projets et le stage de Hawa M'Bodj.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">HM</span>
+      M'Bodj Hawa
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Activer le thème clair">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html">Projets &amp; Stages</a></li>
+        <li>
+          <details class="nav-dropdown" open>
+            <summary>Compétences</summary>
+            <div class="dropdown-menu">
+              <a href="competence-4.html"><span>C4 — Gérer des données</span><small>UE5.4 · UE6.4</small></a>
+              <a href="competence-5.html" class="active"><span>C5 — Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
+              <a href="competence-6.html"><span>C6 — Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="comp-hero container">
+    <span class="comp-badge">Compétence 5</span>
+    <h1>Conduire un <span class="gradient-text">projet</span></h1>
+    <p class="lead">Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des
+      utilisateurs · Participer à la conception et à la mise en œuvre d'un projet système d'information.</p>
+    <div class="ue-tags">
+      <span>UE5.5</span><span>UE6.5</span>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="ac-ce-grid">
+      <div>
+        <div class="section-head">
+          <span class="kicker">Apprentissages critiques visés</span>
+          <h2>AC</h2>
+        </div>
+        <ul class="numbered-list ac-list">
+          <li><span class="num">1</span><span>Mesurer les impacts économiques, sociétaux et technologiques d'un projet informatique</span></li>
+          <li><span class="num">2</span><span>Savoir intégrer un projet informatique dans le système d'information d'une organisation</span></li>
+          <li><span class="num">3</span><span>Savoir adapter un système d'information</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="kicker">Composantes essentielles</span>
+          <h2>CE</h2>
+        </div>
+        <ul class="numbered-list ce-list">
+          <li><span class="num">1</span><span>En communiquant efficacement avec les différents acteurs d'un projet</span></li>
+          <li><span class="num">2</span><span>En respectant les règles juridiques et les normes en vigueur</span></li>
+          <li><span class="num">3</span><span>En se sensibilisant à une gestion éthique, responsable, durable et interculturelle</span></li>
+          <li><span class="num">4</span><span>En adoptant une démarche proactive, créative et critique</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Ressources mobilisées</span>
+      <h2>Ce que j'en ai tiré</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="resource-table">
+        <thead>
+          <tr><th>Ressource</th><th>Ce que j'en ai tiré</th><th>Comment ça m'a préparée</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">R5.C.02 / R6.C.04<br>PPP</td>
+            <td>Réflexion structurée sur mon projet personnel et professionnel</td>
+            <td>M'a aidée à clarifier mon intérêt pour l'IAM et à orienter le choix de mon projet fil-rouge en conséquence.</td>
+          </tr>
+          <tr>
+            <td class="code">R5.01<br>Initiation au management</td>
+            <td>Bases de la gestion d'équipe et de projet (jalons, répartition des tâches)</td>
+            <td>Mobilisées pour structurer le suivi de la plateforme IAM, notamment son découpage en modules (workflows, gateway, intégration multi-systèmes).</td>
+          </tr>
+          <tr>
+            <td class="code">R5.C.10<br>Éco. durable et num.</td>
+            <td>Sensibilisation aux impacts économiques, sociétaux et environnementaux du numérique</td>
+            <td>En lien direct avec l'AC1 ; m'aide à questionner les choix d'infrastructure (cloud, on-premise) du projet IAM.</td>
+          </tr>
+          <tr>
+            <td class="code">R6.02<br>Droit du numérique et PI</td>
+            <td>Cadre juridique du numérique et de la propriété intellectuelle</td>
+            <td>Mobilisé pour respecter les contraintes juridiques (CE2) lors de la conception d'un système manipulant des données d'identité sensibles.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Traces &amp; preuves</span>
+      <h2>Ce que j'ai réalisé</h2>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Stage : ESBanque</span>
+      <p>Participation à un projet visant à améliorer la fiabilité, le suivi et la performance du système
+        d'information de l'entreprise, encadrée par un chef de projet MOE : identification des sources de logs
+        existantes, définition d'indicateurs de suivi (taux de succès, erreurs) répondant à un besoin métier
+        concret. Ce cadrage par la MOE et la nécessité d'intégrer l'outil aux traitements automatisés déjà en
+        place illustrent l'AC2 (intégrer un projet dans le système d'information d'une organisation) et l'AC1
+        (mesurer les impacts d'un projet sur la fiabilité et la performance du SI).</p>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Projet : Plateforme No-Code IAM</span>
+      <p>Participation à la conception d'un projet système d'information à part entière : modélisation des
+        processus métier en <strong>BPMN / CMMN</strong>, intégration du projet dans un écosystème existant
+        (Active Directory, LDAP, Odoo, GLPI, Keycloak, MidPoint) et mise en place d'une gateway transactionnelle
+        garantissant la fiabilité du système (rollback, logs). Ce travail illustre directement la capacité à
+        intégrer un projet informatique dans le système d'information d'une organisation et à l'adapter aux
+        contraintes existantes.</p>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Stage : Rakedd Consulting</span>
+      <p>Conception d'une architecture backend répondant à un besoin métier concret (gestion d'un lexique
+        multilingue) et aux besoins des utilisateurs finaux : gestion de catégories personnalisées, préparation
+        d'un système d'authentification, structuration des données pour un usage multi-utilisateurs. Cette
+        adaptation progressive du système aux besoins exprimés illustre une démarche de suivi de projet centrée
+        utilisateur.</p>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Pistes d'amélioration</span>
+      <h2>Pour aller plus loin</h2>
+    </div>
+    <ul class="improve-list">
+      <li>Formaliser davantage ma démarche de gestion de projet (méthodes agiles, outils de suivi comme un
+        backlog ou un board de tâches), au-delà d'une organisation encore assez informelle.</li>
+      <li>Approfondir le chiffrage des impacts économiques d'un projet (coût d'infrastructure, ROI) plutôt que de
+        les considérer uniquement de façon qualitative.</li>
+      <li>Développer une vision plus stratégique du cadre juridique appliqué à l'IAM (RGPD, propriété
+        intellectuelle) en anticipant ces contraintes dès la phase de conception.</li>
+      <li>Solliciter davantage de retours des différents acteurs du projet (utilisateurs, partenaires) en cours
+        de route, et pas seulement en fin de réalisation.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hawa.mbodj@etu.u-pec.fr">Email</a>
+    </div>
+    <p style="margin:0;">M'Bodj Hawa — Portfolio BUT3 Informatique — UPEC, Université Paris-Est Créteil — Année universitaire <span data-academic-year></span></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
+<title>Compétence 6 — Collaborer au sein d'une équipe informatique — Hawa M'Bodj</title>
+<meta name="description" content="Compétence 6 du BUT Informatique : collaborer au sein d'une équipe informatique, illustrée par les projets et le stage de Hawa M'Bodj.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">HM</span>
+      M'Bodj Hawa
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Activer le thème clair">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html">Projets &amp; Stages</a></li>
+        <li>
+          <details class="nav-dropdown" open>
+            <summary>Compétences</summary>
+            <div class="dropdown-menu">
+              <a href="competence-4.html"><span>C4 — Gérer des données</span><small>UE5.4 · UE6.4</small></a>
+              <a href="competence-5.html"><span>C5 — Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
+              <a href="competence-6.html" class="active"><span>C6 — Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="comp-hero container">
+    <span class="comp-badge">Compétence 6</span>
+    <h1>Collaborer au sein d'une <span class="gradient-text">équipe informatique</span></h1>
+    <p class="lead">Identifier ses aptitudes pour travailler en équipe · Situer son rôle et ses missions au sein
+      d'une équipe informatique · Manager une équipe informatique.</p>
+    <div class="ue-tags">
+      <span>UE5.6</span><span>UE6.6</span>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="ac-ce-grid">
+      <div>
+        <div class="section-head">
+          <span class="kicker">Apprentissages critiques visés</span>
+          <h2>AC</h2>
+        </div>
+        <ul class="numbered-list ac-list">
+          <li><span class="num">1</span><span>Organiser et partager une veille numérique</span></li>
+          <li><span class="num">2</span><span>Identifier les enjeux de l'économie de l'innovation numérique</span></li>
+          <li><span class="num">3</span><span>Guider la conduite du changement informatique au sein d'une organisation</span></li>
+          <li><span class="num">4</span><span>Accompagner le management de projet informatique</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="kicker">Composantes essentielles</span>
+          <h2>CE</h2>
+        </div>
+        <ul class="numbered-list ce-list">
+          <li><span class="num">1</span><span>En inscrivant sa démarche au sein d'une équipe pluridisciplinaire</span></li>
+          <li><span class="num">2</span><span>En accompagnant la mise en œuvre des évolutions informatiques</span></li>
+          <li><span class="num">3</span><span>En veillant au respect des contraintes juridiques</span></li>
+          <li><span class="num">4</span><span>En développant une communication efficace et collaborative</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Ressources mobilisées</span>
+      <h2>Ce que j'en ai tiré</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="resource-table">
+        <thead>
+          <tr><th>Ressource</th><th>Ce que j'en ai tiré</th><th>Comment ça m'a préparée</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">R5.03<br>Communication</td>
+            <td>Techniques de communication écrite et orale</td>
+            <td>Mobilisées pour présenter mon travail et échanger avec les encadrants pendant le stage chez Rakedd Consulting.</td>
+          </tr>
+          <tr>
+            <td class="code">R6.03<br>Comm.: information</td>
+            <td>Communication et traitement de l'information en contexte professionnel</td>
+            <td>Utile pour restituer clairement l'avancement du projet IAM auprès de partenaires variés (LISSI, Evidian, Maidis).</td>
+          </tr>
+          <tr>
+            <td class="code">R5.01<br>Initiation au management</td>
+            <td>Bases du travail en équipe et du management de projet</td>
+            <td>M'a sensibilisée à mon rôle au sein d'un collectif, en particulier dans le cadre pluridisciplinaire du projet IAM.</td>
+          </tr>
+          <tr>
+            <td class="code">PPP<br>(R5.C.02 / R6.C.04)</td>
+            <td>Réflexion sur mes aptitudes personnelles à travailler en équipe</td>
+            <td>M'a aidée à identifier mon rôle naturel, plutôt orienté conception et architecture, au sein des équipes projet.</td>
+          </tr>
+          <tr>
+            <td class="code">R5.C.12<br>Anglais</td>
+            <td>Pratique de l'anglais professionnel</td>
+            <td>Un atout pour collaborer dans un contexte de veille technologique internationale et de partenaires variés.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Traces &amp; preuves</span>
+      <h2>Ce que j'ai réalisé</h2>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Stage : ESBanque</span>
+      <p>Intégration dans une équipe encadrée par un chef de projet MOE, avec qui les échanges réguliers sur
+        l'avancement (sources de logs identifiées, indicateurs proposés) ont demandé de traduire un besoin
+        métier en solution technique compréhensible par un interlocuteur non-développeur. Une illustration de
+        la CE1 (s'inscrire au sein d'une équipe pluridisciplinaire) et de l'AC4 (accompagner le management de
+        projet informatique) en fournissant à la MOE des indicateurs exploitables pour le pilotage du projet.</p>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Projet : Plateforme No-Code IAM</span>
+      <p>Travail au sein d'un projet Full Stack IA associant plusieurs partenaires (<strong>LISSI, Evidian,
+        Maidis</strong>), dans un contexte pluridisciplinaire où il a fallu situer mon rôle sur les aspects
+        conception et architecture backend, tout en assurant une veille numérique active sur les agents IA (LLM)
+        et leur intégration dans des workflows d'identité — une illustration directe de l'AC1 (organiser et
+        partager une veille numérique) et de l'AC3 (guider la conduite du changement informatique).</p>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Stage : Rakedd Consulting</span>
+      <p>Intégration au sein d'une équipe en entreprise pour développer une application de lexique, avec un rôle
+        clairement identifié sur la modélisation des données et l'architecture backend, en communiquant
+        régulièrement l'avancement de mon travail pour l'articuler avec le reste du développement (interface
+        mobile React Native notamment).</p>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Pistes d'amélioration</span>
+      <h2>Pour aller plus loin</h2>
+    </div>
+    <ul class="improve-list">
+      <li>Prendre progressivement plus de responsabilités de coordination, pour aller au-delà d'un rôle de
+        contributrice technique vers un rôle d'accompagnement du management de projet (AC4).</li>
+      <li>Structurer une veille numérique plus régulière et formalisée (outils de curation, partage d'articles
+        avec l'équipe) plutôt qu'une veille ponctuelle liée aux besoins immédiats d'un projet.</li>
+      <li>Développer ma pratique de l'anglais technique à l'oral, pour être plus à l'aise dans des échanges
+        internationaux avec des partenaires ou des équipes distantes.</li>
+      <li>M'exercer davantage à accompagner le changement auprès d'utilisateurs non-techniques, une dimension
+        encore peu présente dans mes expériences actuelles, très orientées conception.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hawa.mbodj@etu.u-pec.fr">Email</a>
+    </div>
+    <p style="margin:0;">M'Bodj Hawa — Portfolio BUT3 Informatique — UPEC, Université Paris-Est Créteil — Année universitaire <span data-academic-year></span></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

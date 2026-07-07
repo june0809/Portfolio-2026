@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
+<title>Compétence 4 — Gérer des données de l'information — Hawa M'Bodj</title>
+<meta name="description" content="Compétence 4 du BUT Informatique : gérer des données de l'information, illustrée par les projets et le stage de Hawa M'Bodj.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">HM</span>
+      M'Bodj Hawa
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Activer le thème clair">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html">Projets &amp; Stages</a></li>
+        <li>
+          <details class="nav-dropdown" open>
+            <summary>Compétences</summary>
+            <div class="dropdown-menu">
+              <a href="competence-4.html" class="active"><span>C4 — Gérer des données</span><small>UE5.4 · UE6.4</small></a>
+              <a href="competence-5.html"><span>C5 — Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
+              <a href="competence-6.html"><span>C6 — Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="comp-hero container">
+    <span class="comp-badge">Compétence 4</span>
+    <h1>Gérer des données de <span class="gradient-text">l'information</span></h1>
+    <p class="lead">Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité ·
+      Administrer une base de données, concevoir et réaliser des systèmes d'informations décisionnels.</p>
+    <div class="ue-tags">
+      <span>UE5.4</span><span>UE6.4</span>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="ac-ce-grid">
+      <div>
+        <div class="section-head">
+          <span class="kicker">Apprentissages critiques visés</span>
+          <h2>AC</h2>
+        </div>
+        <ul class="numbered-list ac-list">
+          <li><span class="num">1</span><span>Capturer et stocker des ensembles volumineux et complexes de données hétérogènes</span></li>
+          <li><span class="num">2</span><span>Préparer et extraire les données pour l'exploitation</span></li>
+          <li><span class="num">3</span><span>Appliquer des méthodes d'exploration et d'exploitation des données (apprentissage, informatique décisionnelle ou fouille de données)</span></li>
+          <li><span class="num">4</span><span>Mettre en production et optimiser le système de gestion de données de l'entreprise</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="kicker">Composantes essentielles</span>
+          <h2>CE</h2>
+        </div>
+        <ul class="numbered-list ce-list">
+          <li><span class="num">1</span><span>En respectant les réglementations sur le respect de la vie privée et la protection des données personnelles</span></li>
+          <li><span class="num">2</span><span>En respectant les enjeux économiques, sociétaux et écologiques de l'utilisation du stockage de données, ainsi que les différentes infrastructures (data centers, cloud, etc.)</span></li>
+          <li><span class="num">3</span><span>En s'appuyant sur les bases mathématiques</span></li>
+          <li><span class="num">4</span><span>En assurant la cohérence et la qualité</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Ressources mobilisées</span>
+      <h2>Ce que j'en ai tiré</h2>
+      <p>Les enseignements qui construisent cette compétence, et ce qu'ils m'ont apporté concrètement pour mes stages et projets.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="resource-table">
+        <thead>
+          <tr><th>Ressource</th><th>Ce que j'en ai tiré</th><th>Comment ça m'a préparée</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">R5.C.04<br>WebBD</td>
+            <td>Conception de bases de données pour des applications web (modèles relationnels, requêtes côté serveur)</td>
+            <td>M'a permis d'aborder sereinement la modélisation du schéma de données de l'application de lexique chez Rakedd Consulting.</td>
+          </tr>
+          <tr>
+            <td class="code">R5.C.05<br>NouvellesBD</td>
+            <td>Découverte des bases NoSQL et SQL multi-modèles</td>
+            <td>M'a aidée à choisir Supabase en connaissance de cause pour le stockage serveur du lexique, selon la structure des données.</td>
+          </tr>
+          <tr>
+            <td class="code">R5.C.06<br>ExploitationBD</td>
+            <td>Techniques de requêtage avancé et d'exploitation de la donnée</td>
+            <td>Directement utile pour concevoir la base de suivi statistique (évolution des mots, catégories les plus utilisées) en stage.</td>
+          </tr>
+          <tr>
+            <td class="code">R5.C.07<br>Données massives</td>
+            <td>Enjeux du Big Data : volumétrie, hétérogénéité, vélocité</td>
+            <td>En écho direct avec l'AC1 ; m'aide à anticiper la montée en charge du projet IAM, qui centralise des données issues de plusieurs systèmes (AD, LDAP, GLPI…).</td>
+          </tr>
+          <tr>
+            <td class="code">R5.C.08<br>Techniques d'IA</td>
+            <td>Bases de l'apprentissage automatique et de la fouille de données</td>
+            <td>Mobilisées dans la réflexion sur l'intégration d'agents IA (LLM) pour la réconciliation des identités dans la plateforme IAM.</td>
+          </tr>
+          <tr>
+            <td class="code">R5.C.09<br>Statistique inférentielle</td>
+            <td>Fondements mathématiques et statistiques (CE3)</td>
+            <td>Base théorique pour construire des indicateurs fiables dans la BDD de suivi statistique du stage.</td>
+          </tr>
+          <tr>
+            <td class="code">R5.C.11<br>Optimisation données SI</td>
+            <td>Techniques d'optimisation d'un système de données (index, normalisation, performance)</td>
+            <td>Appliqué au schéma évolutif de l'application de lexique et à la fiabilité de la gateway transactionnelle du projet IAM.</td>
+          </tr>
+          <tr>
+            <td class="code">R6.C.05<br>Administration BD</td>
+            <td>Administration, sécurité et gestion des accès aux bases de données</td>
+            <td>Réutilisé pour préparer le système d'authentification et de gestion des utilisateurs pendant le stage.</td>
+          </tr>
+          <tr>
+            <td class="code">R6.C.06<br>Aide à la décision</td>
+            <td>Systèmes décisionnels et restitution de la donnée</td>
+            <td>En lien avec la BDD de suivi statistique destinée à visualiser l'évolution des usages du lexique.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Traces &amp; preuves</span>
+      <h2>Ce que j'ai réalisé</h2>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Stage : ESBanque</span>
+      <p>Mise en place d'un outil de suivi des logs et de monitoring pour centraliser des données issues de
+        plusieurs traitements automatisés : identification des sources de logs, structuration et normalisation
+        des données collectées, développement d'un système de suivi des statuts (OK / erreur), et définition
+        d'indicateurs (taux de succès, erreurs remontées) restitués via une interface de visualisation. Une
+        illustration directe des AC1, AC2 et AC4 — capturer/stocker des données hétérogènes, les préparer pour
+        l'exploitation, et optimiser le système de gestion de données en conditions réelles de production.</p>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Stage : Rakedd Consulting</span>
+      <p>Conception et modélisation de la structure de données d'une application de lexique (mots, traductions,
+        catégories), avec un schéma évolutif intégrant les relations entre entités et des métadonnées (langue,
+        date d'ajout, niveau de difficulté, notes). Étude et mise en place d'une solution de stockage serveur avec
+        <strong>Supabase</strong>, conception d'une architecture backend assurant la persistance des données et la
+        synchronisation avec le stockage local. Conception d'une base de données dédiée au suivi statistique
+        (évolution des mots, catégories les plus utilisées).</p>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Projet : Plateforme No-Code IAM</span>
+      <p>Orchestration de données hétérogènes issues de plusieurs systèmes (<strong>Active Directory, LDAP, SQL,
+        Odoo, GLPI, Keycloak</strong>) au sein d'une gateway transactionnelle garantissant la cohérence des données
+        (rollback en cas d'échec, journalisation complète). Réflexion sur l'intégration d'agents IA pour la
+        réconciliation dynamique des identités entre systèmes.</p>
+    </div>
+    <div class="trace-card">
+      <span class="source-tag">Projet : Application Web Météo</span>
+      <p>Conception d'une base de données SQL et intégration de données dynamiques dans un backend PHP structuré
+        selon le modèle MVC, première mise en pratique de la préparation et de l'extraction de données pour
+        l'exploitation dans une application.</p>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Pistes d'amélioration</span>
+      <h2>Pour aller plus loin</h2>
+    </div>
+    <ul class="improve-list">
+      <li>Approfondir la sécurisation des données personnelles (chiffrement, conformité RGPD) pour aller au-delà
+        de la simple préparation d'un système d'authentification.</li>
+      <li>Renforcer mes compétences en fouille de données et en informatique décisionnelle à plus grande échelle
+        (volumes réels de données massives, pas seulement des jeux d'exemple).</li>
+      <li>Me former davantage aux infrastructures de production (cloud, data centers) pour mieux mesurer les
+        enjeux économiques et écologiques du stockage, au-delà du choix ponctuel de Supabase.</li>
+      <li>Poursuivre la montée en compétence sur le monitoring en conditions réelles amorcée avec le stage
+        ESBanque, en allant vers des indicateurs plus avancés (alerting automatique, seuils de criticité).</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hawa.mbodj@etu.u-pec.fr">Email</a>
+    </div>
+    <p style="margin:0;">M'Bodj Hawa — Portfolio BUT3 Informatique — UPEC, Université Paris-Est Créteil — Année universitaire <span data-academic-year></span></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

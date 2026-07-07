@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
+<title>Projets &amp; Stages — Hawa M'Bodj</title>
+<meta name="description" content="Projets et expériences professionnelles de Hawa M'Bodj : stage Rakedd Consulting, plateforme no-code IAM, application météo MVC, virtualisation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">HM</span>
+      M'Bodj Hawa
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Activer le thème clair">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html" class="active">Projets &amp; Stages</a></li>
+        <li>
+          <details class="nav-dropdown">
+            <summary>Compétences</summary>
+            <div class="dropdown-menu">
+              <a href="competence-4.html"><span>C4 — Gérer des données</span><small>UE5.4 · UE6.4</small></a>
+              <a href="competence-5.html"><span>C5 — Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
+              <a href="competence-6.html"><span>C6 — Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Projets &amp; Stages</span>
+    <h1>Mettre la théorie <span class="gradient-text">en pratique</span></h1>
+    <p class="lead">Une expérience en entreprise et trois projets académiques, du réseau à l'IAM, qui nourrissent
+      directement les traces &amp; preuves de mes pages compétences.</p>
+  </section>
+
+  <section class="block container" id="esbanque">
+    <div class="section-head">
+      <span class="kicker">Stage · Juin 2026 – Sept 2026 · En cours</span>
+      <h2>Stagiaire Développement / Data — Outil de suivi des logs et monitoring</h2>
+      <p class="place" style="color:var(--text-faint);">ESBanque — Nanterre</p>
+    </div>
+    <div class="card">
+      <p>Dans le cadre de l'amélioration des outils internes de l'entreprise, ce stage vise à mettre en place une
+        solution permettant de centraliser, analyser et visualiser les logs issus des traitements automatisés —
+        un enjeu de fiabilité, de suivi et de performance pour le système d'information. Le stage est encadré par
+        un chef de projet MOE (Maîtrise d'Ouvrage).</p>
+      <ul class="details">
+        <li>Identification et analyse des différentes sources de logs existantes</li>
+        <li>Mise en place d'une solution de centralisation des logs</li>
+        <li>Structuration et normalisation des données collectées</li>
+        <li>Développement d'un système de suivi des statuts (OK / erreur)</li>
+        <li>Conception d'une interface simple de visualisation des logs</li>
+        <li>Définition et mise en place d'indicateurs de suivi (taux de succès des traitements, erreurs remontées)</li>
+      </ul>
+      <ul class="tags">
+        <li>Centralisation de logs</li><li>Monitoring</li><li>Normalisation de données</li><li>Dashboard</li><li>Indicateurs / KPI</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block container" id="iam">
+    <div class="section-head">
+      <span class="kicker">Projet fil-rouge · Sept 2025 – Présent</span>
+      <h2>Plateforme No-Code IAM — Gouvernance des Identités</h2>
+      <p class="place" style="color:var(--text-faint);">Projet Full Stack IA (LISSI / Evidian / Maidis) — Vitry-sur-Seine</p>
+    </div>
+    <div class="card">
+      <p>Conception d'une plateforme no-code permettant de construire et d'exécuter des workflows de gestion des
+        identités (IAM), en orchestrant plusieurs systèmes hétérogènes utilisés en entreprise.</p>
+      <ul class="details">
+        <li>Développement d'une plateforme no-code de gestion de workflows IAM</li>
+        <li>Orchestration multi-systèmes : Active Directory, LDAP, SQL, Odoo, GLPI, Keycloak</li>
+        <li>Gateway transactionnelle avec mécanisme de rollback et journalisation (logs)</li>
+        <li>Modélisation des processus en BPMN / CMMN</li>
+        <li>Intégration de MidPoint et d'agents IA (LLM) pour la réconciliation des identités et l'adaptation dynamique des workflows</li>
+      </ul>
+      <ul class="tags">
+        <li>IAM</li><li>Active Directory</li><li>LDAP</li><li>SQL</li><li>Odoo</li><li>Keycloak</li><li>BPMN/CMMN</li><li>LLM</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block container" id="rakedd">
+    <div class="section-head">
+      <span class="kicker">Stage · Juin 2025 – Juil 2025</span>
+      <h2>Développement Web &amp; Mobile</h2>
+      <p class="place" style="color:var(--text-faint);">Rakedd Consulting — Le Pecq</p>
+    </div>
+    <div class="card">
+      <p>Stage centré sur la conception et le développement d'une application de lexique multilingue (mots,
+        traductions, catégories), avec une attention particulière portée à la modélisation des données et à leur
+        persistance.</p>
+      <ul class="details">
+        <li>Conception et modélisation de la structure de données d'une application de lexique (mots, traductions, catégories)</li>
+        <li>Définition d'un schéma évolutif intégrant les relations entre entités et des métadonnées (langue, date d'ajout, niveau de difficulté, notes)</li>
+        <li>Étude et mise en place d'une solution de stockage serveur avec Supabase</li>
+        <li>Conception d'une architecture backend pour la persistance des données et la synchronisation avec le stockage local</li>
+        <li>Implémentation de la gestion de catégories personnalisées (création, modification, suppression, validations)</li>
+        <li>Préparation d'un système de gestion des utilisateurs et d'authentification</li>
+        <li>Structuration des données pour un environnement multi-utilisateurs</li>
+        <li>Conception d'une base de données destinée au suivi statistique (évolution des mots, catégories les plus utilisées)</li>
+        <li>Développement d'une interface mobile avec React Native</li>
+      </ul>
+      <ul class="tags">
+        <li>Supabase</li><li>Modélisation de données</li><li>React Native</li><li>Authentification</li><li>Multi-utilisateurs</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block container" id="meteo">
+    <div class="section-head">
+      <span class="kicker">Projet académique · Sept 2024 – Jan 2025</span>
+      <h2>Application Web Météo (MVC)</h2>
+      <p class="place" style="color:var(--text-faint);">IUT Créteil-Vitry</p>
+    </div>
+    <div class="card">
+      <ul class="details">
+        <li>Conception d'une base de données SQL</li>
+        <li>Développement d'un backend PHP structuré selon le modèle MVC</li>
+        <li>Intégration de données dynamiques (données météorologiques)</li>
+      </ul>
+      <ul class="tags">
+        <li>PHP</li><li>MVC</li><li>SQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block container" id="virtualisation">
+    <div class="section-head">
+      <span class="kicker">Projet académique · Nov 2023 – Déc 2023</span>
+      <h2>Virtualisation &amp; Infrastructure Réseau</h2>
+      <p class="place" style="color:var(--text-faint);">IUT Créteil-Vitry</p>
+    </div>
+    <div class="card">
+      <ul class="details">
+        <li>Mise en place d'une infrastructure virtuelle et clonage de serveurs</li>
+        <li>Mise en place d'un service DHCP</li>
+        <li>Configuration de services SSH, FTP et Web sous Linux</li>
+      </ul>
+      <ul class="tags">
+        <li>VirtualBox</li><li>Linux</li><li>DHCP</li><li>SSH</li><li>FTP</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/june0809" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank">LinkedIn</a>
+      <a href="mailto:hawa.mbodj@etu.u-pec.fr">Email</a>
+    </div>
+    <p style="margin:0;">M'Bodj Hawa — Portfolio BUT3 Informatique — UPEC, Université Paris-Est Créteil — Année universitaire <span data-academic-year></span></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
