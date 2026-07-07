@@ -1,0 +1,7 @@
+# Config locale IDE / outils
+.claude/
+.vscode/
+
+# Système
+Thumbs.db
+.DS_Store
