@@ -125,13 +125,14 @@ img { max-width: 100%; display: block; }
   padding: 0.9rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.6rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  margin-right: auto;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
   font-size: 1.05rem;
@@ -305,22 +306,23 @@ nav.main-nav > ul > li > a.active {
   .nav-toggle { display: flex; }
 
   nav.main-nav {
-    position: fixed;
-    top: 63px;
+    display: none;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
     background: var(--bg);
     flex-direction: column;
     align-items: stretch;
-    padding: 1rem 1.2rem;
+    padding: 0.6rem 1.2rem 1rem;
+    max-height: calc(100vh - 60px);
     overflow-y: auto;
-    transform: translateX(100%);
-    transition: transform 0.25s ease;
     border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
   }
 
-  nav.main-nav.open { transform: translateX(0); }
+  nav.main-nav.open { display: flex; }
 
   nav.main-nav ul {
     flex-direction: column;
@@ -338,6 +340,55 @@ nav.main-nav > ul > li > a.active {
 
   .nav-dropdown .dropdown-menu {
     padding-left: 1rem;
+  }
+}
+
+/* Tableaux de ressources : cartes empilées et lisibles sur mobile */
+@media (max-width: 640px) {
+  .table-wrap { border: none; border-radius: 0; overflow: visible; }
+  .table-wrap .resource-table,
+  .table-wrap .resource-table tbody { display: block; width: 100%; }
+  .resource-table thead { display: none; }
+  .resource-table tr {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .resource-table td {
+    display: block;
+    border-bottom: none;
+    padding: 0.5rem 0 0;
+  }
+  .resource-table td:first-child { padding-top: 0; }
+  .resource-table td:nth-child(2)::before {
+    content: "Ce que j'en ai tiré";
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    color: var(--text-faint);
+    margin-bottom: 0.2rem;
+  }
+  .resource-table td:nth-child(3)::before {
+    content: "Comment ça m'a préparée";
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    color: var(--text-faint);
+    margin-bottom: 0.2rem;
+  }
+  .resource-table td.code {
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.3rem;
   }
 }
 
