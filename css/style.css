@@ -237,6 +237,17 @@ nav.main-nav > ul > li > a.active {
   background: var(--accent);
 }
 
+nav.main-nav > ul > li > a.nav-cta {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+nav.main-nav > ul > li > a.nav-cta:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
 .nav-dropdown {
   position: relative;
 }
@@ -360,7 +371,7 @@ nav.main-nav > ul > li > a.active {
   }
   .resource-table td:first-child { padding-top: 0; }
   .resource-table td:nth-child(2)::before {
-    content: "Ce que j'en ai tiré";
+    content: "Apports";
     display: block;
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -370,7 +381,7 @@ nav.main-nav > ul > li > a.active {
     margin-bottom: 0.2rem;
   }
   .resource-table td:nth-child(3)::before {
-    content: "Comment ça m'a préparée";
+    content: "Application en stage / projet";
     display: block;
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -762,6 +773,104 @@ section.block:first-of-type { border-top: none; }
   flex-shrink: 0;
 }
 
+/* ---------- Accroche / positionnement ---------- */
+
+.role-line {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  margin: 0.2rem 0 0.9rem;
+}
+
+@media (max-width: 480px) { .role-line { font-size: 1.05rem; } }
+
+/* Cartes « ce que je sais faire » : une capacité + sa preuve concrète */
+
+.proof-card h3 {
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.proof-card .proof-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-faint);
+  margin: 0.9rem 0 0.3rem;
+}
+
+.proof-card .proof-label + p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* Cartes projet : contexte / réalisations / résultat */
+
+.project-card .proj-part { margin-bottom: 1.3rem; }
+.project-card .proj-part:last-of-type { margin-bottom: 0; }
+
+.project-card .proj-part h4 {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-2);
+  margin-bottom: 0.5rem;
+}
+
+.project-card .proj-part p { margin-bottom: 0; }
+
+.project-card ul.details li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-card ul.details li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.project-card ul.details li:last-child { margin-bottom: 0; }
+
+.project-card .outcome {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.94rem;
+  color: var(--text-muted);
+}
+
+.project-card .outcome strong { color: var(--text); }
+
+/* Bandeau des pages annexes (cadre pédagogique) */
+
+.annex-wrap { margin-top: 1.4rem; }
+
+.annex-banner {
+  padding: 0.85rem 1.1rem;
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-faint);
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+}
+
+.annex-banner a { color: var(--accent); font-weight: 600; }
+
 /* ---------- Footer ---------- */
 
 footer.site-footer {
@@ -781,6 +890,12 @@ footer.site-footer .footer-links {
 }
 
 footer.site-footer a { color: var(--text-muted); }
+
+footer.site-footer .footer-annex {
+  margin: 0.9rem 0 0;
+  font-size: 0.78rem;
+  opacity: 0.75;
+}
 
 /* ---------- Misc ---------- */
 

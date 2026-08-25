@@ -1,55 +1,32 @@
-# Portfolio BUT3 Informatique — Hawa M'Bodj
+# Portfolio — Hawa M'Bodj
 
-Site statique (HTML / CSS / JS, aucune dépendance, aucun build) présentant le portfolio de compétences
-dans le cadre du BUT Informatique (UPEC).
+Site statique (HTML / CSS / JS, aucune dépendance, aucun build) présentant mon profil, mes expériences
+et mes projets, à destination des recruteurs.
 
 ## Structure
 
 ```
-index.html              Page Profil (présentation)
-parcours.html           Formation (Lycée → BUT Informatique)
-projets.html            Stage Rakedd Consulting + 3 projets académiques
-competence-4.html       Compétence 4 — Gérer des données de l'information
-competence-5.html       Compétence 5 — Conduire un projet
-competence-6.html       Compétence 6 — Collaborer au sein d'une équipe informatique
-css/style.css           Feuille de style (thème sombre tech/IAM)
-js/main.js              Menu mobile + calcul auto de l'année universitaire
+index.html              Profil : positionnement, savoir-faire (avec preuves), stack, contact
+projets.html            Expériences & projets : contexte / rôle / résultat pour chacun
+parcours.html           Chronologie, diplômes, langues
+css/style.css           Feuille de style (thème clair & sombre)
+js/main.js              Menu mobile, bascule de thème, année universitaire auto
+
+Annexes (référentiel pédagogique BUT, non listées dans la navigation principale) :
+competence-4.html       Gérer des données de l'information (UE5.4 · UE6.4)
+competence-5.html       Conduire un projet (UE5.5 · UE6.5)
+competence-6.html       Collaborer au sein d'une équipe informatique (UE5.6 · UE6.6)
 ```
 
-## À compléter avant publication
-
-Dans le `<footer>` de chaque page, deux liens sont des placeholders (`href="#"`) :
-
-```html
-<a href="#" target="_blank" rel="noopener">GitHub</a>
-<a href="#" target="_blank" rel="noopener">LinkedIn</a>
-```
-
-Remplace le `#` par tes vraies URLs (ex. `https://github.com/ton-pseudo`,
-`https://www.linkedin.com/in/ton-profil`) — cherche `TODO` dans les fichiers pour les repérer vite.
+Les pages `competence-*.html` conservent le format attendu par le BUT (apprentissages critiques,
+composantes essentielles, ressources, traces & preuves, pistes d'amélioration). Elles ne sont
+accessibles que par un lien discret en pied de page, pour ne pas parasiter la lecture côté recruteur.
 
 ## Tester en local
 
-Ouvre simplement `index.html` dans un navigateur (double-clic), tous les chemins sont relatifs.
+Ouvre `index.html` dans un navigateur (double-clic), tous les chemins sont relatifs.
 
-## Déploiement — GitHub Pages (le plus simple, gratuit)
+## Déploiement — GitHub Pages
 
-1. Crée un dépôt GitHub (public) et ajoute ce dossier :
-   ```
-   git init
-   git add .
-   git commit -m "Portfolio BUT3 Informatique"
-   git branch -M main
-   git remote add origin https://github.com/<ton-pseudo>/<nom-du-repo>.git
-   git push -u origin main
-   ```
-2. Sur GitHub : **Settings → Pages → Source : Deploy from a branch**, choisis la branche `main` et le
-   dossier `/ (root)`.
-3. Le site sera disponible en quelques minutes à l'adresse :
-   `https://<ton-pseudo>.github.io/<nom-du-repo>/`
-
-### Alternative encore plus rapide (sans compte, pour un aperçu) : Netlify Drop
-
-Va sur `app.netlify.com/drop` et glisse-dépose le dossier `portfolio` entier dans la page : un lien
-public est généré instantanément (utile pour un aperçu ; pour un lien permanent lié à ton nom, crée un
-compte gratuit Netlify ou GitHub Pages).
+Sur GitHub : **Settings → Pages → Source : Deploy from a branch**, branche `main`, dossier `/ (root)`.
+Le site est publié à l'adresse `https://june0809.github.io/Portfolio-2026/`.

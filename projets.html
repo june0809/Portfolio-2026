@@ -10,8 +10,8 @@
   document.documentElement.setAttribute("data-theme", theme);
 })();
 </script>
-<title>Projets &amp; Stages — Hawa M'Bodj</title>
-<meta name="description" content="Projets et expériences professionnelles de Hawa M'Bodj : stage Rakedd Consulting, plateforme no-code IAM, application météo MVC, virtualisation.">
+<title>Expériences &amp; projets — Hawa M'Bodj</title>
+<meta name="description" content="Réalisations de Hawa M'Bodj : monitoring de logs chez ESBanque, plateforme no-code de gouvernance des identités, architecture de données chez Rakedd Consulting, application web MVC, infrastructure virtualisée.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -36,18 +36,9 @@
     <nav class="main-nav">
       <ul>
         <li><a href="index.html">Profil</a></li>
+        <li><a href="projets.html" class="active">Expériences &amp; projets</a></li>
         <li><a href="parcours.html">Parcours</a></li>
-        <li><a href="projets.html" class="active">Projets &amp; Stages</a></li>
-        <li>
-          <details class="nav-dropdown">
-            <summary>Compétences</summary>
-            <div class="dropdown-menu">
-              <a href="competence-4.html"><span>C4 — Gérer des données</span><small>UE5.4 · UE6.4</small></a>
-              <a href="competence-5.html"><span>C5 — Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
-              <a href="competence-6.html"><span>C6 — Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
-            </div>
-          </details>
-        </li>
+        <li><a href="mailto:hawambo89@gmail.com" class="nav-cta">Me contacter</a></li>
       </ul>
     </nav>
   </div>
@@ -55,98 +46,146 @@
 
 <main>
   <section class="page-hero container">
-    <span class="eyebrow">Projets &amp; Stages</span>
-    <h1>Mettre la théorie <span class="gradient-text">en pratique</span></h1>
-    <p class="lead">Une expérience en entreprise et trois projets académiques, du réseau à l'IAM, qui nourrissent
-      directement les traces &amp; preuves de mes pages compétences.</p>
+    <span class="eyebrow">Expériences &amp; projets</span>
+    <h1>Expériences &amp; <span class="gradient-text">réalisations</span></h1>
+    <p class="lead">Deux expériences en entreprise et trois projets d'ingénierie, du réseau à la gouvernance des
+      identités. Pour chacun : le contexte, mon rôle et les résultats obtenus.</p>
   </section>
 
   <section class="block container" id="esbanque">
     <div class="section-head">
-      <span class="kicker">Stage · Juin 2026 – Sept 2026 · En cours</span>
-      <h2>Stagiaire Développement / Data — Outil de suivi des logs et monitoring</h2>
-      <p class="place" style="color:var(--text-faint);">ESBanque — Nanterre</p>
+      <span class="kicker">Stage · Juin – Sept 2026 · en cours</span>
+      <h2>Outil de centralisation et de monitoring des logs</h2>
+      <p class="place" style="color:var(--text-faint);">ESBanque, Nanterre — Développement / Data</p>
     </div>
-    <div class="card">
-      <p>Dans le cadre de l'amélioration des outils internes de l'entreprise, ce stage vise à mettre en place une
-        solution permettant de centraliser, analyser et visualiser les logs issus des traitements automatisés —
-        un enjeu de fiabilité, de suivi et de performance pour le système d'information. Le stage est encadré par
-        un chef de projet MOE (Maîtrise d'Ouvrage).</p>
-      <ul class="details">
-        <li>Identification et analyse des différentes sources de logs existantes</li>
-        <li>Mise en place d'une solution de centralisation des logs</li>
-        <li>Structuration et normalisation des données collectées</li>
-        <li>Développement d'un système de suivi des statuts (OK / erreur)</li>
-        <li>Conception d'une interface simple de visualisation des logs</li>
-        <li>Définition et mise en place d'indicateurs de suivi (taux de succès des traitements, erreurs remontées)</li>
-      </ul>
+    <div class="card project-card">
+      <div class="proj-part">
+        <h4>Contexte</h4>
+        <p>Les traitements automatisés de l'entreprise produisent des logs dispersés entre plusieurs sources,
+          ce qui rend difficile le suivi des incidents et la mesure de la fiabilité du système d'information.
+          La mission, encadrée par un chef de projet MOE, consiste à centraliser, analyser et visualiser ces
+          logs afin d'en faire un outil de pilotage.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Rôle et contributions</h4>
+        <ul class="details">
+          <li>Identification et analyse des différentes sources de logs existantes</li>
+          <li>Mise en place d'une solution de centralisation</li>
+          <li>Structuration et normalisation des données collectées</li>
+          <li>Développement d'un système de suivi des statuts (OK / erreur)</li>
+          <li>Conception d'une interface de visualisation des logs</li>
+          <li>Définition d'indicateurs de suivi : taux de succès des traitements, erreurs remontées</li>
+        </ul>
+      </div>
+      <div class="proj-part">
+        <h4>Apports</h4>
+        <p class="outcome">Des logs jusqu'ici éparpillés deviennent une <strong>source unique et normalisée</strong>,
+          exploitable par la MOE pour piloter la fiabilité des traitements, sans consultation manuelle de chaque
+          système.</p>
+      </div>
       <ul class="tags">
-        <li>Centralisation de logs</li><li>Monitoring</li><li>Normalisation de données</li><li>Dashboard</li><li>Indicateurs / KPI</li>
+        <li>Centralisation de logs</li><li>Monitoring</li><li>Normalisation de données</li><li>Dashboard</li><li>Indicateurs / KPI</li><li>SQL</li>
       </ul>
     </div>
   </section>
 
   <section class="block container" id="iam">
     <div class="section-head">
-      <span class="kicker">Projet (Situation d'apprentissage en entreprise) · Sept 2025 – Présent</span>
-      <h2>Plateforme No-Code IAM — Gouvernance des Identités</h2>
-      <p class="place" style="color:var(--text-faint);">Projet Full Stack IA (LISSI / Evidian / Maidis) — Vitry-sur-Seine</p>
+      <span class="kicker">Projet en entreprise · depuis sept. 2025</span>
+      <h2>Plateforme no-code de gouvernance des identités (IAM)</h2>
+      <p class="place" style="color:var(--text-faint);">Projet full stack &amp; IA avec LISSI, Evidian et Maidis — Vitry-sur-Seine</p>
     </div>
-    <div class="card">
-      <p>Conception d'une plateforme no-code permettant de construire et d'exécuter des workflows de gestion des
-        identités (IAM), en orchestrant plusieurs systèmes hétérogènes utilisés en entreprise.</p>
-      <ul class="details">
-        <li>Développement d'une plateforme no-code de gestion de workflows IAM</li>
-        <li>Orchestration multi-systèmes : Active Directory, LDAP, SQL, Odoo, GLPI, Keycloak</li>
-        <li>Gateway transactionnelle avec mécanisme de rollback et journalisation (logs)</li>
-        <li>Modélisation des processus en BPMN / CMMN</li>
-        <li>Intégration de MidPoint et d'agents IA (LLM) pour la réconciliation des identités et l'adaptation dynamique des workflows</li>
-      </ul>
+    <div class="card project-card">
+      <div class="proj-part">
+        <h4>Contexte</h4>
+        <p>Dans une organisation, créer, modifier ou supprimer un compte utilisateur suppose d'intervenir sur
+          six systèmes distincts qui ne communiquent pas entre eux. L'objectif du projet : permettre de construire
+          ces processus d'identité sous forme de <strong>workflows no-code</strong>, sans développement
+          d'intégration spécifique à chaque opération.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Rôle et contributions</h4>
+        <ul class="details">
+          <li>Développement de la plateforme no-code de gestion de workflows IAM</li>
+          <li>Orchestration multi-systèmes : Active Directory, LDAP, SQL, Odoo, GLPI, Keycloak</li>
+          <li>Conception d'une gateway transactionnelle avec mécanisme de rollback et journalisation</li>
+          <li>Modélisation des processus métier en BPMN / CMMN</li>
+          <li>Intégration de MidPoint et d'agents IA (LLM) pour la réconciliation des identités et
+            l'adaptation dynamique des workflows</li>
+        </ul>
+      </div>
+      <div class="proj-part">
+        <h4>Apports</h4>
+        <p class="outcome">Une opération d'identité qui échoue à mi-parcours ne laisse plus le SI dans un état
+          incohérent : la gateway <strong>annule l'ensemble de la transaction et journalise chaque étape</strong>,
+          à travers six systèmes hétérogènes.</p>
+      </div>
       <ul class="tags">
-        <li>IAM</li><li>Active Directory</li><li>LDAP</li><li>SQL</li><li>Odoo</li><li>Keycloak</li><li>BPMN/CMMN</li><li>LLM</li>
+        <li>IAM</li><li>Active Directory</li><li>LDAP</li><li>Keycloak</li><li>MidPoint</li><li>Odoo</li><li>GLPI</li><li>BPMN / CMMN</li><li>LLM</li>
       </ul>
     </div>
   </section>
 
   <section class="block container" id="rakedd">
     <div class="section-head">
-      <span class="kicker">Stage · Juin 2025 – Juil 2025</span>
-      <h2>Développement Web &amp; Mobile</h2>
-      <p class="place" style="color:var(--text-faint);">Rakedd Consulting — Le Pecq</p>
+      <span class="kicker">Stage · Juin – Juil 2025</span>
+      <h2>Architecture de données d'une application mobile</h2>
+      <p class="place" style="color:var(--text-faint);">Rakedd Consulting, Le Pecq — Développement web &amp; mobile</p>
     </div>
-    <div class="card">
-      <p>Stage centré sur la conception et le développement d'une application de lexique multilingue (mots,
-        traductions, catégories), avec une attention particulière portée à la modélisation des données et à leur
-        persistance.</p>
-      <ul class="details">
-        <li>Conception et modélisation de la structure de données d'une application de lexique (mots, traductions, catégories)</li>
-        <li>Définition d'un schéma évolutif intégrant les relations entre entités et des métadonnées (langue, date d'ajout, niveau de difficulté, notes)</li>
-        <li>Étude et mise en place d'une solution de stockage serveur avec Supabase</li>
-        <li>Conception d'une architecture backend pour la persistance des données et la synchronisation avec le stockage local</li>
-        <li>Implémentation de la gestion de catégories personnalisées (création, modification, suppression, validations)</li>
-        <li>Préparation d'un système de gestion des utilisateurs et d'authentification</li>
-        <li>Structuration des données pour un environnement multi-utilisateurs</li>
-        <li>Conception d'une base de données destinée au suivi statistique (évolution des mots, catégories les plus utilisées)</li>
-        <li>Développement d'une interface mobile avec React Native</li>
-      </ul>
+    <div class="card project-card">
+      <div class="proj-part">
+        <h4>Contexte</h4>
+        <p>Conception d'une application de lexique multilingue (mots, traductions, catégories) destinée à
+          plusieurs utilisateurs, avec un enjeu central : une structure de données capable d'évoluer sans
+          remettre en cause l'existant, et une synchronisation fiable entre le terminal mobile et le serveur.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Rôle et contributions</h4>
+        <ul class="details">
+          <li>Conception et modélisation de la structure de données (mots, traductions, catégories)</li>
+          <li>Définition d'un schéma évolutif intégrant les relations entre entités et des métadonnées
+            (langue, date d'ajout, niveau de difficulté, notes)</li>
+          <li>Étude et mise en place d'une solution de stockage serveur avec Supabase</li>
+          <li>Architecture backend pour la persistance et la synchronisation avec le stockage local</li>
+          <li>Gestion des catégories personnalisées : création, modification, suppression, validations</li>
+          <li>Préparation d'un système de gestion des utilisateurs et d'authentification</li>
+          <li>Structuration des données pour un environnement multi-utilisateurs</li>
+          <li>Conception d'une base dédiée au suivi statistique (évolution des mots, catégories les plus utilisées)</li>
+          <li>Développement de l'interface mobile en React Native</li>
+        </ul>
+      </div>
+      <div class="proj-part">
+        <h4>Apports</h4>
+        <p class="outcome">L'application repose sur un <strong>schéma évolutif et multi-utilisateurs</strong> :
+          l'ajout d'une langue, d'une métadonnée ou d'un type de catégorie ne nécessite pas de reprendre le
+          modèle de données.</p>
+      </div>
       <ul class="tags">
-        <li>Supabase</li><li>Modélisation de données</li><li>React Native</li><li>Authentification</li><li>Multi-utilisateurs</li>
+        <li>Supabase</li><li>Modélisation de données</li><li>React Native</li><li>Authentification</li><li>Multi-utilisateurs</li><li>Synchronisation</li>
       </ul>
     </div>
   </section>
 
   <section class="block container" id="meteo">
     <div class="section-head">
-      <span class="kicker">Projet académique · Sept 2024 – Jan 2025</span>
-      <h2>Application Web Météo (MVC)</h2>
+      <span class="kicker">Projet d'ingénierie · Sept 2024 – Jan 2025</span>
+      <h2>Application web météo en architecture MVC</h2>
       <p class="place" style="color:var(--text-faint);">IUT Créteil-Vitry</p>
     </div>
-    <div class="card">
-      <ul class="details">
-        <li>Conception d'une base de données SQL</li>
-        <li>Développement d'un backend PHP structuré selon le modèle MVC</li>
-        <li>Intégration de données dynamiques (données météorologiques)</li>
-      </ul>
+    <div class="card project-card">
+      <div class="proj-part">
+        <h4>Contexte</h4>
+        <p>Développer une application web consommant des données météorologiques dynamiques, avec une séparation
+          rigoureuse des responsabilités entre modèle, vue et contrôleur.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Rôle et contributions</h4>
+        <ul class="details">
+          <li>Conception de la base de données SQL</li>
+          <li>Développement du backend PHP structuré selon le modèle MVC</li>
+          <li>Intégration de données météorologiques dynamiques</li>
+        </ul>
+      </div>
       <ul class="tags">
         <li>PHP</li><li>MVC</li><li>SQL</li>
       </ul>
@@ -155,19 +194,39 @@
 
   <section class="block container" id="virtualisation">
     <div class="section-head">
-      <span class="kicker">Projet académique · Nov 2023 – Déc 2023</span>
-      <h2>Virtualisation &amp; Infrastructure Réseau</h2>
+      <span class="kicker">Projet d'ingénierie · Nov – Déc 2023</span>
+      <h2>Infrastructure réseau virtualisée</h2>
       <p class="place" style="color:var(--text-faint);">IUT Créteil-Vitry</p>
     </div>
-    <div class="card">
-      <ul class="details">
-        <li>Mise en place d'une infrastructure virtuelle et clonage de serveurs</li>
-        <li>Mise en place d'un service DHCP</li>
-        <li>Configuration de services SSH, FTP et Web sous Linux</li>
-      </ul>
+    <div class="card project-card">
+      <div class="proj-part">
+        <h4>Contexte</h4>
+        <p>Mettre en place, depuis l'installation initiale, une infrastructure de serveurs virtualisés et les
+          services réseau associés, sous Linux.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Rôle et contributions</h4>
+        <ul class="details">
+          <li>Mise en place d'une infrastructure virtuelle et clonage de serveurs</li>
+          <li>Mise en place d'un service DHCP</li>
+          <li>Configuration des services SSH, FTP et web sous Linux</li>
+        </ul>
+      </div>
       <ul class="tags">
         <li>VirtualBox</li><li>Linux</li><li>DHCP</li><li>SSH</li><li>FTP</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Contact</span>
+      <h2>Prendre contact</h2>
+      <p>Je reste disponible pour détailler l'architecture de chacun de ces projets.</p>
+    </div>
+    <div class="cta-row" style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+      <a href="mailto:hawambo89@gmail.com" class="btn btn-primary">hawambo89@gmail.com</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
     </div>
   </section>
 </main>
@@ -175,11 +234,12 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-links">
-      <a href="https://github.com/june0809" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank">LinkedIn</a>
+      <a href="https://github.com/june0809" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:hawambo89@gmail.com">Email</a>
     </div>
-    <p style="margin:0;">M'Bodj Hawa - Portfolio BUT3 Informatique, UPEC Université Paris-Est Créteil - Année universitaire <span data-academic-year></span></p>
+    <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · <span data-academic-year></span></p>
+    <p class="footer-annex"><a href="competence-4.html">Annexe pédagogique — référentiel de compétences BUT</a></p>
   </div>
 </footer>
 

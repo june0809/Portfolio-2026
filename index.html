@@ -10,8 +10,8 @@
   document.documentElement.setAttribute("data-theme", theme);
 })();
 </script>
-<title>Hawa M'Bodj — Portfolio BUT3 Informatique</title>
-<meta name="description" content="Portfolio de compétences de Hawa M'Bodj, étudiante en 3ème année de BUT Informatique, parcours Administration et Exploitation des Données.">
+<title>Hawa M'Bodj — Données &amp; Gouvernance des identités (IAM)</title>
+<meta name="description" content="Hawa M'Bodj — développeuse backend spécialisée données et gouvernance des identités (IAM) : bases de données, orchestration multi-systèmes (Active Directory, LDAP, Keycloak), monitoring et indicateurs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -36,18 +36,9 @@
     <nav class="main-nav">
       <ul>
         <li><a href="index.html" class="active">Profil</a></li>
+        <li><a href="projets.html">Expériences &amp; projets</a></li>
         <li><a href="parcours.html">Parcours</a></li>
-        <li><a href="projets.html">Projets &amp; Stages</a></li>
-        <li>
-          <details class="nav-dropdown">
-            <summary>Compétences</summary>
-            <div class="dropdown-menu">
-              <a href="competence-4.html"><span>C4 — Gérer des données</span><small>UE5.4 · UE6.4</small></a>
-              <a href="competence-5.html"><span>C5 — Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
-              <a href="competence-6.html"><span>C6 — Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
-            </div>
-          </details>
-        </li>
+        <li><a href="mailto:hawambo89@gmail.com" class="nav-cta">Me contacter</a></li>
       </ul>
     </nav>
   </div>
@@ -55,45 +46,107 @@
 
 <main>
   <section class="hero container">
-    <span class="eyebrow">Portfolio de compétences · BUT3 Informatique</span>
+    <span class="eyebrow">Données · Systèmes d'information · IAM</span>
     <h1>Hawa <span class="gradient-text">M'Bodj</span></h1>
+    <p class="role-line">Développeuse backend — Données &amp; gouvernance des identités</p>
     <p class="lead">
-      Étudiante en 3ème année de BUT Informatique (parcours Administration, Gestion et Exploitation des Données) à l'UPEC.
-      Intéressée par la data, l'architecture logicielle et la gestion des identités (IAM).
+      Je conçois des architectures backend assurant l'interopérabilité de systèmes hétérogènes — bases de données,
+      annuaires (Active Directory, LDAP), ERP, IAM — de manière fiable, traçable et sécurisée. Mon domaine
+      d'intervention se situe à la jonction de la <strong>donnée</strong> (modélisation, exploitation, indicateurs)
+      et de la <strong>gouvernance des identités</strong>.
     </p>
     <div class="cta-row">
-      <a href="projets.html" class="btn btn-primary">Voir mes projets &amp; stages</a>
-      <a href="competence-4.html" class="btn btn-ghost">Explorer mes compétences</a>
+      <a href="projets.html" class="btn btn-primary">Voir mes réalisations</a>
+      <a href="mailto:hawambo89@gmail.com" class="btn btn-ghost">Me contacter</a>
     </div>
     <div class="contact-chips">
-      <span class="chip">📍 Fontenay-sous-Bois</span>
+      <span class="chip">📍 Fontenay-sous-Bois · Île-de-France</span>
       <span class="chip">✉️ hawambo89@gmail.com</span>
       <span class="chip">📞 06 21 70 21 61</span>
-      <span class="chip">Anglais(B1)</span>
-      <span class="chip">Espagnol élémentaire</span>
+      <span class="chip">Anglais B1</span>
     </div>
   </section>
 
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">À propos</span>
-      <h2>Une approche transversale de la donnée et des identités</h2>
+      <span class="kicker">Compétences</span>
+      <h2>Quatre savoir-faire et leurs mises en œuvre</h2>
+      <p>Pour chaque compétence, la réalisation professionnelle qui l'illustre.</p>
     </div>
-    <p style="max-width:760px;">
-      Mon parcours en BUT Informatique m'a amenée à travailler aussi bien sur la conception de bases de données
-      que sur l'orchestration de systèmes d'information complets. Ce qui m'intéresse particulièrement, c'est
-      le point de rencontre entre la <strong>donnée</strong> (modélisation, stockage, exploitation) et la
-      <strong>gouvernance des identités (IAM)</strong>  deux sujets que je retrouve autant dans mon stage
-      chez Rakedd Consulting que dans mon projet scolaire de plateforme no-code IAM. J'aime construire des
-      architectures backend robustes, capables de faire dialoguer plusieurs systèmes (Active Directory, LDAP,
-      SQL, Odoo, Keycloak…) de façon fiable et sécurisée.
-    </p>
+    <div class="grid grid-2">
+      <div class="card proof-card">
+        <h3><span class="card-icon">🗄️</span>Concevoir et exploiter une base de données</h3>
+        <p>Modélisation de schémas évolutifs, choix de la solution de stockage, requêtage avancé,
+          optimisation (index, normalisation) et exploitation à des fins de suivi.</p>
+        <span class="proof-label">Mise en œuvre</span>
+        <p>Chez Rakedd Consulting, j'ai modélisé de bout en bout la structure de données d'une application de
+          lexique multilingue (entités, relations, métadonnées), choisi Supabase pour le stockage serveur et
+          conçu une base dédiée au suivi statistique des usages.</p>
+      </div>
+      <div class="card proof-card">
+        <h3><span class="card-icon">🔐</span>Orchestrer des systèmes hétérogènes</h3>
+        <p>Faire coopérer des systèmes qui n'ont pas été conçus pour communiquer entre eux, en garantissant la
+          cohérence des données : transactions, rollback, journalisation, réconciliation des identités.</p>
+        <span class="proof-label">Mise en œuvre</span>
+        <p>Sur la plateforme no-code IAM, j'ai travaillé sur une gateway transactionnelle orchestrant
+          Active Directory, LDAP, SQL, Odoo, GLPI et Keycloak, avec rollback en cas d'échec et journalisation
+          complète des opérations.</p>
+      </div>
+      <div class="card proof-card">
+        <h3><span class="card-icon">📊</span>Fiabiliser et mesurer un système</h3>
+        <p>Centraliser des données dispersées, les normaliser, puis en tirer des indicateurs exploitables pour
+          piloter la fiabilité d'un système d'information.</p>
+        <span class="proof-label">Mise en œuvre</span>
+        <p>Chez ESBanque, je mets en place un outil de centralisation et de monitoring des logs de traitements
+          automatisés : identification des sources, normalisation, suivi des statuts OK / erreur et indicateurs
+          de taux de succès restitués dans une interface de visualisation.</p>
+      </div>
+      <div class="card proof-card">
+        <h3><span class="card-icon">🤝</span>Traduire un besoin métier en solution technique</h3>
+        <p>Dialoguer avec des interlocuteurs non-développeurs, cadrer un besoin, modéliser les processus
+          métier et restituer clairement l'avancement.</p>
+        <span class="proof-label">Mise en œuvre</span>
+        <p>Encadrée par un chef de projet MOE chez ESBanque, je traduis un besoin de pilotage en indicateurs
+          concrets. Sur le projet IAM, j'ai modélisé les processus en BPMN / CMMN et restitué l'avancement
+          auprès de partenaires industriels (LISSI, Evidian, Maidis).</p>
+      </div>
+    </div>
   </section>
 
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">Compétences techniques</span>
-      <h2>Ce que je mobilise au quotidien</h2>
+      <span class="kicker">Parcours</span>
+      <h2>Expériences professionnelles</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>ESBanque</h3>
+        <p style="font-size:0.85rem; color:var(--accent-2); font-weight:600; margin-bottom:0.4rem;">Stage · Juin – Sept 2026 · en cours</p>
+        <p style="font-size:0.92rem;">Outil de centralisation et de monitoring des logs des traitements
+          automatisés, avec indicateurs de fiabilité.</p>
+        <a href="projets.html#esbanque">Voir le détail →</a>
+      </div>
+      <div class="card">
+        <h3>Plateforme no-code IAM</h3>
+        <p style="font-size:0.85rem; color:var(--accent-2); font-weight:600; margin-bottom:0.4rem;">Projet en entreprise · depuis sept. 2025</p>
+        <p style="font-size:0.92rem;">Gouvernance des identités : workflows no-code orchestrant six systèmes,
+          gateway transactionnelle et agents IA.</p>
+        <a href="projets.html#iam">Voir le détail →</a>
+      </div>
+      <div class="card">
+        <h3>Rakedd Consulting</h3>
+        <p style="font-size:0.85rem; color:var(--accent-2); font-weight:600; margin-bottom:0.4rem;">Stage · Juin – Juil 2025</p>
+        <p style="font-size:0.92rem;">Architecture de données et backend d'une application mobile de lexique
+          multilingue (Supabase, React Native).</p>
+        <a href="projets.html#rakedd">Voir le détail →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Environnement technique</span>
+      <h2>Technologies et outils maîtrisés</h2>
     </div>
     <div class="grid skills-grid">
       <div class="card skill-card">
@@ -109,27 +162,27 @@
         </ul>
       </div>
       <div class="card skill-card">
-        <h3><span class="card-icon">🔐</span>IAM &amp; Systèmes</h3>
+        <h3><span class="card-icon">🔐</span>IAM &amp; systèmes</h3>
         <ul>
-          <li>Active Directory</li><li>LDAP</li><li>Odoo (XML-RPC)</li><li>Keycloak</li>
+          <li>Active Directory</li><li>LDAP</li><li>Keycloak</li><li>MidPoint</li><li>Odoo (XML-RPC)</li><li>GLPI</li>
         </ul>
       </div>
       <div class="card skill-card">
-        <h3><span class="card-icon">🛠️</span>Outils</h3>
+        <h3><span class="card-icon">🧩</span>Modélisation</h3>
         <ul>
-          <li>GitHub</li><li>VS Code</li><li>Eclipse</li><li>VirtualBox</li><li>Linux (Debian/Ubuntu)</li><li>Git</li>
+          <li>BPMN / CMMN</li><li>Modèle relationnel</li><li>Architecture MVC</li>
         </ul>
       </div>
       <div class="card skill-card">
-        <h3><span class="card-icon">📊</span>Outils Data</h3>
+        <h3><span class="card-icon">📊</span>Data &amp; restitution</h3>
         <ul>
-          <li>Excel</li><li>Power BI</li>
+          <li>Power BI</li><li>Excel</li><li>Indicateurs / KPI</li>
         </ul>
       </div>
       <div class="card skill-card">
-        <h3><span class="card-icon">🌐</span>Langues</h3>
+        <h3><span class="card-icon">🛠️</span>Outils &amp; environnements</h3>
         <ul>
-          <li>Anglais(B1)</li><li>Espagnol — Élémentaire</li>
+          <li>Git / GitHub</li><li>Linux (Debian/Ubuntu)</li><li>VirtualBox</li><li>VS Code</li><li>Eclipse</li>
         </ul>
       </div>
     </div>
@@ -137,42 +190,27 @@
 
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">Démarche portfolio</span>
-      <h2>Mes compétences BUT Informatique</h2>
-      <p>Chaque compétence est documentée : apprentissages critiques visés, composantes essentielles, ressources
-        mobilisées, traces &amp; preuves issues de mes stages/projets, et pistes d'amélioration.</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Compétence 4</h3>
-        <p style="font-size:0.9rem;">Gérer des données de l'information : optimiser une base de données, interagir
-          avec une application et mettre en œuvre la sécurité.</p>
-        <a href="competence-4.html">Voir la page →</a>
-      </div>
-      <div class="card">
-        <h3>Compétence 5</h3>
-        <p style="font-size:0.9rem;">Conduire un projet : appliquer une démarche de suivi de projet en fonction
-          des besoins métiers des clients et des utilisateurs.</p>
-        <a href="competence-5.html">Voir la page →</a>
-      </div>
-      <div class="card">
-        <h3>Compétence 6</h3>
-        <p style="font-size:0.9rem;">Collaborer au sein d'une équipe informatique : situer son rôle et ses missions,
-          jusqu'à manager une équipe.</p>
-        <a href="competence-6.html">Voir la page →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="block container">
-    <div class="section-head">
-      <span class="kicker">En dehors du code</span>
-      <h2>Centres d'intérêt</h2>
+      <span class="kicker">Centres d'intérêt</span>
+      <h2>Activités personnelles</h2>
     </div>
     <div class="badge-row">
-      <span class="chip">✈️ Voyager — Mauritanie, Turquie, Afrique du Sud, Sénégal, Belgique, Allemagne</span>
+      <span class="chip">✈️ Voyages : Mauritanie, Turquie, Afrique du Sud, Sénégal, Belgique, Allemagne</span>
       <span class="chip">🎨 Dessin</span>
       <span class="chip">🍳 Cuisine</span>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Contact</span>
+      <h2>Prendre contact</h2>
+      <p>Je suis ouverte aux opportunités professionnelles dans les domaines de la donnée, du développement
+        backend et de la gouvernance des identités.</p>
+    </div>
+    <div class="cta-row" style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+      <a href="mailto:hawambo89@gmail.com" class="btn btn-primary">hawambo89@gmail.com</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+      <a href="https://github.com/june0809" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
     </div>
   </section>
 </main>
@@ -180,11 +218,12 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-links">
-      <a href="https://github.com/june0809" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank">LinkedIn</a>
+      <a href="https://github.com/june0809" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:hawambo89@gmail.com">Email</a>
     </div>
-    <p style="margin:0;">M'Bodj Hawa - Portfolio BUT3 Informatique, UPEC Université Paris-Est Créteil - Année universitaire <span data-academic-year></span></p>
+    <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · <span data-academic-year></span></p>
+    <p class="footer-annex"><a href="competence-4.html">Annexe pédagogique — référentiel de compétences BUT</a></p>
   </div>
 </footer>
 
