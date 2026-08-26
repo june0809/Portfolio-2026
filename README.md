@@ -6,9 +6,10 @@ et mes projets, à destination des recruteurs.
 ## Structure
 
 ```
-index.html              Profil : positionnement, savoir-faire (avec preuves), stack, contact
+index.html              Profil : positionnement, savoir-faire (avec preuves), formation → terrain, stack
 projets.html            Expériences & projets : contexte / rôle / résultat pour chacun
 parcours.html           Chronologie, diplômes, langues
+formation-terrain.html  Passerelle formation → terrain : acquis mobilisés, livrables, écarts comblés
 css/style.css           Feuille de style (thème clair & sombre)
 js/main.js              Menu mobile, bascule de thème, année universitaire auto
 

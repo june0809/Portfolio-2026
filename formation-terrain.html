@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
+<title>Formation &amp; terrain — Hawa M'Bodj</title>
+<meta name="description" content="Comment les enseignements du BUT Informatique (modélisation, exploitation et administration de bases de données, optimisation, conduite de projet) se sont traduits en réalisations concrètes chez ESBanque, Rakedd Consulting et sur la plateforme IAM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">HM</span>
+      M'Bodj Hawa
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Activer le thème clair">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="projets.html">Expériences &amp; projets</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="formation-terrain.html" class="active">Formation &amp; terrain</a></li>
+        <li><a href="mailto:hawambo89@gmail.com" class="nav-cta">Me contacter</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Formation &amp; terrain</span>
+    <h1>Des acquis de formation <span class="gradient-text">transformés en livrables</span></h1>
+    <p class="lead">Trois expériences, un même mécanisme : un enseignement suivi en BUT Informatique, puis une
+      situation professionnelle où il a fallu le transformer en solution qui fonctionne. Cette page retrace ce
+      passage, mission par mission — ce que la formation a apporté, et ce que le terrain a exigé en plus.</p>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Méthode</span>
+      <h2>Comment un acquis devient une réalisation</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card step-card">
+        <span class="step-num">1</span>
+        <h3>Reconnaître le motif</h3>
+        <p style="font-size:0.94rem;">Derrière un besoin métier formulé en langage courant, identifier le problème
+          technique déjà rencontré en formation : un modèle de données à normaliser, des sources à agréger, une
+          transaction à sécuriser.</p>
+      </div>
+      <div class="card step-card">
+        <span class="step-num">2</span>
+        <h3>Transposer, pas appliquer</h3>
+        <p style="font-size:0.94rem;">Un enseignement fournit une méthode, pas une solution. Le travail consiste à
+          l'adapter aux contraintes réelles : outils imposés, données non documentées, existant qu'il n'est pas
+          possible de reconstruire.</p>
+      </div>
+      <div class="card step-card">
+        <span class="step-num">3</span>
+        <h3>Livrer et mesurer</h3>
+        <p style="font-size:0.94rem;">Une réalisation n'est acquise que si elle est exploitable par d'autres :
+          documentée, restituée à l'encadrement, et évaluée sur un critère concret — fiabilité, cohérence,
+          évolutivité.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Mission par mission</span>
+      <h2>Le transfert dans le détail</h2>
+      <p>Pour chaque expérience : la demande reçue, les acquis effectivement mobilisés, ce qui a été produit, et
+        l'écart que la formation seule ne couvrait pas.</p>
+    </div>
+
+    <div class="card bridge-card">
+      <div class="bridge-head">
+        <h3>Centralisation et monitoring des logs</h3>
+        <span class="bridge-tag">Stage · ESBanque</span>
+      </div>
+      <p class="bridge-need"><strong>La demande :</strong> permettre à la maîtrise d'œuvre de mesurer la fiabilité
+        de traitements automatisés dont les logs sont dispersés entre plusieurs sources, sans avoir à consulter
+        chaque système manuellement.</p>
+      <div class="bridge-flow">
+        <div class="bridge-col">
+          <h4>Acquis mobilisés</h4>
+          <ul>
+            <li><span class="mod">Exploitation de bases de données</span> (R5.C.06) — requêtage et agrégation avancés</li>
+            <li><span class="mod">Données massives</span> (R5.C.07) — volumétrie, hétérogénéité et vélocité des sources</li>
+            <li><span class="mod">Statistique inférentielle</span> (R5.C.09) — construire un indicateur qui a du sens</li>
+            <li><span class="mod">Aide à la décision</span> (R6.C.06) — restitution décisionnelle de la donnée</li>
+            <li><span class="mod">Communication professionnelle</span> (R5.03 / R6.03) — échanger avec un interlocuteur non-développeur</li>
+          </ul>
+        </div>
+        <div class="bridge-arrow" aria-hidden="true">→</div>
+        <div class="bridge-col">
+          <h4>Traduction sur le terrain</h4>
+          <ul>
+            <li>Identification et analyse des sources de logs existantes</li>
+            <li>Schéma de centralisation et normalisation des données collectées</li>
+            <li>Suivi des statuts OK / erreur sur l'ensemble des traitements</li>
+            <li>Indicateurs de fiabilité : taux de succès, erreurs remontées</li>
+            <li>Interface de visualisation exploitable directement par la MOE</li>
+          </ul>
+        </div>
+      </div>
+      <p class="bridge-gap"><strong>Ce que le terrain a ajouté :</strong> en formation, les jeux de données sont
+        propres et documentés. Ici, il a fallu composer avec des formats hétérogènes, des sources non documentées
+        et des volumes réels — et surtout argumenter le choix des indicateurs devant un chef de projet MOE dont
+        l'objectif est le pilotage, pas la technique.</p>
+    </div>
+
+    <div class="card bridge-card">
+      <div class="bridge-head">
+        <h3>Plateforme no-code de gouvernance des identités</h3>
+        <span class="bridge-tag">Projet de fin d'études · LISSI, Evidian, Maidis</span>
+      </div>
+      <p class="bridge-need"><strong>La demande :</strong> construire les processus de création, de modification et
+        de suppression de comptes sous forme de workflows no-code, à travers six systèmes qui ne communiquent pas
+        entre eux — un projet mené avec des partenaires industriels, dans des conditions proches de la
+        production.</p>
+      <div class="bridge-flow">
+        <div class="bridge-col">
+          <h4>Acquis mobilisés</h4>
+          <ul>
+            <li><span class="mod">Infrastructure et services réseau</span> (projet 2023 : Linux, DHCP, SSH) — socle d'administration système pour aborder Active Directory et LDAP</li>
+            <li><span class="mod">Optimisation des données du SI</span> (R5.C.11) — cohérence et performance de la gateway</li>
+            <li><span class="mod">Techniques d'IA</span> (R5.C.08) — agents LLM appliqués à la réconciliation des identités</li>
+            <li><span class="mod">Initiation au management</span> (R5.01) — découpage en modules et suivi des jalons</li>
+            <li><span class="mod">Droit du numérique</span> (R6.02) — traitement de données d'identité sensibles</li>
+          </ul>
+        </div>
+        <div class="bridge-arrow" aria-hidden="true">→</div>
+        <div class="bridge-col">
+          <h4>Traduction sur le terrain</h4>
+          <ul>
+            <li>Gateway transactionnelle orchestrant AD, LDAP, SQL, Odoo, GLPI et Keycloak</li>
+            <li>Mécanisme de rollback et journalisation complète des opérations</li>
+            <li>Modélisation des processus métier en BPMN / CMMN</li>
+            <li>Intégration de MidPoint et d'agents IA dans les workflows</li>
+            <li>Restitution régulière de l'avancement aux partenaires industriels</li>
+          </ul>
+        </div>
+      </div>
+      <p class="bridge-gap"><strong>Ce que le terrain a ajouté :</strong> la transaction et le rollback sont étudiés
+        dans le cadre d'un SGBD unique. Les répartir sur six systèmes hétérogènes, dont certains n'offrent aucune
+        garantie transactionnelle, a imposé de reconstruire la logique de cohérence au niveau applicatif.</p>
+    </div>
+
+    <div class="card bridge-card">
+      <div class="bridge-head">
+        <h3>Architecture de données d'une application mobile</h3>
+        <span class="bridge-tag">Stage · Rakedd Consulting</span>
+      </div>
+      <p class="bridge-need"><strong>La demande :</strong> doter une application de lexique multilingue d'une
+        structure de données capable d'évoluer sans remettre en cause l'existant, et d'une synchronisation fiable
+        entre le terminal mobile et le serveur.</p>
+      <div class="bridge-flow">
+        <div class="bridge-col">
+          <h4>Acquis mobilisés</h4>
+          <ul>
+            <li><span class="mod">Modèle relationnel et normalisation</span> — schéma entités / relations / métadonnées</li>
+            <li><span class="mod">Bases de données pour le web</span> (R5.C.04) — persistance côté serveur</li>
+            <li><span class="mod">Nouvelles bases de données</span> (R5.C.05) — NoSQL et multi-modèles, pour choisir en connaissance de cause</li>
+            <li><span class="mod">Administration de bases de données</span> (R6.C.05) — sécurité et gestion des accès</li>
+            <li><span class="mod">Architecture MVC</span> (projet 2024-2025) — séparation des responsabilités côté backend</li>
+          </ul>
+        </div>
+        <div class="bridge-arrow" aria-hidden="true">→</div>
+        <div class="bridge-col">
+          <h4>Traduction sur le terrain</h4>
+          <ul>
+            <li>Schéma évolutif : entités, relations et métadonnées (langue, date, difficulté, notes)</li>
+            <li>Choix argumenté de Supabase comme solution de stockage serveur</li>
+            <li>Architecture backend de persistance et de synchronisation avec le stockage local</li>
+            <li>Préparation de l'authentification et du fonctionnement multi-utilisateurs</li>
+            <li>Base dédiée au suivi statistique des usages</li>
+          </ul>
+        </div>
+      </div>
+      <p class="bridge-gap"><strong>Ce que le terrain a ajouté :</strong> Supabase ne figurait pas au programme. Ce
+        sont les principes vus en formation — normalisation, évolutivité du schéma, gestion des accès — qui ont
+        permis de prendre en main une plateforme managée inconnue et d'y transposer un modèle relationnel en
+        quelques jours.</p>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Synthèse</span>
+      <h2>Une lecture d'ensemble</h2>
+      <p>Les acquis les plus structurants, et ce qu'ils ont rendu possible en situation professionnelle.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="resource-table">
+        <thead>
+          <tr><th>Acquis de formation</th><th>Où il a servi</th><th>Ce qu'il a rendu possible</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">Modélisation<br>et normalisation</td>
+            <td>Rakedd Consulting · Plateforme IAM</td>
+            <td>Concevoir un schéma qui absorbe l'ajout d'une langue, d'une métadonnée ou d'un système sans reprise du modèle.</td>
+          </tr>
+          <tr>
+            <td class="code">Exploitation<br>et agrégation</td>
+            <td>ESBanque</td>
+            <td>Transformer des logs bruts et dispersés en taux de succès et en volumes d'erreurs exploitables.</td>
+          </tr>
+          <tr>
+            <td class="code">Optimisation<br>et cohérence des données</td>
+            <td>Plateforme IAM</td>
+            <td>Garantir qu'une opération interrompue ne laisse pas six systèmes dans un état divergent.</td>
+          </tr>
+          <tr>
+            <td class="code">Administration<br>et sécurité</td>
+            <td>Rakedd Consulting</td>
+            <td>Préparer l'authentification et la gestion des accès pour un usage multi-utilisateurs.</td>
+          </tr>
+          <tr>
+            <td class="code">Aide à la décision</td>
+            <td>ESBanque</td>
+            <td>Restituer la donnée sous une forme directement lisible par la maîtrise d'œuvre.</td>
+          </tr>
+          <tr>
+            <td class="code">Conduite de projet<br>et communication</td>
+            <td>ESBanque · Plateforme IAM</td>
+            <td>Cadrer un besoin avec un interlocuteur non-développeur et rendre compte de l'avancement à des partenaires industriels.</td>
+          </tr>
+          <tr>
+            <td class="code">Administration système<br>et réseau</td>
+            <td>Plateforme IAM</td>
+            <td>Aborder Active Directory, LDAP et Keycloak sans repartir des fondamentaux.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Le complément du terrain</span>
+      <h2>La part qui s'apprend en situation</h2>
+    </div>
+    <ul class="improve-list">
+      <li><strong>La donnée telle qu'elle est.</strong> Non documentée, incomplète, dans des formats qui ne se
+        ressemblent pas : l'essentiel du travail de normalisation se joue là.</li>
+      <li><strong>La contrainte d'exploitation.</strong> Un système en production doit rester cohérent même
+        lorsqu'un traitement échoue — c'est ce qui a dicté la conception du rollback sur la plateforme IAM.</li>
+      <li><strong>Le bon niveau de restitution.</strong> Un indicateur n'a de valeur que si son destinataire peut
+        décider avec. Ajuster ce niveau à un chef de projet MOE demande de la pratique.</li>
+      <li><strong>L'existant qu'on ne choisit pas.</strong> Outils imposés, systèmes qu'il n'est pas possible de
+        modifier : la solution doit s'insérer dans un environnement déjà en place.</li>
+    </ul>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Contact</span>
+      <h2>Prendre contact</h2>
+      <p>Je reste disponible pour détailler l'un de ces transferts de compétence ou l'architecture des projets
+        associés.</p>
+    </div>
+    <div class="cta-row" style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+      <a href="projets.html" class="btn btn-primary">Voir les réalisations</a>
+      <a href="mailto:hawambo89@gmail.com" class="btn btn-ghost">hawambo89@gmail.com</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/june0809" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hawambo89@gmail.com">Email</a>
+    </div>
+    <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · <span data-academic-year></span></p>
+    <p class="footer-annex"><a href="competence-4.html">Annexe pédagogique — référentiel de compétences BUT</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
