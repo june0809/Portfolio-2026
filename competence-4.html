@@ -38,14 +38,15 @@
         <li><a href="index.html">Profil</a></li>
         <li><a href="projets.html">Expériences &amp; projets</a></li>
         <li><a href="parcours.html">Parcours</a></li>
-        <li><a href="formation-terrain.html">Formation &amp; terrain</a></li>
         <li>
           <details class="nav-dropdown" open>
-            <summary>Annexe BUT</summary>
+            <summary>Compétences</summary>
             <div class="dropdown-menu">
+              <a href="competences.html"><span>Vue d'ensemble</span><small>les 3 compétences du BUT</small></a>
               <a href="competence-4.html" class="active"><span>Gérer des données de l'information</span><small>UE5.4 · UE6.4</small></a>
               <a href="competence-5.html"><span>Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
               <a href="competence-6.html"><span>Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
+              <a href="formation-terrain.html"><span>Formation &amp; terrain</span><small>transfert des acquis</small></a>
             </div>
           </details>
         </li>
@@ -56,8 +57,8 @@
 
 <div class="container annex-wrap">
   <div class="annex-banner">
-    <span>📎 <strong>Annexe pédagogique</strong> — cette page documente le référentiel de compétences du BUT Informatique (apprentissages critiques, ressources, traces &amp; preuves).</span>
-    <a href="projets.html">Accéder aux réalisations →</a>
+    <span><strong>Compétence du référentiel BUT Informatique</strong> — les savoir-faire attendus, mon auto-évaluation, les cours suivis et les preuves.</span>
+    <a href="competences.html">Vue d'ensemble des 3 compétences →</a>
   </div>
 </div>
 
@@ -76,8 +77,8 @@
     <div class="ac-ce-grid">
       <div>
         <div class="section-head">
-          <span class="kicker">Apprentissages critiques visés</span>
-          <h2>AC</h2>
+          <span class="kicker">Apprentissages critiques (AC) du référentiel</span>
+          <h2>Ce que je dois savoir faire</h2>
         </div>
         <ul class="numbered-list ac-list">
           <li><span class="num">1</span><span>Capturer et stocker des ensembles volumineux et complexes de données hétérogènes</span></li>
@@ -88,8 +89,8 @@
       </div>
       <div>
         <div class="section-head">
-          <span class="kicker">Composantes essentielles</span>
-          <h2>CE</h2>
+          <span class="kicker">Composantes essentielles (CE) du référentiel</span>
+          <h2>Dans quelles conditions</h2>
         </div>
         <ul class="numbered-list ce-list">
           <li><span class="num">1</span><span>En respectant les réglementations sur le respect de la vie privée et la protection des données personnelles</span></li>
@@ -101,16 +102,91 @@
     </div>
   </section>
 
+  <section class="block container" id="auto-evaluation">
+    <div class="section-head">
+      <span class="kicker">Mon auto-évaluation</span>
+      <h2>Où j'en suis, savoir-faire par savoir-faire</h2>
+      <p>Le référentiel du BUT décompose chaque compétence en « apprentissages critiques » : les savoir-faire
+        attendus en fin de parcours. Pour chacun, voici le niveau que j'estime avoir atteint, la réalisation qui l'atteste,
+        ce que la situation m'a appris, et le palier suivant.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">1</span>
+        <h3>Capturer et stocker des ensembles volumineux et complexes de données hétérogènes</h3>
+        <span class="level level-solid">Maîtrisé</span>
+      </div>
+      <p><strong>Preuve :</strong> chaîne de centralisation des logs multi-sources chez ESBanque et schéma de
+        données du lexique multilingue — <a href="projets.html#esbanque">voir les schémas de principe</a>.</p>
+      <p><strong>Mon analyse :</strong> j'ai découvert que la difficulté n'est pas le stockage mais
+        l'hétérogénéité. Chaque source de logs a son format ; tant que je n'avais pas arrêté une structure
+        commune, aucune requête n'avait de sens. J'ai appris à faire ce choix de structure avant d'écrire du
+        code, pas après.</p>
+      <p><strong>Palier suivant :</strong> travailler sur une volumétrie réellement massive — partitionnement,
+        traitement en flux — que je n'ai pas encore rencontrée en situation.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">2</span>
+        <h3>Préparer et extraire les données pour l'exploitation</h3>
+        <span class="level level-solid">Maîtrisé</span>
+      </div>
+      <p><strong>Preuve :</strong> normalisation des données collectées et suivi des statuts OK / erreur sur
+        l'ensemble des traitements automatisés (ESBanque).</p>
+      <p><strong>Mon analyse :</strong> mon premier réflexe a été de tout conserver, par prudence. C'est en
+        construisant les indicateurs que j'ai compris qu'une donnée qu'on ne sait pas interpréter n'est pas une
+        donnée exploitable : il vaut mieux normaliser fermement quitte à écarter, que tout garder et ne rien
+        pouvoir en tirer.</p>
+      <p><strong>Palier suivant :</strong> contrôler la qualité en entrée de chaîne — détecter automatiquement un
+        format inattendu — plutôt que de corriger en aval.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">3</span>
+        <h3>Appliquer des méthodes d'exploration et d'exploitation des données</h3>
+        <span class="level level-mid">En consolidation</span>
+      </div>
+      <p><strong>Preuve :</strong> base de suivi statistique des usages (Rakedd), indicateurs de fiabilité
+        (ESBanque), exploration d'agents LLM pour la réconciliation des identités (plateforme IAM).</p>
+      <p><strong>Mon analyse :</strong> je suis à l'aise sur le versant décisionnel — définir un indicateur, le
+        calculer, le restituer. Le versant apprentissage automatique reste, lui, exploratoire : sur l'IAM, je
+        sais formuler ce qu'un agent devrait réconcilier, je ne sais pas encore en évaluer rigoureusement la
+        performance.</p>
+      <p><strong>Palier suivant :</strong> mener une démarche de fouille complète sur un jeu de données réel,
+        avec mesure de la qualité des résultats.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">4</span>
+        <h3>Mettre en production et optimiser le système de gestion de données de l'entreprise</h3>
+        <span class="level level-mid">En consolidation</span>
+      </div>
+      <p><strong>Preuve :</strong> optimisation du schéma du lexique (index, normalisation, évolutivité) et
+        conception du point de passage unique qui garantit la cohérence entre six systèmes
+        — <a href="projets.html#iam">voir le schéma</a>.</p>
+      <p><strong>Mon analyse :</strong> j'ai conçu et optimisé, mais la mise en production reste encadrée par
+        d'autres. Ce que j'ai compris chez ESBanque, c'est que l'exploitation impose des contraintes que la
+        conception ignore : qui surveille l'outil, que se passe-t-il quand une source disparaît, qui reprend le
+        code après moi.</p>
+      <p><strong>Palier suivant :</strong> prendre en charge un déploiement de bout en bout, avec alerting et
+        seuils de criticité.</p>
+    </div>
+  </section>
+
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">Ressources mobilisées</span>
-      <h2>Apports pour ma pratique</h2>
+      <span class="kicker">Cours et modules suivis</span>
+      <h2>Ce que la formation m'a apporté</h2>
       <p>Les enseignements qui construisent cette compétence, et leur apport concret dans mes stages et projets.</p>
     </div>
     <div class="table-wrap">
-      <table class="resource-table">
+      <table class="resource-table res-cours">
         <thead>
-          <tr><th>Ressource</th><th>Apports</th><th>Application en stage / projet</th></tr>
+          <tr><th>Cours</th><th>Ce que j'y ai appris</th><th>Où cela m'a servi</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -131,7 +207,7 @@
           <tr>
             <td class="code">R5.C.07<br>Données massives</td>
             <td>Enjeux du Big Data : volumétrie, hétérogénéité, vélocité</td>
-            <td>En écho direct avec l'AC1 ; m'aide à anticiper la montée en charge du projet IAM, qui centralise des données issues de plusieurs systèmes (AD, LDAP, GLPI…).</td>
+            <td>Directement lié au savoir-faire n° 1 (capturer et stocker des données hétérogènes) ; m'aide à anticiper la montée en charge du projet IAM, qui centralise des données issues de plusieurs systèmes (AD, LDAP, GLPI…).</td>
           </tr>
           <tr>
             <td class="code">R5.C.08<br>Techniques d'IA</td>
@@ -140,13 +216,13 @@
           </tr>
           <tr>
             <td class="code">R5.C.09<br>Statistique inférentielle</td>
-            <td>Fondements mathématiques et statistiques (CE3)</td>
+            <td>Fondements mathématiques et statistiques, sur lesquels le référentiel demande de s'appuyer</td>
             <td>Base théorique pour construire des indicateurs fiables dans la BDD de suivi statistique du stage.</td>
           </tr>
           <tr>
             <td class="code">R5.C.11<br>Optimisation données SI</td>
             <td>Techniques d'optimisation d'un système de données (index, normalisation, performance)</td>
-            <td>Appliqué au schéma évolutif de l'application de lexique et à la fiabilité de la gateway transactionnelle du projet IAM.</td>
+            <td>Appliqué au schéma évolutif de l'application de lexique et à la fiabilité du point de passage transactionnel du projet IAM.</td>
           </tr>
           <tr>
             <td class="code">R6.C.05<br>Administration BD</td>
@@ -165,16 +241,16 @@
 
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">Traces &amp; preuves</span>
+      <span class="kicker">Preuves</span>
       <h2>Réalisations</h2>
     </div>
     <div class="trace-card">
       <span class="source-tag">Stage : ESBanque</span>
-      <p>Mise en place d'un outil de suivi des logs et de monitoring pour centraliser des données issues de
+      <p>Mise en place d'un outil de suivi et de supervision des journaux d'activité, pour centraliser des données issues de
         plusieurs traitements automatisés : identification des sources de logs, structuration et normalisation
         des données collectées, développement d'un système de suivi des statuts (OK / erreur), et définition
         d'indicateurs (taux de succès, erreurs remontées) restitués via une interface de visualisation. Une
-        illustration directe des AC1, AC2 et AC4 — capturer/stocker des données hétérogènes, les préparer pour
+        illustration directe des savoir-faire n° 1, 2 et 4 : capturer et stocker des données hétérogènes, les préparer pour
         l'exploitation, et optimiser le système de gestion de données en conditions réelles de production.</p>
     </div>
     <div class="trace-card">
@@ -189,8 +265,8 @@
     <div class="trace-card">
       <span class="source-tag">Projet : Plateforme No-Code IAM</span>
       <p>Orchestration de données hétérogènes issues de plusieurs systèmes (<strong>Active Directory, LDAP, SQL,
-        Odoo, GLPI, Keycloak</strong>) au sein d'une gateway transactionnelle garantissant la cohérence des données
-        (rollback en cas d'échec, journalisation complète). Réflexion sur l'intégration d'agents IA pour la
+        Odoo, GLPI, Keycloak</strong>) au sein d'un point de passage unique garantissant la cohérence des données
+        (annulation de toutes les étapes en cas d'échec, trace complète des opérations). Réflexion sur l'intégration d'agents IA pour la
         réconciliation dynamique des identités entre systèmes.</p>
     </div>
     <div class="trace-card">
@@ -213,7 +289,7 @@
         (volumes réels de données massives, pas seulement des jeux d'exemple).</li>
       <li>Me former davantage aux infrastructures de production (cloud, data centers) pour mieux mesurer les
         enjeux économiques et écologiques du stockage, au-delà du choix ponctuel de Supabase.</li>
-      <li>Poursuivre la montée en compétence sur le monitoring en conditions réelles amorcée avec le stage
+      <li>Poursuivre la montée en compétence sur la supervision en conditions réelles amorcée avec le stage
         ESBanque, en allant vers des indicateurs plus avancés (alerting automatique, seuils de criticité).</li>
     </ul>
   </section>

@@ -38,7 +38,7 @@
         <li><a href="index.html" class="active">Profil</a></li>
         <li><a href="projets.html">Expériences &amp; projets</a></li>
         <li><a href="parcours.html">Parcours</a></li>
-        <li><a href="formation-terrain.html">Formation &amp; terrain</a></li>
+        <li><a href="competences.html">Compétences</a></li>
         <li><a href="mailto:hawambo89@gmail.com" class="nav-cta">Me contacter</a></li>
       </ul>
     </nav>
@@ -52,7 +52,7 @@
     <p class="role-line">Développeuse backend — Données &amp; gouvernance des identités</p>
     <p class="lead">
       Je conçois des architectures backend assurant l'interopérabilité de systèmes hétérogènes — bases de données,
-      annuaires (Active Directory, LDAP), ERP, IAM — de manière fiable, traçable et sécurisée. Mon domaine
+      annuaires d'entreprise (Active Directory, LDAP), progiciels de gestion, outils de gestion des identités — de manière fiable, traçable et sécurisée. Mon domaine
       d'intervention se situe à la jonction de la <strong>donnée</strong> (modélisation, exploitation, indicateurs)
       et de la <strong>gouvernance des identités</strong>.
     </p>
@@ -87,18 +87,18 @@
       <div class="card proof-card">
         <h3><span class="card-icon">🔐</span>Orchestrer des systèmes hétérogènes</h3>
         <p>Faire coopérer des systèmes qui n'ont pas été conçus pour communiquer entre eux, en garantissant la
-          cohérence des données : transactions, rollback, journalisation, réconciliation des identités.</p>
+          cohérence des données : une opération passe partout, ou nulle part — et chaque étape est tracée.</p>
         <span class="proof-label">Mise en œuvre</span>
-        <p>Sur la plateforme no-code IAM, j'ai travaillé sur une gateway transactionnelle orchestrant
-          Active Directory, LDAP, SQL, Odoo, GLPI et Keycloak, avec rollback en cas d'échec et journalisation
-          complète des opérations.</p>
+        <p>Sur la plateforme IAM, j'ai travaillé sur une <strong>gateway transactionnelle</strong> : un point de
+          passage unique qui exécute une opération sur Active Directory, LDAP, SQL, Odoo, GLPI et Keycloak, et
+          qui annule tout automatiquement si l'un d'eux échoue, en journalisant chaque étape.</p>
       </div>
       <div class="card proof-card">
         <h3><span class="card-icon">📊</span>Fiabiliser et mesurer un système</h3>
         <p>Centraliser des données dispersées, les normaliser, puis en tirer des indicateurs exploitables pour
           piloter la fiabilité d'un système d'information.</p>
         <span class="proof-label">Mise en œuvre</span>
-        <p>Chez ESBanque, je mets en place un outil de centralisation et de monitoring des logs de traitements
+        <p>Chez ESBanque, je mets en place un outil qui centralise et surveille les journaux d'activité (les « logs ») des traitements
           automatisés : identification des sources, normalisation, suivi des statuts OK / erreur et indicateurs
           de taux de succès restitués dans une interface de visualisation.</p>
       </div>
@@ -107,10 +107,13 @@
         <p>Dialoguer avec des interlocuteurs non-développeurs, cadrer un besoin, modéliser les processus
           métier et restituer clairement l'avancement.</p>
         <span class="proof-label">Mise en œuvre</span>
-        <p>Encadrée par un chef de projet MOE chez ESBanque, je traduis un besoin de pilotage en indicateurs
-          concrets. Sur le projet IAM, j'ai modélisé les processus en BPMN / CMMN et restitué l'avancement
+        <p>Encadrée chez ESBanque par un chef de projet côté maîtrise d'œuvre (l'équipe qui pilote le besoin, sans développer), je traduis un besoin de pilotage en indicateurs
+          concrets. Sur le projet IAM, j'ai décrit les processus métier en BPMN / CMMN (des notations standard pour représenter un enchaînement d'étapes) et restitué l'avancement
           auprès de partenaires industriels (LISSI, Evidian, Maidis).</p>
       </div>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1.5rem;">
+      <a href="competences.html" class="btn btn-ghost">Les 3 compétences du référentiel et leurs preuves →</a>
     </div>
   </section>
 
@@ -131,7 +134,8 @@
       <div class="card">
         <h3>Plateforme IAM</h3>
         <p style="font-size:0.92rem;"><strong>Optimisation et cohérence des données</strong>, administration
-          système et réseau : une transaction répartie sur six systèmes hétérogènes, avec rollback et
+          système et réseau : une opération répartie sur six systèmes différents, annulée entièrement en cas
+          d'échec et
           journalisation.</p>
       </div>
       <div class="card">
@@ -154,15 +158,15 @@
       <div class="card">
         <h3>ESBanque</h3>
         <p style="font-size:0.85rem; color:var(--accent-2); font-weight:600; margin-bottom:0.4rem;">Stage · Juin – Sept 2026 · en cours</p>
-        <p style="font-size:0.92rem;">Outil de centralisation et de monitoring des logs des traitements
+        <p style="font-size:0.92rem;">Outil qui centralise et supervise les journaux d'activité des traitements
           automatisés, avec indicateurs de fiabilité.</p>
         <a href="projets.html#esbanque">Voir le détail →</a>
       </div>
       <div class="card">
         <h3>Plateforme no-code IAM</h3>
         <p style="font-size:0.85rem; color:var(--accent-2); font-weight:600; margin-bottom:0.4rem;">Projet de fin d'études · depuis sept. 2025</p>
-        <p style="font-size:0.92rem;">Gouvernance des identités : workflows no-code orchestrant six systèmes,
-          gateway transactionnelle et agents IA.</p>
+        <p style="font-size:0.92rem;">Gouvernance des identités : des processus paramétrables sans écrire de code, qui pilotent six systèmes,
+          avec un point de passage unique garantissant la cohérence.</p>
         <a href="projets.html#iam">Voir le détail →</a>
       </div>
       <div class="card">
@@ -255,7 +259,7 @@
       <a href="mailto:hawambo89@gmail.com">Email</a>
     </div>
     <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · <span data-academic-year></span></p>
-    <p class="footer-annex"><a href="competence-4.html">Annexe pédagogique — référentiel de compétences BUT</a></p>
+    <p class="footer-annex"><a href="competences.html">Compétences du référentiel BUT — analyse et preuves</a></p>
   </div>
 </footer>
 

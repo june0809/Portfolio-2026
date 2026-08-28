@@ -38,7 +38,7 @@
         <li><a href="index.html">Profil</a></li>
         <li><a href="projets.html">Expériences &amp; projets</a></li>
         <li><a href="parcours.html">Parcours</a></li>
-        <li><a href="formation-terrain.html" class="active">Formation &amp; terrain</a></li>
+        <li><a href="competences.html" class="active">Compétences</a></li>
         <li><a href="mailto:hawambo89@gmail.com" class="nav-cta">Me contacter</a></li>
       </ul>
     </nav>
@@ -98,7 +98,8 @@
         <span class="bridge-tag">Stage · ESBanque</span>
       </div>
       <p class="bridge-need"><strong>La demande :</strong> permettre à la maîtrise d'œuvre de mesurer la fiabilité
-        de traitements automatisés dont les logs sont dispersés entre plusieurs sources, sans avoir à consulter
+        de traitements automatisés dont les journaux d'activité (les « logs ») sont dispersés entre plusieurs
+        sources, sans avoir à consulter
         chaque système manuellement.</p>
       <div class="bridge-flow">
         <div class="bridge-col">
@@ -119,13 +120,13 @@
             <li>Schéma de centralisation et normalisation des données collectées</li>
             <li>Suivi des statuts OK / erreur sur l'ensemble des traitements</li>
             <li>Indicateurs de fiabilité : taux de succès, erreurs remontées</li>
-            <li>Interface de visualisation exploitable directement par la MOE</li>
+            <li>Interface de visualisation exploitable directement par la maîtrise d'œuvre</li>
           </ul>
         </div>
       </div>
       <p class="bridge-gap"><strong>Ce que le terrain a ajouté :</strong> en formation, les jeux de données sont
         propres et documentés. Ici, il a fallu composer avec des formats hétérogènes, des sources non documentées
-        et des volumes réels — et surtout argumenter le choix des indicateurs devant un chef de projet MOE dont
+        et des volumes réels — et surtout argumenter le choix des indicateurs devant un chef de projet côté maîtrise d'œuvre dont
         l'objectif est le pilotage, pas la technique.</p>
     </div>
 
@@ -135,7 +136,8 @@
         <span class="bridge-tag">Projet de fin d'études · LISSI, Evidian, Maidis</span>
       </div>
       <p class="bridge-need"><strong>La demande :</strong> construire les processus de création, de modification et
-        de suppression de comptes sous forme de workflows no-code, à travers six systèmes qui ne communiquent pas
+        de suppression de comptes sous forme de parcours paramétrables sans écrire de code, à travers six systèmes
+        qui ne communiquent pas
         entre eux — un projet mené avec des partenaires industriels, dans des conditions proches de la
         production.</p>
       <div class="bridge-flow">
@@ -143,7 +145,7 @@
           <h4>Acquis mobilisés</h4>
           <ul>
             <li><span class="mod">Infrastructure et services réseau</span> (projet 2023 : Linux, DHCP, SSH) — socle d'administration système pour aborder Active Directory et LDAP</li>
-            <li><span class="mod">Optimisation des données du SI</span> (R5.C.11) — cohérence et performance de la gateway</li>
+            <li><span class="mod">Optimisation des données d'un système d'information</span> (R5.C.11) — cohérence et performance de la gateway</li>
             <li><span class="mod">Techniques d'IA</span> (R5.C.08) — agents LLM appliqués à la réconciliation des identités</li>
             <li><span class="mod">Initiation au management</span> (R5.01) — découpage en modules et suivi des jalons</li>
             <li><span class="mod">Droit du numérique</span> (R6.02) — traitement de données d'identité sensibles</li>
@@ -153,17 +155,22 @@
         <div class="bridge-col">
           <h4>Traduction sur le terrain</h4>
           <ul>
-            <li>Gateway transactionnelle orchestrant AD, LDAP, SQL, Odoo, GLPI et Keycloak</li>
-            <li>Mécanisme de rollback et journalisation complète des opérations</li>
-            <li>Modélisation des processus métier en BPMN / CMMN</li>
-            <li>Intégration de MidPoint et d'agents IA dans les workflows</li>
+            <li>Point de passage unique (« gateway transactionnelle ») pilotant Active Directory, LDAP, SQL, Odoo,
+              GLPI et Keycloak</li>
+            <li>Annulation automatique de toutes les étapes déjà effectuées en cas d'échec, et trace complète des
+              opérations</li>
+            <li>Description des processus métier en BPMN / CMMN, des notations standard lisibles par des
+              non-développeurs</li>
+            <li>Intégration de MidPoint et d'agents IA dans ces parcours</li>
             <li>Restitution régulière de l'avancement aux partenaires industriels</li>
           </ul>
         </div>
       </div>
-      <p class="bridge-gap"><strong>Ce que le terrain a ajouté :</strong> la transaction et le rollback sont étudiés
-        dans le cadre d'un SGBD unique. Les répartir sur six systèmes hétérogènes, dont certains n'offrent aucune
-        garantie transactionnelle, a imposé de reconstruire la logique de cohérence au niveau applicatif.</p>
+      <p class="bridge-gap"><strong>Ce que le terrain a ajouté :</strong> l'annulation d'une opération interrompue
+        (le « rollback ») est étudiée en cours
+        dans le cadre d'une seule base de données, qui garantit elle-même la cohérence. Répartir cette garantie sur
+        six systèmes différents, dont certains ne savent pas revenir en arrière tout seuls, a
+        imposé de reconstruire cette logique nous-mêmes, dans le code.</p>
     </div>
 
     <div class="card bridge-card">
@@ -211,7 +218,7 @@
       <p>Les acquis les plus structurants, et ce qu'ils ont rendu possible en situation professionnelle.</p>
     </div>
     <div class="table-wrap">
-      <table class="resource-table">
+      <table class="resource-table res-transfert">
         <thead>
           <tr><th>Acquis de formation</th><th>Où il a servi</th><th>Ce qu'il a rendu possible</th></tr>
         </thead>
@@ -265,9 +272,9 @@
       <li><strong>La donnée telle qu'elle est.</strong> Non documentée, incomplète, dans des formats qui ne se
         ressemblent pas : l'essentiel du travail de normalisation se joue là.</li>
       <li><strong>La contrainte d'exploitation.</strong> Un système en production doit rester cohérent même
-        lorsqu'un traitement échoue — c'est ce qui a dicté la conception du rollback sur la plateforme IAM.</li>
+        lorsqu'un traitement échoue — c'est ce qui a dicté la conception du mécanisme d'annulation sur la plateforme IAM.</li>
       <li><strong>Le bon niveau de restitution.</strong> Un indicateur n'a de valeur que si son destinataire peut
-        décider avec. Ajuster ce niveau à un chef de projet MOE demande de la pratique.</li>
+        décider avec. Ajuster ce niveau à un chef de projet côté maîtrise d'œuvre demande de la pratique.</li>
       <li><strong>L'existant qu'on ne choisit pas.</strong> Outils imposés, systèmes qu'il n'est pas possible de
         modifier : la solution doit s'insérer dans un environnement déjà en place.</li>
     </ul>
@@ -296,7 +303,7 @@
       <a href="mailto:hawambo89@gmail.com">Email</a>
     </div>
     <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · <span data-academic-year></span></p>
-    <p class="footer-annex"><a href="competence-4.html">Annexe pédagogique — référentiel de compétences BUT</a></p>
+    <p class="footer-annex"><a href="competences.html">Compétences du référentiel BUT — analyse et preuves</a></p>
   </div>
 </footer>
 

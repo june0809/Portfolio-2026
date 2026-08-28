@@ -38,14 +38,15 @@
         <li><a href="index.html">Profil</a></li>
         <li><a href="projets.html">Expériences &amp; projets</a></li>
         <li><a href="parcours.html">Parcours</a></li>
-        <li><a href="formation-terrain.html">Formation &amp; terrain</a></li>
         <li>
           <details class="nav-dropdown" open>
-            <summary>Annexe BUT</summary>
+            <summary>Compétences</summary>
             <div class="dropdown-menu">
+              <a href="competences.html"><span>Vue d'ensemble</span><small>les 3 compétences du BUT</small></a>
               <a href="competence-4.html"><span>Gérer des données de l'information</span><small>UE5.4 · UE6.4</small></a>
               <a href="competence-5.html"><span>Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
               <a href="competence-6.html" class="active"><span>Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
+              <a href="formation-terrain.html"><span>Formation &amp; terrain</span><small>transfert des acquis</small></a>
             </div>
           </details>
         </li>
@@ -56,8 +57,8 @@
 
 <div class="container annex-wrap">
   <div class="annex-banner">
-    <span>📎 <strong>Annexe pédagogique</strong> — cette page documente le référentiel de compétences du BUT Informatique (apprentissages critiques, ressources, traces &amp; preuves).</span>
-    <a href="projets.html">Accéder aux réalisations →</a>
+    <span><strong>Compétence du référentiel BUT Informatique</strong> — les savoir-faire attendus, mon auto-évaluation, les cours suivis et les preuves.</span>
+    <a href="competences.html">Vue d'ensemble des 3 compétences →</a>
   </div>
 </div>
 
@@ -76,8 +77,8 @@
     <div class="ac-ce-grid">
       <div>
         <div class="section-head">
-          <span class="kicker">Apprentissages critiques visés</span>
-          <h2>AC</h2>
+          <span class="kicker">Apprentissages critiques (AC) du référentiel</span>
+          <h2>Ce que je dois savoir faire</h2>
         </div>
         <ul class="numbered-list ac-list">
           <li><span class="num">1</span><span>Organiser et partager une veille numérique</span></li>
@@ -88,8 +89,8 @@
       </div>
       <div>
         <div class="section-head">
-          <span class="kicker">Composantes essentielles</span>
-          <h2>CE</h2>
+          <span class="kicker">Composantes essentielles (CE) du référentiel</span>
+          <h2>Dans quelles conditions</h2>
         </div>
         <ul class="numbered-list ce-list">
           <li><span class="num">1</span><span>En inscrivant sa démarche au sein d'une équipe pluridisciplinaire</span></li>
@@ -101,15 +102,89 @@
     </div>
   </section>
 
+  <section class="block container" id="auto-evaluation">
+    <div class="section-head">
+      <span class="kicker">Mon auto-évaluation</span>
+      <h2>Où j'en suis, savoir-faire par savoir-faire</h2>
+      <p>Le référentiel du BUT décompose chaque compétence en « apprentissages critiques » : les savoir-faire
+        attendus en fin de parcours. Pour chacun, voici le niveau que j'estime avoir atteint, la réalisation qui l'atteste,
+        ce que la situation m'a appris, et le palier suivant.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">1</span>
+        <h3>Organiser et partager une veille numérique</h3>
+        <span class="level level-mid">En consolidation</span>
+      </div>
+      <p><strong>Preuve :</strong> veille menée sur les agents IA (LLM) et leur intégration dans des processus
+        d'identité, qui a alimenté les choix techniques de la plateforme IAM.</p>
+      <p><strong>Mon analyse :</strong> ma veille existe et elle est utile, mais elle est déclenchée par les
+        besoins du projet plutôt qu'organisée. Je la partage à l'oral, en réunion, sans support qui reste. Sur un
+        sujet qui bouge aussi vite que les agents IA, c'est une perte : ce que j'ai lu il y a six mois n'est
+        retrouvable nulle part.</p>
+      <p><strong>Palier suivant :</strong> tenir une veille écrite et régulière, partagée avec l'équipe, plutôt
+        qu'une recherche ponctuelle.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">2</span>
+        <h3>Identifier les enjeux de l'économie de l'innovation numérique</h3>
+        <span class="level level-open">À développer</span>
+      </div>
+      <p><strong>Preuve :</strong> choix d'outils argumentés — Supabase côté application mobile, briques IAM
+        open source face à des solutions éditeurs sur le projet de fin d'études.</p>
+      <p><strong>Mon analyse :</strong> je perçois ces enjeux à l'échelle d'un projet : ce que coûte une
+        dépendance à un éditeur, ce qu'on gagne à rester sur des briques ouvertes. À l'échelle d'un marché ou
+        d'une filière, je n'ai pas encore la vision d'ensemble — travailler aux côtés de LISSI, Evidian et Maidis
+        me montre justement qu'il y a là un paysage que je ne maîtrise pas.</p>
+      <p><strong>Palier suivant :</strong> replacer les briques utilisées sur le projet IAM dans le paysage des
+        solutions du marché, pour comprendre les stratégies des éditeurs.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">3</span>
+        <h3>Guider la conduite du changement informatique au sein d'une organisation</h3>
+        <span class="level level-open">À développer</span>
+      </div>
+      <p><strong>Preuve :</strong> restitution régulière de l'avancement du projet IAM auprès des partenaires
+        industriels, et traduction d'un besoin de pilotage en indicateurs auprès de la maîtrise d'œuvre d'ESBanque.</p>
+      <p><strong>Mon analyse :</strong> je sais rendre compte à des interlocuteurs qui ne codent pas — c'est
+        acquis. Mais conduire un changement, c'est accompagner ceux dont le travail quotidien va être modifié par
+        l'outil, et cette situation, je ne l'ai pas encore vécue : mes projets se sont arrêtés avant la mise en
+        service auprès des utilisateurs finaux.</p>
+      <p><strong>Palier suivant :</strong> suivre un outil jusqu'à son appropriation par ses utilisateurs, y
+        compris la formation et la reprise des réticences.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">4</span>
+        <h3>Accompagner le management de projet informatique</h3>
+        <span class="level level-mid">En consolidation</span>
+      </div>
+      <p><strong>Preuve :</strong> indicateurs de fiabilité fournis à la maîtrise d'œuvre pour le pilotage des traitements
+        (ESBanque) et découpage de la plateforme IAM en modules : les parcours, le point de passage central, les intégrations.</p>
+      <p><strong>Mon analyse :</strong> je fournis la matière au pilotage plus que je ne pilote, et c'est
+        cohérent avec ma place dans ces projets. Ce que je note en revanche, c'est que mon propre découpage sur
+        l'IAM est resté informel : il vit dans ma tête et dans les échanges, pas dans un outil de suivi que
+        quelqu'un d'autre pourrait reprendre.</p>
+      <p><strong>Palier suivant :</strong> formaliser un suivi — jalons, backlog partagé — sur la fin du stage,
+        pour rendre mon avancement lisible sans moi.</p>
+    </div>
+  </section>
+
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">Ressources mobilisées</span>
-      <h2>Apports pour ma pratique</h2>
+      <span class="kicker">Cours et modules suivis</span>
+      <h2>Ce que la formation m'a apporté</h2>
     </div>
     <div class="table-wrap">
-      <table class="resource-table">
+      <table class="resource-table res-cours">
         <thead>
-          <tr><th>Ressource</th><th>Apports</th><th>Application en stage / projet</th></tr>
+          <tr><th>Cours</th><th>Ce que j'y ai appris</th><th>Où cela m'a servi</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -144,24 +219,26 @@
 
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">Traces &amp; preuves</span>
+      <span class="kicker">Preuves</span>
       <h2>Réalisations</h2>
     </div>
     <div class="trace-card">
       <span class="source-tag">Stage : ESBanque</span>
-      <p>Intégration dans une équipe encadrée par un chef de projet MOE, avec qui les échanges réguliers sur
-        l'avancement (sources de logs identifiées, indicateurs proposés) ont demandé de traduire un besoin
-        métier en solution technique compréhensible par un interlocuteur non-développeur. Une illustration de
-        la CE1 (s'inscrire au sein d'une équipe pluridisciplinaire) et de l'AC4 (accompagner le management de
-        projet informatique) en fournissant à la MOE des indicateurs exploitables pour le pilotage du projet.</p>
+      <p>Intégration dans une équipe encadrée par un chef de projet côté maîtrise d'œuvre — l'équipe qui définit
+        le besoin et pilote le projet sans écrire le code. Les échanges réguliers sur l'avancement (sources de logs
+        identifiées, indicateurs proposés) ont demandé de traduire un besoin métier en solution technique
+        compréhensible par un interlocuteur qui ne développe pas. Cela illustre deux attendus du référentiel :
+        travailler au sein d'une équipe aux profils variés, et accompagner le pilotage d'un projet informatique en
+        fournissant des indicateurs directement exploitables.</p>
     </div>
     <div class="trace-card">
       <span class="source-tag">Projet : Plateforme No-Code IAM</span>
       <p>Travail au sein d'un projet Full Stack IA associant plusieurs partenaires (<strong>LISSI, Evidian,
         Maidis</strong>), dans un contexte pluridisciplinaire où il a fallu situer mon rôle sur les aspects
-        conception et architecture backend, tout en assurant une veille numérique active sur les agents IA (LLM)
-        et leur intégration dans des workflows d'identité — une illustration directe de l'AC1 (organiser et
-        partager une veille numérique) et de l'AC3 (guider la conduite du changement informatique).</p>
+        conception et architecture backend, tout en assurant une veille active sur les agents IA (des programmes
+        s'appuyant sur des modèles de langage) et leur intégration dans des processus de gestion des identités —
+        une illustration directe de deux savoir-faire attendus : organiser et partager une veille technologique,
+        et accompagner le changement informatique dans une organisation.</p>
     </div>
     <div class="trace-card">
       <span class="source-tag">Stage : Rakedd Consulting</span>
@@ -179,7 +256,7 @@
     </div>
     <ul class="improve-list">
       <li>Prendre progressivement plus de responsabilités de coordination, pour aller au-delà d'un rôle de
-        contributrice technique vers un rôle d'accompagnement du management de projet (AC4).</li>
+        contributrice technique vers un rôle d'accompagnement du management de projet (savoir-faire n° 4).</li>
       <li>Structurer une veille numérique plus régulière et formalisée (outils de curation, partage d'articles
         avec l'équipe) plutôt qu'une veille ponctuelle liée aux besoins immédiats d'un projet.</li>
       <li>Développer ma pratique de l'anglais technique à l'oral, pour être plus à l'aise dans des échanges

@@ -38,7 +38,7 @@
         <li><a href="index.html">Profil</a></li>
         <li><a href="projets.html" class="active">Expériences &amp; projets</a></li>
         <li><a href="parcours.html">Parcours</a></li>
-        <li><a href="formation-terrain.html">Formation &amp; terrain</a></li>
+        <li><a href="competences.html">Compétences</a></li>
         <li><a href="mailto:hawambo89@gmail.com" class="nav-cta">Me contacter</a></li>
       </ul>
     </nav>
@@ -56,15 +56,16 @@
   <section class="block container" id="esbanque">
     <div class="section-head">
       <span class="kicker">Stage · Juin – Sept 2026 · en cours</span>
-      <h2>Outil de centralisation et de monitoring des logs</h2>
+      <h2>Outil de centralisation et de supervision des journaux d'activité</h2>
       <p class="place" style="color:var(--text-faint);">ESBanque, Nanterre — Développement / Data</p>
     </div>
     <div class="card project-card">
       <div class="proj-part">
         <h4>Contexte</h4>
-        <p>Les traitements automatisés de l'entreprise produisent des logs dispersés entre plusieurs sources,
+        <p>Les traitements automatisés de l'entreprise produisent des journaux d'activité — les « logs » — dispersés
+          entre plusieurs sources,
           ce qui rend difficile le suivi des incidents et la mesure de la fiabilité du système d'information.
-          La mission, encadrée par un chef de projet MOE, consiste à centraliser, analyser et visualiser ces
+          La mission, encadrée par un chef de projet côté maîtrise d'œuvre — l'équipe qui définit le besoin et pilote le projet sans écrire le code —, consiste à centraliser, analyser et visualiser ces
           logs afin d'en faire un outil de pilotage.</p>
       </div>
       <div class="proj-part">
@@ -81,8 +82,44 @@
       <div class="proj-part">
         <h4>Apports</h4>
         <p class="outcome">Des logs jusqu'ici éparpillés deviennent une <strong>source unique et normalisée</strong>,
-          exploitable par la MOE pour piloter la fiabilité des traitements, sans consultation manuelle de chaque
+          exploitable par la maîtrise d'œuvre pour piloter la fiabilité des traitements, sans consultation manuelle de chaque
           système.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Chaîne de traitement — schéma de principe</h4>
+        <div class="diagram-wrap">
+          <svg class="diagram" viewBox="0 0 720 210" role="img" aria-label="Chaîne de traitement : des sources de logs multiples alimentent une centralisation, puis une normalisation, puis un suivi des statuts OK ou erreur, et enfin des indicateurs restitués dans une interface de visualisation destinée à la maîtrise d'œuvre.">
+            <defs>
+              <marker id="ar-esb" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
+            </defs>
+            <rect class="d-box" x="9" y="26" width="110" height="60" rx="8" opacity="0.5"/>
+            <rect class="d-box" x="5" y="32" width="110" height="60" rx="8" opacity="0.75"/>
+            <rect class="d-box" x="1" y="38" width="110" height="60" rx="8"/>
+            <text class="d-title" x="56" y="62" text-anchor="middle">Sources</text>
+            <text class="d-sub" x="56" y="78" text-anchor="middle">traitements auto.</text>
+            <path class="d-line" d="M115 68 H 145" marker-end="url(#ar-esb)"/>
+            <rect class="d-box" x="151" y="38" width="118" height="60" rx="8"/>
+            <text class="d-title" x="210" y="62" text-anchor="middle">Centralisation</text>
+            <text class="d-sub" x="210" y="78" text-anchor="middle">collecte unique</text>
+            <path class="d-line" d="M269 68 H 295" marker-end="url(#ar-esb)"/>
+            <rect class="d-box" x="301" y="38" width="118" height="60" rx="8"/>
+            <text class="d-title" x="360" y="62" text-anchor="middle">Normalisation</text>
+            <text class="d-sub" x="360" y="78" text-anchor="middle">format commun</text>
+            <path class="d-line" d="M419 68 H 445" marker-end="url(#ar-esb)"/>
+            <rect class="d-box" x="451" y="38" width="118" height="60" rx="8"/>
+            <text class="d-title" x="510" y="62" text-anchor="middle">Statuts</text>
+            <text class="d-sub" x="510" y="78" text-anchor="middle">OK / erreur</text>
+            <path class="d-line" d="M569 68 H 595" marker-end="url(#ar-esb)"/>
+            <rect class="d-box-accent" x="601" y="38" width="118" height="60" rx="8"/>
+            <text class="d-title" x="660" y="62" text-anchor="middle">Indicateurs</text>
+            <text class="d-sub" x="660" y="78" text-anchor="middle">taux de succès</text>
+            <path class="d-line" d="M660 98 V 138" marker-end="url(#ar-esb)"/>
+            <rect class="d-box-alt" x="301" y="144" width="418" height="52" rx="8"/>
+            <text class="d-title" x="510" y="168" text-anchor="middle">Interface de visualisation</text>
+            <text class="d-sub" x="510" y="184" text-anchor="middle">pilotage de la fiabilité par la maîtrise d'œuvre</text>
+          </svg>
+          <p class="diagram-note">Schéma de principe : étapes de la chaîne de traitement, sans nommer les systèmes internes ni exposer de donnée.</p>
+        </div>
       </div>
       <ul class="tags">
         <li>Centralisation de logs</li><li>Monitoring</li><li>Normalisation de données</li><li>Dashboard</li><li>Indicateurs / KPI</li><li>SQL</li>
@@ -101,25 +138,70 @@
         <h4>Contexte</h4>
         <p>Dans une organisation, créer, modifier ou supprimer un compte utilisateur suppose d'intervenir sur
           six systèmes distincts qui ne communiquent pas entre eux. L'objectif du projet : permettre de construire
-          ces processus d'identité sous forme de <strong>workflows no-code</strong>, sans développement
+          ces processus d'identité sous forme de <strong>parcours paramétrables sans écrire de code</strong>
+          (approche « no-code »), sans développement
           d'intégration spécifique à chaque opération.</p>
       </div>
       <div class="proj-part">
         <h4>Rôle et contributions</h4>
         <ul class="details">
-          <li>Développement de la plateforme no-code de gestion de workflows IAM</li>
+          <li>Développement de la plateforme permettant de construire ces parcours d'identité sans écrire de code</li>
           <li>Orchestration multi-systèmes : Active Directory, LDAP, SQL, Odoo, GLPI, Keycloak</li>
-          <li>Conception d'une gateway transactionnelle avec mécanisme de rollback et journalisation</li>
-          <li>Modélisation des processus métier en BPMN / CMMN</li>
+          <li>Conception d'une gateway transactionnelle — un point de passage unique par lequel transite toute
+            opération — capable d'annuler l'ensemble des étapes déjà effectuées (rollback) en cas d'échec, et de
+            journaliser chacune d'elles</li>
+          <li>Description des processus métier en BPMN / CMMN, deux notations standard pour représenter un
+            enchaînement d'étapes de façon lisible par des non-développeurs</li>
           <li>Intégration de MidPoint et d'agents IA (LLM) pour la réconciliation des identités et
-            l'adaptation dynamique des workflows</li>
+            l'adaptation automatique de ces parcours</li>
         </ul>
       </div>
       <div class="proj-part">
         <h4>Apports</h4>
         <p class="outcome">Une opération d'identité qui échoue à mi-parcours ne laisse plus le SI dans un état
-          incohérent : la gateway <strong>annule l'ensemble de la transaction et journalise chaque étape</strong>,
+          incohérent : le point de passage central <strong>annule l'ensemble de l'opération et journalise chaque
+          étape</strong>,
           à travers six systèmes hétérogènes.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Architecture — schéma de principe</h4>
+        <div class="diagram-wrap">
+          <svg class="diagram" viewBox="0 0 720 300" role="img" aria-label="Un parcours décrit sans code alimente un point de passage unique, qui pilote six systèmes : Active Directory, LDAP, SQL, Odoo, GLPI et Keycloak. En cas d'échec sur l'un d'eux, l'opération est annulée en totalité.">
+            <defs>
+              <marker id="ar-iam" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
+              <marker id="ar-iam-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow-alt"/></marker>
+            </defs>
+            <rect class="d-box-alt" x="210" y="8" width="300" height="50" rx="8"/>
+            <text class="d-title" x="360" y="30" text-anchor="middle">Parcours paramétré sans code</text>
+            <text class="d-sub" x="360" y="46" text-anchor="middle">processus métier modélisé en BPMN / CMMN</text>
+            <path class="d-line" d="M360 58 V 94" marker-end="url(#ar-iam)"/>
+            <rect class="d-box-accent" x="160" y="100" width="400" height="64" rx="8"/>
+            <text class="d-title" x="360" y="128" text-anchor="middle">Point de passage unique</text>
+            <text class="d-sub" x="360" y="146" text-anchor="middle">tout ou rien · annulation en cas d'échec · trace de chaque étape</text>
+            <path class="d-line" d="M360 164 V 190 H 80 V 214" marker-end="url(#ar-iam)"/>
+            <path class="d-line" d="M360 164 V 190 H 192 V 214" marker-end="url(#ar-iam)"/>
+            <path class="d-line" d="M360 164 V 190 H 304 V 214" marker-end="url(#ar-iam)"/>
+            <path class="d-line" d="M360 164 V 190 H 416 V 214" marker-end="url(#ar-iam)"/>
+            <path class="d-line" d="M360 164 V 190 H 528 V 214" marker-end="url(#ar-iam)"/>
+            <path class="d-line" d="M360 164 V 190 H 640 V 214" marker-end="url(#ar-iam)"/>
+            <rect class="d-box" x="30" y="220" width="100" height="44" rx="8"/>
+            <text class="d-title" x="80" y="240" text-anchor="middle">Active</text>
+            <text class="d-title" x="80" y="255" text-anchor="middle">Directory</text>
+            <rect class="d-box" x="142" y="220" width="100" height="44" rx="8"/>
+            <text class="d-title" x="192" y="247" text-anchor="middle">LDAP</text>
+            <rect class="d-box" x="254" y="220" width="100" height="44" rx="8"/>
+            <text class="d-title" x="304" y="247" text-anchor="middle">SQL</text>
+            <rect class="d-box" x="366" y="220" width="100" height="44" rx="8"/>
+            <text class="d-title" x="416" y="247" text-anchor="middle">Odoo</text>
+            <rect class="d-box" x="478" y="220" width="100" height="44" rx="8"/>
+            <text class="d-title" x="528" y="247" text-anchor="middle">GLPI</text>
+            <rect class="d-box" x="590" y="220" width="100" height="44" rx="8"/>
+            <text class="d-title" x="640" y="247" text-anchor="middle">Keycloak</text>
+            <path class="d-line-dash" d="M30 242 H 14 V 132 H 154" marker-end="url(#ar-iam-a)"/>
+            <text class="d-tag" x="360" y="288" text-anchor="middle">Échec sur un système → l'opération est annulée en totalité, partout</text>
+          </svg>
+          <p class="diagram-note">Schéma de principe : rôle du point de passage central et sens des échanges. Les six systèmes représentés sont ceux effectivement pilotés.</p>
+        </div>
       </div>
       <ul class="tags">
         <li>IAM</li><li>Active Directory</li><li>LDAP</li><li>Keycloak</li><li>MidPoint</li><li>Odoo</li><li>GLPI</li><li>BPMN / CMMN</li><li>LLM</li>
@@ -161,6 +243,45 @@
           l'ajout d'une langue, d'une métadonnée ou d'un type de catégorie ne nécessite pas de reprendre le
           modèle de données.</p>
       </div>
+      <div class="proj-part">
+        <h4>Architecture — schéma de principe</h4>
+        <div class="diagram-wrap">
+          <svg class="diagram" viewBox="0 0 720 260" role="img" aria-label="À gauche, le schéma de données : l'entité Mot relie Traduction, Catégorie et Métadonnées. À droite, la synchronisation entre le stockage local de l'application mobile et le stockage serveur Supabase.">
+            <defs>
+              <marker id="ar-rak" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
+              <marker id="ar-rak-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow-alt"/></marker>
+              <marker id="ar-rak-b" viewBox="0 0 8 8" refX="1" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M8 0 L0 4 L8 8 z" class="d-arrow-alt"/></marker>
+            </defs>
+            <text class="d-tag" x="8" y="14">Schéma de données évolutif</text>
+            <text class="d-tag" x="420" y="14">Persistance &amp; synchronisation</text>
+            <line class="d-line-dash" x1="375" y1="24" x2="375" y2="240" opacity="0.4"/>
+            <rect class="d-box-accent" x="110" y="30" width="120" height="42" rx="8"/>
+            <text class="d-title" x="170" y="56" text-anchor="middle">Mot</text>
+            <path class="d-line" d="M170 72 V 91"/>
+            <path class="d-line" d="M170 91 H 85 V 104" marker-end="url(#ar-rak)"/>
+            <path class="d-line" d="M170 91 H 245 V 104" marker-end="url(#ar-rak)"/>
+            <path class="d-line" d="M170 91 V 184" marker-end="url(#ar-rak)"/>
+            <rect class="d-box" x="20" y="110" width="130" height="42" rx="8"/>
+            <text class="d-title" x="85" y="130" text-anchor="middle">Traduction</text>
+            <text class="d-sub" x="85" y="145" text-anchor="middle">1 mot → n langues</text>
+            <rect class="d-box" x="180" y="110" width="130" height="42" rx="8"/>
+            <text class="d-title" x="245" y="130" text-anchor="middle">Catégorie</text>
+            <text class="d-sub" x="245" y="145" text-anchor="middle">dont personnalisées</text>
+            <rect class="d-box" x="80" y="190" width="200" height="48" rx="8"/>
+            <text class="d-title" x="180" y="210" text-anchor="middle">Métadonnées</text>
+            <text class="d-sub" x="180" y="226" text-anchor="middle">langue · date · niveau · notes</text>
+            <rect class="d-box" x="420" y="30" width="280" height="56" rx="8"/>
+            <text class="d-title" x="560" y="54" text-anchor="middle">Application mobile</text>
+            <text class="d-sub" x="560" y="70" text-anchor="middle">stockage local (React Native)</text>
+            <path class="d-line-dash" d="M560 92 V 154" marker-end="url(#ar-rak-a)" marker-start="url(#ar-rak-b)"/>
+            <text class="d-tag" x="576" y="126">synchronisation</text>
+            <rect class="d-box-alt" x="420" y="160" width="280" height="56" rx="8"/>
+            <text class="d-title" x="560" y="184" text-anchor="middle">Supabase</text>
+            <text class="d-sub" x="560" y="200" text-anchor="middle">stockage serveur · multi-utilisateurs</text>
+          </svg>
+          <p class="diagram-note">Schéma de principe reconstitué : structure du modèle et sens des flux, sans donnée applicative.</p>
+        </div>
+      </div>
       <ul class="tags">
         <li>Supabase</li><li>Modélisation de données</li><li>React Native</li><li>Authentification</li><li>Multi-utilisateurs</li><li>Synchronisation</li>
       </ul>
@@ -177,7 +298,8 @@
       <div class="proj-part">
         <h4>Contexte</h4>
         <p>Développer une application web consommant des données météorologiques dynamiques, avec une séparation
-          rigoureuse des responsabilités entre modèle, vue et contrôleur.</p>
+          rigoureuse des responsabilités entre les données (modèle), l'affichage (vue) et la logique (contrôleur)
+          — c'est ce que désigne l'architecture MVC.</p>
       </div>
       <div class="proj-part">
         <h4>Rôle et contributions</h4>
@@ -240,7 +362,7 @@
       <a href="mailto:hawambo89@gmail.com">Email</a>
     </div>
     <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · <span data-academic-year></span></p>
-    <p class="footer-annex"><a href="competence-4.html">Annexe pédagogique — référentiel de compétences BUT</a></p>
+    <p class="footer-annex"><a href="competences.html">Compétences du référentiel BUT — analyse et preuves</a></p>
   </div>
 </footer>
 

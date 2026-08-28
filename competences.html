@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
+<title>Compétences — Hawa M'Bodj</title>
+<meta name="description" content="Les trois compétences terminales du BUT Informatique parcours Données : gérer des données de l'information, conduire un projet, collaborer en équipe. Auto-évaluation savoir-faire par savoir-faire, et preuves à l'appui.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">HM</span>
+      M'Bodj Hawa
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Activer le thème clair">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="projets.html">Expériences &amp; projets</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="competences.html" class="active">Compétences</a></li>
+        <li><a href="mailto:hawambo89@gmail.com" class="nav-cta">Me contacter</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Les compétences visées en fin de BUT Informatique · parcours Données</span>
+    <h1>Trois compétences, <span class="gradient-text">onze savoir-faire, des preuves</span></h1>
+    <p class="lead">Gérer des données de l'information, conduire un projet, collaborer au sein d'une équipe
+      informatique. Le référentiel du BUT décompose ces trois compétences en onze « apprentissages critiques » :
+      les savoir-faire attendus en fin de parcours. Pour chacun : le niveau que j'estime avoir atteint, la
+      réalisation qui l'atteste, et ce qu'il me reste à franchir. L'auto-évaluation est volontairement nuancée —
+      trois savoir-faire sur onze sont encore devant moi, et je préfère les nommer.</p>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Vue d'ensemble</span>
+      <h2>Les trois compétences</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <span class="comp-badge">Compétence 4</span>
+        <h3>Gérer des données de l'information</h3>
+        <p style="font-size:0.92rem;">Capturer, préparer, exploiter et optimiser des données hétérogènes, de la
+          modélisation jusqu'à la restitution décisionnelle.</p>
+        <p style="font-size:0.88rem; color:var(--text-faint);"><strong style="color:var(--text);">4 savoir-faire</strong>
+          — 2 maîtrisés, 2 en consolidation</p>
+        <ul class="tags">
+          <li>UE5.4</li><li>UE6.4</li>
+        </ul>
+        <a href="competence-4.html">Analyse détaillée →</a>
+      </div>
+      <div class="card">
+        <span class="comp-badge">Compétence 5</span>
+        <h3>Conduire un projet</h3>
+        <p style="font-size:0.92rem;">Intégrer et adapter un projet informatique dans le système d'information
+          d'une organisation, en mesurant ses impacts.</p>
+        <p style="font-size:0.88rem; color:var(--text-faint);"><strong style="color:var(--text);">3 savoir-faire</strong>
+          — 1 maîtrisé, 1 en consolidation, 1 à développer</p>
+        <ul class="tags">
+          <li>UE5.5</li><li>UE6.5</li>
+        </ul>
+        <a href="competence-5.html">Analyse détaillée →</a>
+      </div>
+      <div class="card">
+        <span class="comp-badge">Compétence 6</span>
+        <h3>Collaborer en équipe informatique</h3>
+        <p style="font-size:0.92rem;">Situer son rôle dans une équipe, organiser une veille, accompagner le
+          changement et le management de projet.</p>
+        <p style="font-size:0.88rem; color:var(--text-faint);"><strong style="color:var(--text);">4 savoir-faire</strong>
+          — 2 en consolidation, 2 à développer</p>
+        <ul class="tags">
+          <li>UE5.6</li><li>UE6.6</li>
+        </ul>
+        <a href="competence-6.html">Analyse détaillée →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Auto-évaluation</span>
+      <h2>Les onze savoir-faire attendus, d'un seul coup d'œil</h2>
+      <p>Le détail de chaque ligne — preuve, analyse, palier suivant — se trouve sur la page de la compétence
+        correspondante.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="resource-table res-eval">
+        <thead>
+          <tr><th>Compétence</th><th>Savoir-faire attendu</th><th>Niveau atteint</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">C4 · AC1</td>
+            <td>Capturer et stocker des données volumineuses et hétérogènes</td>
+            <td><span class="level level-solid">Maîtrisé</span></td>
+          </tr>
+          <tr>
+            <td class="code">C4 · AC2</td>
+            <td>Préparer et extraire les données pour l'exploitation</td>
+            <td><span class="level level-solid">Maîtrisé</span></td>
+          </tr>
+          <tr>
+            <td class="code">C4 · AC3</td>
+            <td>Appliquer des méthodes d'exploration et d'exploitation des données</td>
+            <td><span class="level level-mid">En consolidation</span></td>
+          </tr>
+          <tr>
+            <td class="code">C4 · AC4</td>
+            <td>Mettre en production et optimiser le système de gestion de données</td>
+            <td><span class="level level-mid">En consolidation</span></td>
+          </tr>
+          <tr>
+            <td class="code">C5 · AC1</td>
+            <td>Mesurer les impacts économiques, sociétaux et technologiques d'un projet</td>
+            <td><span class="level level-open">À développer</span></td>
+          </tr>
+          <tr>
+            <td class="code">C5 · AC2</td>
+            <td>Intégrer un projet informatique dans le système d'information d'une organisation</td>
+            <td><span class="level level-solid">Maîtrisé</span></td>
+          </tr>
+          <tr>
+            <td class="code">C5 · AC3</td>
+            <td>Savoir adapter un système d'information</td>
+            <td><span class="level level-mid">En consolidation</span></td>
+          </tr>
+          <tr>
+            <td class="code">C6 · AC1</td>
+            <td>Organiser et partager une veille numérique</td>
+            <td><span class="level level-mid">En consolidation</span></td>
+          </tr>
+          <tr>
+            <td class="code">C6 · AC2</td>
+            <td>Identifier les enjeux de l'économie de l'innovation numérique</td>
+            <td><span class="level level-open">À développer</span></td>
+          </tr>
+          <tr>
+            <td class="code">C6 · AC3</td>
+            <td>Guider la conduite du changement informatique</td>
+            <td><span class="level level-open">À développer</span></td>
+          </tr>
+          <tr>
+            <td class="code">C6 · AC4</td>
+            <td>Accompagner le management de projet informatique</td>
+            <td><span class="level level-mid">En consolidation</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Preuves tangibles</span>
+      <h2>Ce sur quoi ces niveaux s'appuient</h2>
+      <p>Chaque savoir-faire renvoie à une réalisation vérifiable, pas à une déclaration d'intention.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3><span class="card-icon">📐</span>Schémas d'architecture</h3>
+        <p style="font-size:0.94rem;">Trois schémas de principe reconstitués, intégrés aux fiches projet : la
+          chaîne de traitement des journaux d'activité, le point de passage unique reliant six systèmes, et le
+          modèle de données du
+          lexique avec sa synchronisation.</p>
+        <p style="font-size:0.88rem;"><a href="projets.html#esbanque">Chaîne de logs</a> ·
+          <a href="projets.html#iam">Gateway IAM</a> ·
+          <a href="projets.html#rakedd">Modèle de données</a></p>
+      </div>
+      <div class="card">
+        <h3><span class="card-icon">🔗</span>Code &amp; documents</h3>
+        <p style="font-size:0.94rem;">Le code des projets académiques et personnels est consultable sur mon dépôt.
+          Les livrables de stage restent internes à l'entreprise : ils sont ici représentés par des schémas de
+          principe, sans donnée ni système nommé.</p>
+        <!-- À compléter : remplacer le lien de profil par les liens directs vers les dépôts concernés. -->
+        <p style="font-size:0.88rem;"><a href="https://github.com/june0809" target="_blank" rel="noopener">github.com/june0809</a></p>
+      </div>
+      <div class="card">
+        <h3><span class="card-icon">🧭</span>Le transfert formation → terrain</h3>
+        <p style="font-size:0.94rem;">Une page retrace, mission par mission, quels enseignements ont été mobilisés,
+          ce qu'ils ont produit, et l'écart que la formation seule ne couvrait pas.</p>
+        <p style="font-size:0.88rem;"><a href="formation-terrain.html">Voir la passerelle formation &amp; terrain →</a></p>
+      </div>
+      <div class="card">
+        <h3><span class="card-icon">🗂️</span>Fiches de réalisation</h3>
+        <p style="font-size:0.94rem;">Cinq réalisations documentées selon le même format : contexte, rôle et
+          contributions, apports mesurables, technologies.</p>
+        <p style="font-size:0.88rem;"><a href="projets.html">Voir les réalisations →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Ma lecture d'ensemble</span>
+      <h2>Ce que ces trois compétences dessinent</h2>
+    </div>
+    <div class="card">
+      <p>En relisant ces onze savoir-faire, une ligne se dégage nettement : je suis solide là où la compétence
+        est <strong>technique et structurante</strong> — modéliser, normaliser, garantir la cohérence, insérer une
+        solution dans un existant. C'est cohérent avec le rôle que j'ai occupé sur mes trois expériences :
+        conception et architecture backend.</p>
+      <p>Ceux que je situe encore devant moi partagent eux aussi un point commun, et il est
+        instructif : ils portent tous sur ce qui entoure la technique — chiffrer un impact économique, situer une
+        solution dans un marché, accompagner des utilisateurs dans un changement. Ce ne sont pas des lacunes
+        théoriques : ce sont des situations que je n'ai pas encore vécues, parce que mes projets se sont
+        arrêtés à la livraison technique.</p>
+      <p>C'est précisément ce que j'attends de mon entrée dans la vie professionnelle : rester sur le terrain de
+        la donnée et de la gouvernance des identités, où je suis à l'aise, mais aller cette fois jusqu'au bout de
+        la chaîne — jusqu'à l'exploitation, jusqu'aux utilisateurs, jusqu'aux arbitrages de coût.</p>
+    </div>
+  </section>
+
+  <section class="block container">
+    <div class="section-head">
+      <span class="kicker">Contact</span>
+      <h2>Prendre contact</h2>
+      <p>Je reste disponible pour détailler l'une de ces compétences, une auto-évaluation ou l'architecture d'un
+        projet.</p>
+    </div>
+    <div class="cta-row" style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+      <a href="projets.html" class="btn btn-primary">Voir les réalisations</a>
+      <a href="mailto:hawambo89@gmail.com" class="btn btn-ghost">hawambo89@gmail.com</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/june0809" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hawambo89@gmail.com">Email</a>
+    </div>
+    <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · <span data-academic-year></span></p>
+    <p class="footer-annex"><a href="formation-terrain.html">Formation &amp; terrain — le transfert des acquis</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

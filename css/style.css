@@ -370,8 +370,8 @@ nav.main-nav > ul > li > a.nav-cta:hover {
     padding: 0.5rem 0 0;
   }
   .resource-table td:first-child { padding-top: 0; }
-  .resource-table td:nth-child(2)::before {
-    content: "Apports";
+  .res-cours td:nth-child(2)::before {
+    content: "Ce que j'y ai appris";
     display: block;
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -380,8 +380,8 @@ nav.main-nav > ul > li > a.nav-cta:hover {
     color: var(--text-faint);
     margin-bottom: 0.2rem;
   }
-  .resource-table td:nth-child(3)::before {
-    content: "Application en stage / projet";
+  .res-cours td:nth-child(3)::before {
+    content: "Où cela m'a servi";
     display: block;
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -390,6 +390,22 @@ nav.main-nav > ul > li > a.nav-cta:hover {
     color: var(--text-faint);
     margin-bottom: 0.2rem;
   }
+  .res-transfert td:nth-child(2)::before,
+  .res-transfert td:nth-child(3)::before,
+  .res-eval td:nth-child(2)::before,
+  .res-eval td:nth-child(3)::before {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    color: var(--text-faint);
+    margin-bottom: 0.2rem;
+  }
+  .res-transfert td:nth-child(2)::before { content: "Où il a servi"; }
+  .res-transfert td:nth-child(3)::before { content: "Ce qu'il a rendu possible"; }
+  .res-eval td:nth-child(2)::before { content: "Savoir-faire attendu"; }
+  .res-eval td:nth-child(3)::before { content: "Niveau atteint"; }
   .resource-table td.code {
     font-size: 0.95rem;
     font-weight: 700;
@@ -1011,3 +1027,100 @@ footer.site-footer .footer-annex {
   .bridge-flow { grid-template-columns: 1fr; gap: 0.8rem; }
   .bridge-arrow { justify-self: start; transform: rotate(90deg); }
 }
+
+/* ---------- Schemas de principe (SVG inline, theme-aware) ---------- */
+
+.diagram-wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  padding: 1.1rem 1rem 0.8rem;
+  overflow-x: auto;
+}
+
+.diagram { width: 100%; min-width: 560px; height: auto; display: block; }
+
+.diagram .d-box { fill: var(--card); stroke: var(--border); stroke-width: 1.5; }
+.diagram .d-box-accent { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+.diagram .d-box-alt { fill: var(--accent-2-soft); stroke: var(--accent-2); stroke-width: 1.5; }
+.diagram .d-title { fill: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 13px; font-weight: 600; }
+.diagram .d-sub { fill: var(--text-faint); font-family: "Inter", sans-serif; font-size: 10.5px; }
+.diagram .d-tag { fill: var(--accent-2); font-family: "Inter", sans-serif; font-size: 10.5px; font-weight: 600; }
+.diagram .d-line { stroke: var(--text-faint); stroke-width: 1.5; fill: none; }
+.diagram .d-line-dash { stroke: var(--accent-2); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+.diagram .d-arrow { fill: var(--text-faint); }
+.diagram .d-arrow-alt { fill: var(--accent-2); }
+
+.diagram-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+/* ---------- Auto-evaluation par apprentissage critique ---------- */
+
+.ac-eval {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.ac-eval:last-of-type { margin-bottom: 0; }
+
+.ac-eval-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.ac-eval-head .num {
+  flex: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ac-eval-head h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  flex: 1 1 260px;
+}
+
+.level {
+  flex: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 100px;
+  padding: 0.22rem 0.7rem;
+  white-space: nowrap;
+}
+
+.level-solid { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+.level-mid { background: var(--accent-2-soft); color: var(--accent-2); border: 1px solid var(--accent-2); }
+.level-open { background: transparent; color: var(--text-faint); border: 1px dashed var(--border); }
+
+.ac-eval p {
+  font-size: 0.92rem;
+  margin: 0 0 0.6rem;
+  padding-left: 2.3rem;
+}
+
+.ac-eval p:last-child { margin-bottom: 0; }
+.ac-eval p strong { color: var(--text); }
+
+@media (max-width: 560px) { .ac-eval p { padding-left: 0; } }

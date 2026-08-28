@@ -38,14 +38,15 @@
         <li><a href="index.html">Profil</a></li>
         <li><a href="projets.html">Expériences &amp; projets</a></li>
         <li><a href="parcours.html">Parcours</a></li>
-        <li><a href="formation-terrain.html">Formation &amp; terrain</a></li>
         <li>
           <details class="nav-dropdown" open>
-            <summary>Annexe BUT</summary>
+            <summary>Compétences</summary>
             <div class="dropdown-menu">
+              <a href="competences.html"><span>Vue d'ensemble</span><small>les 3 compétences du BUT</small></a>
               <a href="competence-4.html"><span>Gérer des données de l'information</span><small>UE5.4 · UE6.4</small></a>
               <a href="competence-5.html" class="active"><span>Conduire un projet</span><small>UE5.5 · UE6.5</small></a>
               <a href="competence-6.html"><span>Collaborer en équipe</span><small>UE5.6 · UE6.6</small></a>
+              <a href="formation-terrain.html"><span>Formation &amp; terrain</span><small>transfert des acquis</small></a>
             </div>
           </details>
         </li>
@@ -56,8 +57,8 @@
 
 <div class="container annex-wrap">
   <div class="annex-banner">
-    <span>📎 <strong>Annexe pédagogique</strong> — cette page documente le référentiel de compétences du BUT Informatique (apprentissages critiques, ressources, traces &amp; preuves).</span>
-    <a href="projets.html">Accéder aux réalisations →</a>
+    <span><strong>Compétence du référentiel BUT Informatique</strong> — les savoir-faire attendus, mon auto-évaluation, les cours suivis et les preuves.</span>
+    <a href="competences.html">Vue d'ensemble des 3 compétences →</a>
   </div>
 </div>
 
@@ -76,8 +77,8 @@
     <div class="ac-ce-grid">
       <div>
         <div class="section-head">
-          <span class="kicker">Apprentissages critiques visés</span>
-          <h2>AC</h2>
+          <span class="kicker">Apprentissages critiques (AC) du référentiel</span>
+          <h2>Ce que je dois savoir faire</h2>
         </div>
         <ul class="numbered-list ac-list">
           <li><span class="num">1</span><span>Mesurer les impacts économiques, sociétaux et technologiques d'un projet informatique</span></li>
@@ -87,8 +88,8 @@
       </div>
       <div>
         <div class="section-head">
-          <span class="kicker">Composantes essentielles</span>
-          <h2>CE</h2>
+          <span class="kicker">Composantes essentielles (CE) du référentiel</span>
+          <h2>Dans quelles conditions</h2>
         </div>
         <ul class="numbered-list ce-list">
           <li><span class="num">1</span><span>En communiquant efficacement avec les différents acteurs d'un projet</span></li>
@@ -100,15 +101,73 @@
     </div>
   </section>
 
+  <section class="block container" id="auto-evaluation">
+    <div class="section-head">
+      <span class="kicker">Mon auto-évaluation</span>
+      <h2>Où j'en suis, savoir-faire par savoir-faire</h2>
+      <p>Le référentiel du BUT décompose chaque compétence en « apprentissages critiques » : les savoir-faire
+        attendus en fin de parcours. Pour chacun, voici le niveau que j'estime avoir atteint, la réalisation qui l'atteste,
+        ce que la situation m'a appris, et le palier suivant.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">1</span>
+        <h3>Mesurer les impacts économiques, sociétaux et technologiques d'un projet informatique</h3>
+        <span class="level level-open">À développer</span>
+      </div>
+      <p><strong>Preuve :</strong> analyse des choix d'infrastructure de la plateforme IAM (hébergement interne
+        ou cloud) au regard des enjeux de coût et de souveraineté des données d'identité.</p>
+      <p><strong>Mon analyse :</strong> c'est le savoir-faire où je me situe le plus en retrait, et je préfère
+        le dire. Mon raisonnement reste qualitatif : je sais poser les bonnes questions — dépendance à un
+        éditeur, sensibilité des données, impact d'un stockage qui grossit — mais je n'ai jamais chiffré un coût
+        d'infrastructure ni comparé deux scénarios budgétés.</p>
+      <p><strong>Palier suivant :</strong> chiffrer, d'ici la fin du stage ESBanque, le coût de stockage et de
+        traitement de la centralisation des logs, pour passer de l'intuition à l'estimation.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">2</span>
+        <h3>Savoir intégrer un projet informatique dans le système d'information d'une organisation</h3>
+        <span class="level level-solid">Maîtrisé</span>
+      </div>
+      <p><strong>Preuve :</strong> outil de supervision greffé sur des traitements automatisés déjà en place
+        (ESBanque) et point de passage unique inséré entre six systèmes existants
+        — <a href="projets.html#iam">voir le schéma d'architecture</a>.</p>
+      <p><strong>Mon analyse :</strong> ces deux projets m'ont appris la même chose : on ne conçoit pas contre
+        l'existant. Sur l'IAM, aucun des six systèmes ne pouvait être modifié pour nous arranger — c'est la
+        solution qui devait s'adapter à eux. Cette contrainte, que je vivais d'abord comme une limite, est en
+        réalité ce qui a structuré la solution.</p>
+      <p><strong>Palier suivant :</strong> anticiper plus tôt les contraintes d'exploitation — qui reprend
+        l'outil, comment il est supervisé — plutôt que de les découvrir en fin de conception.</p>
+    </div>
+
+    <div class="ac-eval">
+      <div class="ac-eval-head">
+        <span class="num">3</span>
+        <h3>Savoir adapter un système d'information</h3>
+        <span class="level level-mid">En consolidation</span>
+      </div>
+      <p><strong>Preuve :</strong> workflows no-code permettant de faire évoluer les processus d'identité sans
+        redéveloppement, et gestion des catégories personnalisées côté application mobile (Rakedd).</p>
+      <p><strong>Mon analyse :</strong> je sais concevoir un système qui se laisse adapter — c'est tout l'objet
+        de l'approche no-code. En revanche, je n'ai encore jamais accompagné les utilisateurs dans le changement
+        que cette adaptation provoque : mes interlocuteurs ont toujours été techniques.</p>
+      <p><strong>Palier suivant :</strong> participer à une phase de déploiement auprès d'utilisateurs non
+        techniques, où l'adaptation du système d'information se joue autant en organisation qu'en code.</p>
+    </div>
+  </section>
+
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">Ressources mobilisées</span>
-      <h2>Apports pour ma pratique</h2>
+      <span class="kicker">Cours et modules suivis</span>
+      <h2>Ce que la formation m'a apporté</h2>
     </div>
     <div class="table-wrap">
-      <table class="resource-table">
+      <table class="resource-table res-cours">
         <thead>
-          <tr><th>Ressource</th><th>Apports</th><th>Application en stage / projet</th></tr>
+          <tr><th>Cours</th><th>Ce que j'y ai appris</th><th>Où cela m'a servi</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -119,17 +178,17 @@
           <tr>
             <td class="code">R5.01<br>Initiation au management</td>
             <td>Bases de la gestion d'équipe et de projet (jalons, répartition des tâches)</td>
-            <td>Mobilisées pour structurer le suivi de la plateforme IAM, notamment son découpage en modules (workflows, gateway, intégration multi-systèmes).</td>
+            <td>Mobilisées pour structurer le suivi de la plateforme IAM, notamment son découpage en modules : les parcours, le point de passage central, les intégrations.</td>
           </tr>
           <tr>
             <td class="code">R5.C.10<br>Éco. durable et num.</td>
             <td>Sensibilisation aux impacts économiques, sociétaux et environnementaux du numérique</td>
-            <td>En lien direct avec l'AC1 ; m'aide à questionner les choix d'infrastructure (cloud, on-premise) du projet IAM.</td>
+            <td>Directement lié au savoir-faire n° 1 (mesurer les impacts d'un projet) ; m'aide à questionner les choix d'infrastructure (cloud, on-premise) du projet IAM.</td>
           </tr>
           <tr>
             <td class="code">R6.02<br>Droit du numérique et PI</td>
             <td>Cadre juridique du numérique et de la propriété intellectuelle</td>
-            <td>Mobilisé pour respecter les contraintes juridiques (CE2) lors de la conception d'un système manipulant des données d'identité sensibles.</td>
+            <td>Mobilisé pour respecter les contraintes juridiques exigées par le référentiel lors de la conception d'un système manipulant des données d'identité sensibles.</td>
           </tr>
         </tbody>
       </table>
@@ -138,24 +197,27 @@
 
   <section class="block container">
     <div class="section-head">
-      <span class="kicker">Traces &amp; preuves</span>
+      <span class="kicker">Preuves</span>
       <h2>Réalisations</h2>
     </div>
     <div class="trace-card">
       <span class="source-tag">Stage : ESBanque</span>
       <p>Participation à un projet visant à améliorer la fiabilité, le suivi et la performance du système
-        d'information de l'entreprise, encadrée par un chef de projet MOE : identification des sources de logs
-        existantes, définition d'indicateurs de suivi (taux de succès, erreurs) répondant à un besoin métier
-        concret. Ce cadrage par la MOE et la nécessité d'intégrer l'outil aux traitements automatisés déjà en
-        place illustrent l'AC2 (intégrer un projet dans le système d'information d'une organisation) et l'AC1
-        (mesurer les impacts d'un projet sur la fiabilité et la performance du SI).</p>
+        d'information de l'entreprise, encadrée par un chef de projet côté maîtrise d'œuvre — l'équipe qui définit
+        le besoin et pilote le projet sans écrire le code : identification des sources de logs existantes,
+        définition d'indicateurs de suivi (taux de succès, erreurs) répondant à un besoin concret. Ce cadrage et
+        la nécessité de greffer l'outil sur des traitements automatisés déjà en place illustrent deux savoir-faire
+        attendus : intégrer un projet dans le système d'information d'une organisation, et mesurer ses impacts sur
+        la fiabilité et la performance de ce système.</p>
     </div>
     <div class="trace-card">
       <span class="source-tag">Projet : Plateforme No-Code IAM</span>
       <p>Participation à la conception d'un projet système d'information à part entière : modélisation des
-        processus métier en <strong>BPMN / CMMN</strong>, intégration du projet dans un écosystème existant
-        (Active Directory, LDAP, Odoo, GLPI, Keycloak, MidPoint) et mise en place d'une gateway transactionnelle
-        garantissant la fiabilité du système (rollback, logs). Ce travail illustre directement la capacité à
+        processus métier en <strong>BPMN / CMMN</strong> — deux notations standard pour décrire un processus étape
+        par étape —, intégration du projet dans un écosystème existant (Active Directory, LDAP, Odoo, GLPI,
+        Keycloak, MidPoint) et mise en place d'une <strong>gateway transactionnelle</strong> : un point de passage
+        unique qui exécute une opération sur tous les systèmes concernés, ou l'annule intégralement si l'un d'eux
+        échoue, en gardant la trace de chaque étape. Ce travail illustre directement la capacité à
         intégrer un projet informatique dans le système d'information d'une organisation et à l'adapter aux
         contraintes existantes.</p>
     </div>
