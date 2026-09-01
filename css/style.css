@@ -482,12 +482,12 @@ nav.main-nav > ul > li > a.nav-cta:hover {
 /* ---------- Hero ---------- */
 
 .hero {
-  padding: clamp(2.8rem, 7vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
+  padding-block: clamp(2.8rem, 7vw, 4.5rem) clamp(2rem, 4vw, 3rem);
 }
 
 .hero .eyebrow {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   color: var(--accent);
   font-size: 0.85rem;
@@ -499,6 +499,8 @@ nav.main-nav > ul > li > a.nav-cta:hover {
 
 .hero .eyebrow::before {
   content: "";
+  margin-top: 0.42em;
+  flex: none;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -567,7 +569,7 @@ nav.main-nav > ul > li > a.nav-cta:hover {
 /* ---------- Sections ---------- */
 
 section.block {
-  padding: var(--section-pad) 0;
+  padding-block: var(--section-pad);
   border-top: 1px solid var(--border);
 }
 
@@ -792,7 +794,7 @@ section.block:first-of-type { border-top: none; }
 /* ---------- Compétence pages ---------- */
 
 .comp-hero {
-  padding: clamp(2.4rem, 6vw, 3.5rem) 0 clamp(1.4rem, 3vw, 2rem);
+  padding-block: clamp(2.4rem, 6vw, 3.5rem) clamp(1.4rem, 3vw, 2rem);
   border-bottom: 1px solid var(--border);
 }
 
@@ -1067,7 +1069,7 @@ footer.site-footer .footer-annex {
 /* ---------- Misc ---------- */
 
 .page-hero {
-  padding: clamp(2.4rem, 6vw, 3.5rem) 0 1rem;
+  padding-block: clamp(2.4rem, 6vw, 3.5rem) 1rem;
 }
 
 .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
@@ -1328,3 +1330,48 @@ footer.site-footer .footer-annex {
   .site-header { position: static; }
   nav.main-nav { max-height: 70dvh; }
 }
+
+/* Le commentaire du schéma reste devant les yeux quand on fait défiler le
+   dessin : sans cela il glisse hors de l'écran avec lui. */
+.diagram-wrap > .diagram-note {
+  position: sticky;
+  left: 0;
+}
+
+/* Sur écran tactile, un lien de 22 px se rate une fois sur deux : on épaissit
+   la zone cliquable sans changer l'aspect du texte. */
+@media (max-width: 640px) {
+  footer.site-footer .footer-links {
+    gap: 0.4rem 1.4rem;
+  }
+
+  .logo { min-height: 44px; }
+
+  footer.site-footer .footer-links a,
+  footer.site-footer .footer-annex a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .card > a,
+  .annex-banner a {
+    display: inline-block;
+    padding-top: 0.7rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .timeline-item a {
+    display: inline-block;
+    padding-block: 0.35rem;
+  }
+
+  .link-row a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+/* Rangée de liens en pied de carte. */
+.link-row { font-size: 0.88rem; }
