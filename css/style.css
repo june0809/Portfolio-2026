@@ -1,53 +1,58 @@
 /* =========================================================
    Portfolio BUT3 Informatique — Hawa M'Bodj
-   Thème : épuré / pro — palette douce (clair & sombre)
+   Thème : monochrome « encre de Chine » (clair & sombre)
+   Aucune couleur hors des logos de technologies au survol.
    ========================================================= */
 
 :root {
-  /* Mode sombre doux (slate + périwinkle/lavande) par défaut */
-  --bg: #191c26;
-  --bg-elevated: #212533;
-  --card: #212533;
-  --card-hover: #2a2f40;
-  --border: #333849;
-  --text: #e9ebf2;
-  --text-muted: #a6adbf;
-  --text-faint: #737b90;
-  --accent: #8fb5ec;
-  --accent-2: #bca9e6;
-  --accent-soft: #8fb5ec1a;
-  --accent-2-soft: #bca9e61a;
-  --gradient: linear-gradient(135deg, #8fb5ec 0%, #bca9e6 100%);
+  /* Encre sur fond noir (mode sombre par défaut) */
+  --bg: #101215;
+  --bg-elevated: #171a1e;
+  --card: #16191d;
+  --card-hover: #1e2126;
+  --border: #2b2f35;
+  --text: #eceef1;
+  --text-muted: #a5aab2;
+  --text-faint: #71767e;
+  --accent: #e3e6ea;
+  --accent-2: #9aa0a9;
+  --on-accent: #101215;
+  --accent-soft: #e3e6ea14;
+  --accent-2-soft: #9aa0a914;
+  --gradient: linear-gradient(135deg, #ffffff 0%, #8d939c 100%);
   --glow:
-    radial-gradient(ellipse 80% 50% at 50% -10%, #8fb5ec14, transparent),
-    radial-gradient(ellipse 60% 40% at 90% 10%, #bca9e60f, transparent);
-  --radius: 14px;
+    radial-gradient(ellipse 90% 55% at 50% -12%, rgba(255, 255, 255, 0.055), transparent 70%),
+    radial-gradient(ellipse 55% 45% at 88% 8%, rgba(255, 255, 255, 0.03), transparent 70%);
+  --grain-opacity: 0.035;
+  --radius: 12px;
   --radius-sm: 8px;
-  --shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
   --max-width: 1080px;
   font-size: 16px;
 }
 
-/* ---------- Mode clair doux ---------- */
+/* ---------- Encre sur papier (mode clair) ---------- */
 
 :root[data-theme="light"] {
-  --bg: #f6f7fb;
-  --bg-elevated: #ffffff;
-  --card: #ffffff;
-  --card-hover: #f0f3fa;
-  --border: #e5e8f1;
-  --text: #303649;
-  --text-muted: #616a80;
-  --text-faint: #98a0b3;
-  --accent: #6f9ae0;
-  --accent-2: #9585d4;
-  --accent-soft: #6f9ae014;
-  --accent-2-soft: #9585d414;
-  --gradient: linear-gradient(135deg, #7aa5e6 0%, #a08fda 100%);
+  --bg: #f7f6f3;
+  --bg-elevated: #fffefb;
+  --card: #fffefb;
+  --card-hover: #f1efe9;
+  --border: #e1ded6;
+  --text: #1a1c1f;
+  --text-muted: #55585e;
+  --text-faint: #8b8d93;
+  --accent: #1a1c1f;
+  --accent-2: #6a6d74;
+  --on-accent: #faf9f6;
+  --accent-soft: #1a1c1f0f;
+  --accent-2-soft: #6a6d740f;
+  --gradient: linear-gradient(135deg, #14161a 0%, #5d616a 100%);
   --glow:
-    radial-gradient(ellipse 80% 50% at 50% -10%, #6f9ae00d, transparent),
-    radial-gradient(ellipse 60% 40% at 90% 10%, #9585d40a, transparent);
-  --shadow: 0 8px 24px rgba(90, 110, 150, 0.10);
+    radial-gradient(ellipse 90% 55% at 50% -12%, rgba(20, 22, 26, 0.055), transparent 70%),
+    radial-gradient(ellipse 55% 45% at 88% 8%, rgba(20, 22, 26, 0.03), transparent 70%);
+  --grain-opacity: 0.05;
+  --shadow: 0 6px 20px rgba(26, 28, 31, 0.08);
 }
 
 * { box-sizing: border-box; }
@@ -71,6 +76,21 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Grain de papier / de lavis — très discret, purement décoratif */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
 h1, h2, h3, h4 {
   font-family: "Space Grotesk", "Inter", sans-serif;
   line-height: 1.2;
@@ -86,6 +106,31 @@ p { color: var(--text-muted); margin: 0 0 1em 0; }
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+/* En monochrome, un lien ne peut plus se distinguer par sa teinte :
+   les liens de contenu sont soulignés, comme sur un imprimé. */
+main p a,
+main li a,
+.annex-banner a,
+.footer-annex a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+main p a:hover,
+main li a:hover,
+.annex-banner a:hover,
+.footer-annex a:hover { text-decoration-color: currentColor; }
+
+.card > a {
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+}
+
+.card > a:hover { border-bottom-color: var(--accent); text-decoration: none; }
 
 ul { padding-left: 0; list-style: none; }
 
@@ -143,7 +188,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--on-accent);
   font-weight: 700;
   font-size: 0.85rem;
 }
@@ -233,7 +278,7 @@ nav.main-nav summary:hover {
 }
 
 nav.main-nav > ul > li > a.active {
-  color: #fff;
+  color: var(--on-accent);
   background: var(--accent);
 }
 
@@ -455,7 +500,7 @@ nav.main-nav > ul > li > a.nav-cta:hover {
   height: 8px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 12px var(--accent);
+  box-shadow: none;
 }
 
 .hero p.lead {
@@ -484,7 +529,7 @@ nav.main-nav > ul > li > a.nav-cta:hover {
 
 .btn-primary {
   background: var(--gradient);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .btn-primary:hover { opacity: 0.9; text-decoration: none; }
@@ -591,6 +636,94 @@ section.block:first-of-type { border-top: none; }
   border-radius: 6px;
   color: var(--text-muted);
 }
+
+/* ---------- Technologies : logo à l'encre, couleur de marque au survol ----------
+   Le logo est toujours visible. Au repos il est encré (couleur du texte) ;
+   au survol il reprend la couleur officielle de la marque (--brand). */
+
+.skill-card ul li.tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.7rem 0.32rem 0.55rem;
+  transition: color 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.tech-mark {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  opacity: 0.7;
+  transition: background-color 0.18s ease, opacity 0.18s ease;
+  -webkit-mask-image: var(--logo, url("../img/tech/_generic.svg"));
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: var(--logo, url("../img/tech/_generic.svg"));
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.skill-card ul li.tech:hover {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--brand, var(--text)) 55%, var(--border));
+  background-color: color-mix(in srgb, var(--brand, var(--text)) 10%, var(--bg-elevated));
+}
+
+.skill-card ul li.tech:hover .tech-mark {
+  background-color: var(--brand, currentColor);
+  opacity: 1;
+}
+
+/* Logos officiels + couleur de marque */
+.tech-python     { --logo: url("../img/tech/python.svg");     --brand: #3776AB; }
+.tech-java       { --logo: url("../img/tech/openjdk.svg");    --brand: #E76F00; }
+.tech-c          { --logo: url("../img/tech/c.svg");          --brand: #A8B9CC; }
+.tech-php        { --logo: url("../img/tech/php.svg");        --brand: #777BB4; }
+.tech-js         { --logo: url("../img/tech/javascript.svg"); --brand: #F7DF1E; }
+.tech-html       { --logo: url("../img/tech/html5.svg");      --brand: #E34F26; }
+.tech-css        { --logo: url("../img/tech/css3.svg");       --brand: #1572B6; }
+.tech-oracle     { --logo: url("../img/tech/oracle.svg");     --brand: #F80000; }
+.tech-supabase   { --logo: url("../img/tech/supabase.svg");   --brand: #3FCF8E; }
+.tech-keycloak   { --logo: url("../img/tech/keycloak.svg");   --brand: #4D4D4D; }
+.tech-odoo       { --logo: url("../img/tech/odoo.svg");       --brand: #714B67; }
+.tech-powerbi    { --logo: url("../img/tech/powerbi.svg");    --brand: #F2C811; }
+.tech-excel      { --logo: url("../img/tech/excel.svg");      --brand: #217346; }
+.tech-git        { --logo: url("../img/tech/git.svg");        --brand: #F03C2E; }
+.tech-github     { --logo: url("../img/tech/github.svg");     --brand: #181717; }
+.tech-linux      { --logo: url("../img/tech/linux.svg");      --brand: #FCC624; }
+.tech-debian     { --logo: url("../img/tech/debian.svg");     --brand: #A81D33; }
+.tech-ubuntu     { --logo: url("../img/tech/ubuntu.svg");     --brand: #E95420; }
+.tech-virtualbox { --logo: url("../img/tech/virtualbox.svg"); --brand: #2F61B4; }
+.tech-vscode     { --logo: url("../img/tech/vscode.svg");     --brand: #007ACC; }
+.tech-eclipse    { --logo: url("../img/tech/eclipseide.svg"); --brand: #2C2255; }
+
+/* Sans logo officiel : pictogramme à l'encre, qui passe simplement en encre pleine */
+.tech-sql        { --logo: url("../img/tech/_db.svg"); }
+.tech-multimodel { --logo: url("../img/tech/_schema.svg"); }
+.tech-mcd        { --logo: url("../img/tech/_schema.svg"); }
+.tech-ad         { --logo: url("../img/tech/_directory.svg"); }
+.tech-ldap       { --logo: url("../img/tech/_directory.svg"); }
+.tech-midpoint   { --logo: url("../img/tech/_identity.svg"); }
+.tech-glpi       { --logo: url("../img/tech/_ticket.svg"); }
+.tech-bpmn       { --logo: url("../img/tech/_flow.svg"); }
+.tech-mvc        { --logo: url("../img/tech/_layers.svg"); }
+.tech-kpi        { --logo: url("../img/tech/_chart.svg"); }
+
+/* Marques trop sombres sur fond d'encre : variante lisible en mode sombre */
+:root:not([data-theme="light"]) .tech-github  { --brand: #E6EDF3; }
+:root:not([data-theme="light"]) .tech-eclipse { --brand: #8877CE; }
+:root:not([data-theme="light"]) .tech-keycloak { --brand: #C6CAD0; }
+
+/* Marques trop claires sur papier : variante lisible en mode clair */
+:root[data-theme="light"] .tech-js    { --brand: #D4BC00; }
+:root[data-theme="light"] .tech-linux { --brand: #D19A00; }
+
+/* Les emojis décoratifs restent dans la gamme d'encre */
+.card-icon { filter: grayscale(1); opacity: 0.85; }
+.chip { filter: grayscale(1); }
 
 /* ---------- Timeline (Parcours) ---------- */
 
