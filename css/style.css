@@ -1434,3 +1434,34 @@ footer.site-footer .footer-annex {
   color: var(--text-faint);
   font-style: italic;
 }
+
+/* ---------- Capture d'écran d'une réalisation ----------
+   Le site raconte d'ordinaire par le schéma ; une capture d'exécution
+   réelle mérite le même cadre que lui, pas un traitement à part. */
+
+.shot {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  padding: 0.7rem 0.7rem 0.9rem;
+}
+
+.shot img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.shot figcaption {
+  margin: 0.75rem 0.3rem 0;
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+/* La capture est ouvrable en grand : sur téléphone la vignette ne suffit pas. */
+.shot > a { display: block; }
+.shot > a:hover { text-decoration: none; }
+.shot > a:hover img { border-color: var(--seal); }
