@@ -49,8 +49,119 @@
   <section class="page-hero container">
     <span class="eyebrow">Expériences &amp; projets</span>
     <h1>Expériences &amp; <span class="gradient-text">réalisations</span></h1>
-    <p class="lead">Deux expériences en entreprise et trois projets d'ingénierie, du réseau à la gouvernance des
+    <p class="lead">Trois expériences en entreprise et trois projets d'ingénierie, du réseau à la gouvernance des
       identités. Pour chacun : le contexte, mon rôle et les résultats obtenus.</p>
+  </section>
+
+  <section class="block container" id="ocr">
+    <div class="section-head">
+      <span class="kicker">Stage de fin d'études (BUT3) · 14 semaines · en cours</span>
+      <h2>Lecture automatique des résultats de match à partir d'une capture d'écran</h2>
+      <p class="place" style="color:var(--text-faint);">Service d'ingestion pour « The Circle », plateforme de tournois esport — Développement / Backend</p>
+    </div>
+    <div class="card project-card">
+      <div class="proj-part">
+        <h4>Contexte</h4>
+        <p>À la fin de chaque match, l'organisateur du tournoi dispose d'une capture d'écran du tableau de résultats :
+          deux équipes, jusqu'à cinq joueurs chacune, avec pseudo, score et statistiques. Ces chiffres étaient
+          <strong>recopiés à la main</strong> dans la plateforme. Sur un tournoi qui enchaîne les matchs, c'est lent,
+          monotone, et chaque recopie est une occasion d'erreur — une erreur qui fausse un classement. L'objectif de la
+          mission : transformer une capture d'écran en <strong>données validées</strong>, directement exploitables par
+          la plateforme.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Rôle et contributions</h4>
+        <ul class="details">
+          <li>Conception et développement du service d'ingestion et de son interface de programmation, en binôme —
+            contributrice majoritaire du dépôt avec 26 commits sur 35, et 16 sur 17 sur la partie service</li>
+          <li>Détection automatique de la structure du tableau : les colonnes sont identifiées par leur contenu et non
+            par une position figée, car le jeu réorganise son affichage selon le format de l'écran</li>
+          <li>Exécution de la lecture dans le navigateur de l'organisateur, derrière une interface unique qui isole les
+            seules opérations dépendantes de la plateforme — une seule implémentation, deux adaptateurs</li>
+          <li>Lecture du score de manches pour déduire le vainqueur, avec plusieurs passes de renforcement de contraste
+            en cascade lorsque le score est peu lisible</li>
+          <li>Documentation d'intégration rédigée pour l'équipe cliente, sur un contrat figé tôt, afin qu'elle
+            développe sa partie en parallèle sans attendre</li>
+          <li>Mise en place de contrôles automatisés bloquants : vérification que le paquet publié s'installe et
+            s'importe réellement, et refus de toute contribution contenant un secret</li>
+        </ul>
+      </div>
+      <div class="proj-part">
+        <h4>Résultats mesurés</h4>
+        <ul class="stat-row">
+          <li class="stat">
+            <span class="stat-value">114 / 114</span>
+            <span class="stat-label">Statistiques de joueurs lues correctement</span>
+          </li>
+          <li class="stat">
+            <span class="stat-value">4 / 4</span>
+            <span class="stat-label">Scores de manches lus et vainqueur déduit</span>
+          </li>
+          <li class="stat">
+            <span class="stat-value">4,5 s</span>
+            <span class="stat-label">Pour lire une capture de bout en bout</span>
+          </li>
+          <li class="stat">
+            <span class="stat-value">0</span>
+            <span class="stat-label">Image transmise ou conservée</span>
+          </li>
+        </ul>
+        <p class="stat-note">Mesures relevées le 31 juillet 2026 par exécution sur quatre captures de référence,
+          couvrant deux familles d'appareils (tablette et téléphone). Le projet est en cours : plusieurs lots sont
+          encore en revue.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Apports</h4>
+        <p class="outcome">Une capture d'écran devient une <strong>feuille de match validée en quelques secondes</strong>,
+          là où les résultats étaient ressaisis à la main. La lecture s'exécute sur l'appareil de l'organisateur :
+          aucune image ne circule ni n'est conservée, et le service ne manipule aucune donnée personnelle — le seul
+          point de contact avec la plateforme est le pseudo affiché en jeu, rendu tel quel et jamais « corrigé »
+          automatiquement.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Une difficulté représentative</h4>
+        <p>Dans ce mode de jeu, ni les éliminations ni le score individuel ne désignent le gagnant : seul le score de
+          manches, affiché en haut de l'écran, compte. Sur l'une des captures de référence, <strong>le meilleur joueur
+          du match — 14 éliminations pour 1 mort — appartient à l'équipe qui a perdu 0-5</strong>. Déduire le vainqueur
+          des statistiques l'aurait attribué au mauvais camp. Il a donc fallu lire ce score, en écartant l'horodatage
+          qui lui ressemble, et le renforcer quand il est peu contrasté. Quand il reste illisible, le service
+          <strong>n'invente rien</strong> : il laisse le champ vide et signale une saisie manuelle.</p>
+      </div>
+      <div class="proj-part">
+        <h4>Chaîne de traitement — schéma de principe</h4>
+        <div class="diagram-wrap">
+          <svg class="diagram" viewBox="0 0 720 220" role="img" aria-label="Chaîne de traitement : sur l'appareil de l'organisateur, une capture d'écran est lue localement, puis les chiffres relus sont affichés et restent corrigeables. Seuls ces chiffres franchissent la frontière de l'appareil pour rejoindre le service d'ingestion, qui les valide avant de les transmettre à la plateforme de tournois. L'image, elle, ne quitte jamais l'appareil.">
+            <defs>
+              <marker id="ar-ocr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
+            </defs>
+            <rect class="d-line-dash" x="1" y="28" width="716" height="112" rx="10" fill="none"/>
+            <text class="d-tag" x="14" y="48">APPAREIL DE L'ORGANISATEUR — LA CAPTURE N'EN SORT PAS</text>
+            <rect class="d-box" x="14" y="62" width="180" height="62" rx="8"/>
+            <text class="d-title" x="104" y="88" text-anchor="middle">Capture d'écran</text>
+            <text class="d-sub" x="104" y="105" text-anchor="middle">tableau de fin de match</text>
+            <path class="d-line" d="M194 93 H 220" marker-end="url(#ar-ocr)"/>
+            <rect class="d-box" x="226" y="62" width="204" height="62" rx="8"/>
+            <text class="d-title" x="328" y="88" text-anchor="middle">Lecture locale</text>
+            <text class="d-sub" x="328" y="105" text-anchor="middle">OCR classique + géométrie mesurée</text>
+            <path class="d-line" d="M430 93 H 456" marker-end="url(#ar-ocr)"/>
+            <rect class="d-box-accent" x="462" y="62" width="242" height="62" rx="8"/>
+            <text class="d-title" x="583" y="88" text-anchor="middle">Chiffres relus</text>
+            <text class="d-sub" x="583" y="105" text-anchor="middle">corrigeables avant envoi</text>
+            <path class="d-line" d="M583 124 V 164" marker-end="url(#ar-ocr)"/>
+            <text class="d-sub" x="571" y="152" text-anchor="end">les chiffres seuls — jamais l'image</text>
+            <rect class="d-box-alt" x="226" y="170" width="478" height="46" rx="8"/>
+            <text class="d-title" x="465" y="190" text-anchor="middle">Service d'ingestion → feuille de match validée</text>
+            <text class="d-sub" x="465" y="206" text-anchor="middle">validation du format · indice de confiance par cellule</text>
+          </svg>
+          <p class="diagram-note">Schéma de principe : le trajet de la donnée et la frontière de l'appareil, sans exposer
+            ni capture ni identifiant.</p>
+        </div>
+      </div>
+      <ul class="tags">
+        <li>TypeScript</li><li>Next.js</li><li>React</li><li>OCR (Tesseract)</li><li>API REST</li>
+        <li>Validation de schéma</li><li>Tests automatisés</li><li>GitHub Actions</li>
+      </ul>
+    </div>
   </section>
 
   <section class="block container" id="esbanque">
