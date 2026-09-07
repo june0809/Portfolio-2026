@@ -1,7 +1,10 @@
 /* =========================================================
    Portfolio BUT3 Informatique — Hawa M'Bodj
-   Thème : monochrome « encre de Chine » (clair & sombre)
-   Aucune couleur hors des logos de technologies au survol.
+   Thème : encre de Chine + vermillon de sceau (clair & sombre)
+   Une seule couleur signature, celle du sceau qui accompagne l'encre.
+   Elle porte les liens, les surtitres, les chiffres et les appels à
+   l'action ; tout le reste, y compris le nom en titre, reste à l'encre.
+   Les logos de technologies gardent leur propre couleur au survol.
    ========================================================= */
 
 :root {
@@ -19,10 +22,15 @@
   --on-accent: #101215;
   --accent-soft: #e3e6ea14;
   --accent-2-soft: #9aa0a914;
+  --seal: #f2704e;
+  --seal-strong: #ff9077;
+  --seal-soft: #f2704e1f;
+  --on-seal: #14100e;
   --gradient: linear-gradient(135deg, #ffffff 0%, #8d939c 100%);
+  --gradient-seal: linear-gradient(135deg, #f2704e 0%, #c9482a 100%);
   --glow:
     radial-gradient(ellipse 90% 55% at 50% -12%, rgba(255, 255, 255, 0.055), transparent 70%),
-    radial-gradient(ellipse 55% 45% at 88% 8%, rgba(255, 255, 255, 0.03), transparent 70%);
+    radial-gradient(ellipse 55% 45% at 88% 8%, rgba(242, 112, 78, 0.07), transparent 70%);
   --grain-opacity: 0.035;
   --radius: 12px;
   --radius-sm: 8px;
@@ -50,10 +58,15 @@
   --on-accent: #faf9f6;
   --accent-soft: #1a1c1f0f;
   --accent-2-soft: #6a6d740f;
+  --seal: #a82f14;
+  --seal-strong: #7e1f09;
+  --seal-soft: #a82f1414;
+  --on-seal: #fffefb;
   --gradient: linear-gradient(135deg, #14161a 0%, #5d616a 100%);
+  --gradient-seal: linear-gradient(135deg, #a82f14 0%, #7e1f09 100%);
   --glow:
     radial-gradient(ellipse 90% 55% at 50% -12%, rgba(20, 22, 26, 0.055), transparent 70%),
-    radial-gradient(ellipse 55% 45% at 88% 8%, rgba(20, 22, 26, 0.03), transparent 70%);
+    radial-gradient(ellipse 55% 45% at 88% 8%, rgba(168, 47, 20, 0.06), transparent 70%);
   --grain-opacity: 0.05;
   --shadow: 0 6px 20px rgba(26, 28, 31, 0.08);
 }
@@ -110,7 +123,7 @@ p { color: var(--text-muted); margin: 0 0 1em 0; }
 /* Les longs mots (adresses, identifiants) ne debordent jamais de leur colonne */
 p, li, h1, h2, h3, h4, .chip, .btn { overflow-wrap: break-word; }
 
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--seal); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* En monochrome, un lien ne peut plus se distinguer par sa teinte :
@@ -128,7 +141,10 @@ main li a,
 main p a:hover,
 main li a:hover,
 .annex-banner a:hover,
-.footer-annex a:hover { text-decoration-color: currentColor; }
+.footer-annex a:hover {
+  color: var(--seal-strong);
+  text-decoration-color: currentColor;
+}
 
 .card > a {
   font-weight: 600;
@@ -136,7 +152,7 @@ main li a:hover,
   padding-bottom: 1px;
 }
 
-.card > a:hover { border-bottom-color: var(--accent); text-decoration: none; }
+.card > a:hover { border-bottom-color: var(--seal); text-decoration: none; }
 
 ul { padding-left: 0; list-style: none; }
 
@@ -238,7 +254,7 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
 }
 
-.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.theme-toggle:hover { border-color: var(--seal); color: var(--seal); }
 
 .theme-toggle svg { width: 18px; height: 18px; }
 
@@ -290,14 +306,14 @@ nav.main-nav > ul > li > a.active {
 }
 
 nav.main-nav > ul > li > a.nav-cta {
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid var(--seal);
+  color: var(--seal);
   font-weight: 600;
 }
 
 nav.main-nav > ul > li > a.nav-cta:hover {
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--seal-soft);
+  color: var(--seal);
 }
 
 .nav-dropdown {
@@ -358,7 +374,7 @@ nav.main-nav > ul > li > a.nav-cta:hover {
 }
 
 .nav-dropdown .dropdown-menu a.active {
-  color: var(--accent);
+  color: var(--seal);
 }
 
 @media (max-width: 940px) {
@@ -489,7 +505,7 @@ nav.main-nav > ul > li > a.nav-cta:hover {
   display: inline-flex;
   align-items: flex-start;
   gap: 0.5rem;
-  color: var(--accent);
+  color: var(--seal);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -504,7 +520,7 @@ nav.main-nav > ul > li > a.nav-cta:hover {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--seal);
   box-shadow: none;
 }
 
@@ -533,11 +549,11 @@ nav.main-nav > ul > li > a.nav-cta:hover {
 }
 
 .btn-primary {
-  background: var(--gradient);
-  color: var(--on-accent);
+  background: var(--gradient-seal);
+  color: var(--on-seal);
 }
 
-.btn-primary:hover { opacity: 0.9; text-decoration: none; }
+.btn-primary:hover { background: var(--seal-strong); text-decoration: none; }
 
 .btn-ghost {
   border-color: var(--border);
@@ -545,7 +561,7 @@ nav.main-nav > ul > li > a.nav-cta:hover {
   background: var(--card);
 }
 
-.btn-ghost:hover { border-color: var(--accent); text-decoration: none; }
+.btn-ghost:hover { border-color: var(--seal); text-decoration: none; }
 
 .contact-chips {
   display: flex;
@@ -578,7 +594,7 @@ section.block:first-of-type { border-top: none; }
 .section-head { margin-bottom: clamp(1.4rem, 3vw, 2rem); }
 
 .section-head .kicker {
-  color: var(--accent-2);
+  color: var(--seal);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -629,8 +645,8 @@ section.block:first-of-type { border-top: none; }
 .card ul.tags li {
   font-size: 0.78rem;
   padding: 0.25rem 0.6rem;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--seal-soft);
+  color: var(--seal);
   border-radius: 999px;
 }
 
@@ -762,7 +778,7 @@ section.block:first-of-type { border-top: none; }
   height: 14px;
   border-radius: 50%;
   background: var(--bg);
-  border: 3px solid var(--accent);
+  border: 3px solid var(--seal);
 }
 
 .timeline-date {
@@ -788,7 +804,7 @@ section.block:first-of-type { border-top: none; }
   content: "›";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--seal);
 }
 
 /* ---------- Compétence pages ---------- */
@@ -857,7 +873,7 @@ section.block:first-of-type { border-top: none; }
   font-family: "Space Grotesk", sans-serif;
 }
 
-.ac-list .num { background: var(--accent-soft); color: var(--accent); }
+.ac-list .num { background: var(--seal-soft); color: var(--seal); }
 .ce-list .num { background: var(--accent-2-soft); color: var(--accent-2); }
 
 .resource-table {
@@ -904,7 +920,7 @@ section.block:first-of-type { border-top: none; }
 .table-wrap .resource-table tr:last-child td { border-bottom: none; }
 
 .trace-card {
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--seal);
   background: var(--card);
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: clamp(1.1rem, 2.6vw, 1.3rem) clamp(1.1rem, 3vw, 1.5rem);
@@ -918,8 +934,8 @@ section.block:first-of-type { border-top: none; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  color: var(--accent);
-  background: var(--accent-soft);
+  color: var(--seal);
+  background: var(--seal-soft);
   padding: 0.2rem 0.6rem;
   border-radius: 5px;
   margin-bottom: 0.6rem;
@@ -1005,14 +1021,14 @@ section.block:first-of-type { border-top: none; }
   content: "›";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--seal);
 }
 
 .project-card ul.details li:last-child { margin-bottom: 0; }
 
 .project-card .outcome {
-  border-left: 3px solid var(--accent);
-  background: var(--accent-soft);
+  border-left: 3px solid var(--seal);
+  background: var(--seal-soft);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: 0.9rem 1.1rem;
   font-size: 0.94rem;
@@ -1038,7 +1054,7 @@ section.block:first-of-type { border-top: none; }
   gap: 0.5rem 0.9rem;
 }
 
-.annex-banner a { color: var(--accent); font-weight: 600; }
+.annex-banner a { color: var(--seal); font-weight: 600; }
 
 /* ---------- Footer ---------- */
 
@@ -1139,14 +1155,14 @@ footer.site-footer .footer-annex {
   content: "›";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--seal);
 }
 
 .bridge-col .mod { color: var(--text); font-weight: 600; }
 
 .bridge-arrow {
   align-self: center;
-  color: var(--accent);
+  color: var(--seal);
   font-size: 1.5rem;
   line-height: 1;
 }
@@ -1169,8 +1185,8 @@ footer.site-footer .footer-annex {
   width: 1.9rem;
   height: 1.9rem;
   border-radius: 50%;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--seal-soft);
+  color: var(--seal);
   font-weight: 700;
   font-size: 0.9rem;
   margin-bottom: 0.6rem;
@@ -1194,7 +1210,7 @@ footer.site-footer .footer-annex {
 .diagram { width: 100%; min-width: 560px; height: auto; display: block; }
 
 .diagram .d-box { fill: var(--card); stroke: var(--border); stroke-width: 1.5; }
-.diagram .d-box-accent { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+.diagram .d-box-accent { fill: var(--seal-soft); stroke: var(--seal); stroke-width: 1.5; }
 .diagram .d-box-alt { fill: var(--accent-2-soft); stroke: var(--accent-2); stroke-width: 1.5; }
 .diagram .d-title { fill: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 13px; font-weight: 600; }
 .diagram .d-sub { fill: var(--text-faint); font-family: "Inter", sans-serif; font-size: 10.5px; }
@@ -1236,8 +1252,8 @@ footer.site-footer .footer-annex {
   width: 1.7rem;
   height: 1.7rem;
   border-radius: 50%;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--seal-soft);
+  color: var(--seal);
   font-weight: 700;
   font-size: 0.85rem;
   display: inline-flex;
@@ -1263,7 +1279,7 @@ footer.site-footer .footer-annex {
   white-space: nowrap;
 }
 
-.level-solid { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+.level-solid { background: var(--seal-soft); color: var(--seal); border: 1px solid var(--seal); }
 .level-mid { background: var(--accent-2-soft); color: var(--accent-2); border: 1px solid var(--accent-2); }
 .level-open { background: transparent; color: var(--text-faint); border: 1px dashed var(--border); }
 
