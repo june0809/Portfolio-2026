@@ -141,33 +141,15 @@
       </div>
       <div class="proj-part">
         <h4>Chaîne de traitement — schéma de principe</h4>
-        <div class="diagram-wrap">
-          <svg class="diagram" viewBox="0 0 720 220" role="img" aria-label="Chaîne de traitement : sur l'appareil de l'organisateur, une capture d'écran est lue localement, puis les chiffres relus sont affichés et restent corrigeables. Seuls ces chiffres franchissent la frontière de l'appareil pour rejoindre le service d'ingestion, qui les valide avant de les transmettre à la plateforme de tournois. L'image, elle, ne quitte jamais l'appareil.">
-            <defs>
-              <marker id="ar-ocr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
-            </defs>
-            <rect class="d-line-dash" x="1" y="28" width="716" height="112" rx="10" fill="none"/>
-            <text class="d-tag" x="14" y="48">APPAREIL DE L'ORGANISATEUR — LA CAPTURE N'EN SORT PAS</text>
-            <rect class="d-box" x="14" y="62" width="180" height="62" rx="8"/>
-            <text class="d-title" x="104" y="88" text-anchor="middle">Capture d'écran</text>
-            <text class="d-sub" x="104" y="105" text-anchor="middle">tableau de fin de match</text>
-            <path class="d-line" d="M194 93 H 220" marker-end="url(#ar-ocr)"/>
-            <rect class="d-box" x="226" y="62" width="204" height="62" rx="8"/>
-            <text class="d-title" x="328" y="88" text-anchor="middle">Lecture locale</text>
-            <text class="d-sub" x="328" y="105" text-anchor="middle">OCR classique + géométrie mesurée</text>
-            <path class="d-line" d="M430 93 H 456" marker-end="url(#ar-ocr)"/>
-            <rect class="d-box-accent" x="462" y="62" width="242" height="62" rx="8"/>
-            <text class="d-title" x="583" y="88" text-anchor="middle">Chiffres relus</text>
-            <text class="d-sub" x="583" y="105" text-anchor="middle">corrigeables avant envoi</text>
-            <path class="d-line" d="M583 124 V 164" marker-end="url(#ar-ocr)"/>
-            <text class="d-sub" x="571" y="152" text-anchor="end">les chiffres seuls — jamais l'image</text>
-            <rect class="d-box-alt" x="226" y="170" width="478" height="46" rx="8"/>
-            <text class="d-title" x="465" y="190" text-anchor="middle">Service d'ingestion → feuille de match validée</text>
-            <text class="d-sub" x="465" y="206" text-anchor="middle">validation du format · indice de confiance par cellule</text>
-          </svg>
-          <p class="diagram-note">Schéma de principe : le trajet de la donnée et la frontière de l'appareil, sans exposer
-            ni capture ni identifiant.</p>
-        </div>
+        <figure class="schema-image">
+          <div class="schema-image-fond">
+            <img src="img/schema_ocr.drawio.png" width="567" height="212" loading="lazy" decoding="async"
+              alt="Sur l'appareil de l'organisateur : une capture d'écran du tableau de fin de match est lue localement par OCR classique et géométrie mesurée, ce qui produit des chiffres relus, corrigeables avant l'envoi. Seuls ces chiffres sortent de l'appareil pour rejoindre le service d'ingestion, qui valide le format et attache un indice de confiance par cellule avant de produire la feuille de match validée.">
+          </div>
+          <figcaption>Schéma de principe : le trajet de la donnée et la frontière de l'appareil. La capture est lue
+            sur l'appareil de l'organisateur et n'en sort pas ; seuls les chiffres relus rejoignent le service
+            d'ingestion.</figcaption>
+        </figure>
       </div>
       <ul class="tags">
         <li>TypeScript</li><li>Next.js</li><li>React</li><li>OCR (Tesseract)</li><li>API REST</li>

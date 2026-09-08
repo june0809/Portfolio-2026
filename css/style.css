@@ -1465,3 +1465,50 @@ footer.site-footer .footer-annex {
 .shot > a { display: block; }
 .shot > a:hover { text-decoration: none; }
 .shot > a:hover img { border-color: var(--seal); }
+
+/* ---------- Schéma fourni en image ----------
+   L'export a un fond blanc opaque : on l'assume comme un encart posé sur
+   la page plutôt que de le laisser trouer le thème sombre. La légende, elle,
+   reste hors du cadre blanc pour suivre les couleurs du thème. */
+
+.schema-image { margin: 0; }
+
+.schema-image-fond {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  padding: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+/* Jamais au-delà de sa taille d'origine : agrandi, l'export devient flou. */
+.schema-image img {
+  width: 100%;
+  max-width: 567px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.schema-image figcaption {
+  margin: 0.75rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+/* Sur petit écran, l'image tombe sous 350 px et ses libellés deviennent
+   illisibles : on la consulte en la faisant défiler, comme les schémas SVG. */
+@media (max-width: 640px) {
+  .schema-image-fond {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  .schema-image img { min-width: 520px; }
+
+  .schema-image figcaption::before {
+    content: "Schéma à faire défiler horizontalement · ";
+    font-style: normal;
+    color: var(--accent-2);
+  }
+}
