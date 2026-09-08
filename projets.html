@@ -49,7 +49,7 @@
   <section class="page-hero container">
     <span class="eyebrow">Expériences &amp; projets</span>
     <h1>Expériences &amp; <span class="gradient-text">réalisations</span></h1>
-    <p class="lead">Trois expériences en entreprise et trois projets d'ingénierie, du réseau à la gouvernance des
+    <p class="lead">Deux expériences en entreprise et trois projets d'ingénierie, du réseau à la gouvernance des
       identités. Pour chacun : le contexte, mon rôle et les résultats obtenus.</p>
   </section>
 
@@ -57,7 +57,7 @@
     <div class="section-head">
       <span class="kicker">Projet personnel · 2026 · en cours</span>
       <h2>Lecture automatique des résultats de match à partir d'une capture d'écran</h2>
-      <p class="place" style="color:var(--text-faint);">Projet personnel mené en binôme — service d'ingestion pour « The Circle », plateforme de tournois esport</p>
+      <p class="place" style="color:var(--text-faint);">Projet personnel mené en binôme : service d'ingestion pour « The Circle », plateforme de tournois esport</p>
     </div>
     <div class="card project-card">
       <div class="proj-part">
@@ -65,19 +65,18 @@
         <p>À la fin de chaque match, l'organisateur du tournoi dispose d'une capture d'écran du tableau de résultats :
           deux équipes, jusqu'à cinq joueurs chacune, avec pseudo, score et statistiques. Ces chiffres étaient
           <strong>recopiés à la main</strong> dans la plateforme. Sur un tournoi qui enchaîne les matchs, c'est lent,
-          monotone, et chaque recopie est une occasion d'erreur — une erreur qui fausse un classement. L'objectif de la
+          monotone, et chaque recopie est une occasion d'erreur, une erreur qui fausse un classement. L'objectif de la
           mission : transformer une capture d'écran en <strong>données validées</strong>, directement exploitables par
           la plateforme.</p>
       </div>
       <div class="proj-part">
         <h4>Rôle et contributions</h4>
         <ul class="details">
-          <li>Conception et développement du service d'ingestion et de son interface de programmation, en binôme —
-            contributrice majoritaire du dépôt avec 26 commits sur 35, et 16 sur 17 sur la partie service</li>
+          <li>Conception et développement du service d'ingestion et de son interface de programmation</li>
           <li>Détection automatique de la structure du tableau : les colonnes sont identifiées par leur contenu et non
             par une position figée, car le jeu réorganise son affichage selon le format de l'écran</li>
           <li>Exécution de la lecture dans le navigateur de l'organisateur, derrière une interface unique qui isole les
-            seules opérations dépendantes de la plateforme — une seule implémentation, deux adaptateurs</li>
+            seules opérations dépendantes de la plateforme, une seule implémentation, deux adaptateurs</li>
           <li>Lecture du score de manches pour déduire le vainqueur, avec plusieurs passes de renforcement de contraste
             en cascade lorsque le score est peu lisible</li>
           <li>Documentation d'intégration rédigée pour l'équipe cliente, sur un contrat figé tôt, afin qu'elle
@@ -111,22 +110,22 @@
           encore en revue.</p>
       </div>
       <div class="proj-part">
-        <h4>L'écran d'enregistrement — exécution réelle</h4>
+        <h4>L'écran d'enregistrement : exécution réelle</h4>
         <figure class="shot">
           <a href="img/ocr-scan.jpg" target="_blank" rel="noopener" aria-label="Ouvrir la capture en grand">
           <img src="img/ocr-scan.jpg" width="1258" height="1790" loading="lazy" decoding="async"
             alt="Écran d'enregistrement d'un match : la capture de fin de partie déposée en haut, le temps de lecture affiché, puis les deux équipes avec leurs statistiques lues et modifiables, les cellules de faible confiance surlignées, les manches pré-remplies et le vainqueur déduit en bas.">
           </a>
-          <figcaption>Exécution réelle, pas une maquette. La capture est lue en 4 541 ms ; les cellules dont la
+          <figcaption>Exécution réelle, pas une maquette. La capture est lue en 4,5 s ; les cellules dont la
             lecture est peu sûre sont surlignées, et tout reste corrigeable avant enregistrement. Les pseudos des
-            joueurs sont floutés ici — les chiffres sont ceux effectivement lus. Ouvrir l'image en grand.</figcaption>
+            joueurs sont floutés ici  les chiffres sont ceux effectivement lus. Ouvrir l'image en grand.</figcaption>
         </figure>
       </div>
       <div class="proj-part">
         <h4>Apports</h4>
         <p class="outcome">Une capture d'écran devient une <strong>feuille de match validée en quelques secondes</strong>,
           là où les résultats étaient ressaisis à la main. La lecture s'exécute sur l'appareil de l'organisateur :
-          aucune image ne circule ni n'est conservée, et le service ne manipule aucune donnée personnelle — le seul
+          aucune image ne circule ni n'est conservée, et le service ne manipule aucune donnée personnelle, le seul
           point de contact avec la plateforme est le pseudo affiché en jeu, rendu tel quel et jamais « corrigé »
           automatiquement.</p>
       </div>
@@ -134,13 +133,13 @@
         <h4>Une difficulté représentative</h4>
         <p>Dans ce mode de jeu, ni les éliminations ni le score individuel ne désignent le gagnant : seul le score de
           manches, affiché en haut de l'écran, compte. Sur l'une des captures de référence, <strong>le meilleur joueur
-          du match — 14 éliminations pour 1 mort — appartient à l'équipe qui a perdu 0-5</strong>. Déduire le vainqueur
+          du match  14 éliminations pour 1 mort  appartient à l'équipe qui a perdu 0-5</strong>. Déduire le vainqueur
           des statistiques l'aurait attribué au mauvais camp. Il a donc fallu lire ce score, en écartant l'horodatage
           qui lui ressemble, et le renforcer quand il est peu contrasté. Quand il reste illisible, le service
           <strong>n'invente rien</strong> : il laisse le champ vide et signale une saisie manuelle.</p>
       </div>
       <div class="proj-part">
-        <h4>Chaîne de traitement — schéma de principe</h4>
+        <h4>Chaîne de traitement  schéma de principe</h4>
         <figure class="schema-image">
           <div class="schema-image-fond">
             <img src="img/schema-ocr.png" width="567" height="212" loading="lazy" decoding="async"
@@ -162,15 +161,15 @@
     <div class="section-head">
       <span class="kicker">Stage · Juin – Sept 2026 · en cours</span>
       <h2>Outil de centralisation et de supervision des journaux d'activité</h2>
-      <p class="place" style="color:var(--text-faint);">ESBanque, Nanterre — Développement / Data</p>
+      <p class="place" style="color:var(--text-faint);">ESBanque, Nanterre : Développement / Data</p>
     </div>
     <div class="card project-card">
       <div class="proj-part">
         <h4>Contexte</h4>
-        <p>Les traitements automatisés de l'entreprise produisent des journaux d'activité — les « logs » — dispersés
+        <p>Les traitements automatisés de l'entreprise produisent des journaux d'activité  les « logs » — dispersés
           entre plusieurs sources,
           ce qui rend difficile le suivi des incidents et la mesure de la fiabilité du système d'information.
-          La mission, encadrée par un chef de projet côté maîtrise d'œuvre — l'équipe qui définit le besoin et pilote le projet sans écrire le code —, consiste à centraliser, analyser et visualiser ces
+          La mission, encadrée par un chef de projet côté maîtrise d'œuvre l'équipe qui définit le besoin et pilote le projet sans écrire le code + la DSI qui est l'équipe de production, consiste à centraliser, analyser et visualiser ces
           logs afin d'en faire un outil de pilotage.</p>
       </div>
       <div class="proj-part">
@@ -191,7 +190,7 @@
           système.</p>
       </div>
       <div class="proj-part">
-        <h4>Chaîne de traitement — schéma de principe</h4>
+        <h4>Chaîne de traitement  schéma de principe</h4>
         <div class="diagram-wrap">
           <svg class="diagram" viewBox="0 0 720 210" role="img" aria-label="Chaîne de traitement : des sources de logs multiples alimentent une centralisation, puis une normalisation, puis un suivi des statuts OK ou erreur, et enfin des indicateurs restitués dans une interface de visualisation destinée à la maîtrise d'œuvre.">
             <defs>
@@ -318,7 +317,7 @@
     <div class="section-head">
       <span class="kicker">Stage · Juin – Juil 2025</span>
       <h2>Architecture de données d'une application mobile</h2>
-      <p class="place" style="color:var(--text-faint);">Rakedd Consulting, Le Pecq — Développement web &amp; mobile</p>
+      <p class="place" style="color:var(--text-faint);">Rakedd Consulting, Le Pecq : Développement web &amp; mobile</p>
     </div>
     <div class="card project-card">
       <div class="proj-part">
@@ -349,7 +348,7 @@
           modèle de données.</p>
       </div>
       <div class="proj-part">
-        <h4>Architecture — schéma de principe</h4>
+        <h4>Architecture : schéma de principe</h4>
         <div class="diagram-wrap">
           <svg class="diagram" viewBox="0 0 720 260" role="img" aria-label="À gauche, le schéma de données : l'entité Mot relie Traduction, Catégorie et Métadonnées. À droite, la synchronisation entre le stockage local de l'application mobile et le stockage serveur Supabase.">
             <defs>
@@ -395,7 +394,7 @@
 
   <section class="block container" id="meteo">
     <div class="section-head">
-      <span class="kicker">Projet d'ingénierie · Sept 2024 – Jan 2025</span>
+      <span class="kicker">Projet scolaire · Sept 2024 – Jan 2025</span>
       <h2>Application web météo en architecture MVC</h2>
       <p class="place" style="color:var(--text-faint);">IUT Créteil-Vitry</p>
     </div>
@@ -404,7 +403,7 @@
         <h4>Contexte</h4>
         <p>Développer une application web consommant des données météorologiques dynamiques, avec une séparation
           rigoureuse des responsabilités entre les données (modèle), l'affichage (vue) et la logique (contrôleur)
-          — c'est ce que désigne l'architecture MVC.</p>
+           c'est ce que désigne l'architecture MVC.</p>
       </div>
       <div class="proj-part">
         <h4>Rôle et contributions</h4>
@@ -422,7 +421,7 @@
 
   <section class="block container" id="virtualisation">
     <div class="section-head">
-      <span class="kicker">Projet d'ingénierie · Nov – Déc 2023</span>
+      <span class="kicker">Projet scolaire · Nov – Déc 2023</span>
       <h2>Infrastructure réseau virtualisée</h2>
       <p class="place" style="color:var(--text-faint);">IUT Créteil-Vitry</p>
     </div>
@@ -466,8 +465,8 @@
       <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:hawambo89@gmail.com">Email</a>
     </div>
-    <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · 2025–2026</p>
-    <p class="footer-annex"><a href="competences.html">Compétences visées en fin de BUT — analyse et preuves</a></p>
+    <p style="margin:0;">Hawa M'Bodj  BUT Informatique, parcours Données · UPEC · 2025–2026</p>
+    <p class="footer-annex"><a href="competences.html">Compétences visées en fin de BUT  analyse et preuves</a></p>
   </div>
 </footer>
 
