@@ -739,6 +739,7 @@ section.block:first-of-type { border-top: none; }
 .tech-bpmn       { --logo: url("../img/tech/_flow.svg"); }
 .tech-mvc        { --logo: url("../img/tech/_layers.svg"); }
 .tech-kpi        { --logo: url("../img/tech/_chart.svg"); }
+.tech-grafana    { --logo: url("../img/tech/_chart.svg"); --brand: #F46800; }
 
 /* Marques trop sombres sur fond d'encre : variante lisible en mode sombre */
 :root:not([data-theme="light"]) .tech-github  { --brand: #E6EDF3; }
