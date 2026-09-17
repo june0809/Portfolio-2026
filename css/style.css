@@ -1,5 +1,5 @@
 /* =========================================================
-   Portfolio BUT3 Informatique — Hawa M'Bodj
+   Portfolio BUT3 Informatique, Hawa M'Bodj
    Thème : encre de Chine + vermillon de sceau (clair & sombre)
    Une seule couleur signature, celle du sceau qui accompagne l'encre.
    Elle porte les liens, les surtitres, les chiffres et les appels à
@@ -92,7 +92,7 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Grain de papier / de lavis — très discret, purement décoratif */
+/* Grain de papier / de lavis, très discret, purement décoratif */
 body::before {
   content: "";
   position: fixed;
@@ -1295,7 +1295,7 @@ footer.site-footer .footer-annex {
 @media (max-width: 560px) { .ac-eval p { padding-left: 0; } }
 
 /* =========================================================
-   Adaptations d'écran — du téléphone au grand moniteur
+   Adaptations d'écran, du téléphone au grand moniteur
    ========================================================= */
 
 /* Grands écrans : la colonne de lecture peut s'élargir un peu. */

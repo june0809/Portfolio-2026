@@ -1,4 +1,4 @@
-# Portfolio — Hawa M'Bodj
+# Portfolio, Hawa M'Bodj
 
 Site statique (HTML / CSS / JS, aucune dépendance, aucun build) présentant mon profil, mes expériences
 et mes projets, à destination des recruteurs.
@@ -29,7 +29,7 @@ référentiel est assumé, mais présenté dans un registre professionnel.
 
 Ouvre `index.html` dans un navigateur (double-clic), tous les chemins sont relatifs.
 
-## Déploiement — GitHub Pages
+## Déploiement sur GitHub Pages
 
 Sur GitHub : **Settings → Pages → Source : Deploy from a branch**, branche `main`, dossier `/ (root)`.
 Le site est publié à l'adresse `https://june0809.github.io/Portfolio-2026/`.
