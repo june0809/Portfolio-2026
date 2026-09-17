@@ -49,263 +49,150 @@
   <section class="page-hero container">
     <span class="eyebrow">Expériences &amp; projets</span>
     <h1>Expériences &amp; <span class="gradient-text">réalisations</span></h1>
-    <p class="lead">Deux expériences en entreprise et trois projets d'ingénierie, du réseau à la gouvernance des
-      identités. Pour chacun : le contexte, mon rôle et les résultats obtenus.</p>
+    <p class="lead">Pour chaque projet : le problème, ce que j'ai fait, le résultat.</p>
   </section>
 
   <section class="block container" id="ocr">
     <div class="section-head">
-      <span class="kicker">Projet personnel · 2026 · en cours</span>
-      <h2>Lecture automatique des résultats de match à partir d'une capture d'écran</h2>
-      <p class="place" style="color:var(--text-faint);">Projet personnel mené en binôme : service d'ingestion pour « The Circle », plateforme de tournois esport</p>
+      <span class="kicker">Projet personnel en binôme · 2026 · en cours</span>
+      <h2>Lecture automatique des résultats de match (OCR)</h2>
+      <p class="place" style="color:var(--text-faint);">Service d'ingestion pour « The Circle », plateforme de tournois esport</p>
     </div>
     <div class="card project-card">
       <div class="proj-part">
-        <h4>Contexte</h4>
-        <p>À la fin de chaque match, l'organisateur du tournoi dispose d'une capture d'écran du tableau de résultats :
-          deux équipes, jusqu'à cinq joueurs chacune, avec pseudo, score et statistiques. Ces chiffres étaient
-          <strong>recopiés à la main</strong> dans la plateforme. Sur un tournoi qui enchaîne les matchs, c'est lent,
-          monotone, et chaque recopie est une occasion d'erreur, une erreur qui fausse un classement. L'objectif de la
-          mission : transformer une capture d'écran en <strong>données validées</strong>, directement exploitables par
-          la plateforme.</p>
+        <h4>Problème</h4>
+        <p>Les scores de fin de match étaient <strong>recopiés à la main</strong> depuis une capture d'écran : lent et source d'erreurs dans les classements.</p>
       </div>
       <div class="proj-part">
-        <h4>Rôle et contributions</h4>
+        <h4>Ce que j'ai fait</h4>
         <ul class="details">
-          <li>Conception et développement du service d'ingestion et de son interface de programmation</li>
-          <li>Détection automatique de la structure du tableau : les colonnes sont identifiées par leur contenu et non
-            par une position figée, car le jeu réorganise son affichage selon le format de l'écran</li>
-          <li>Exécution de la lecture dans le navigateur de l'organisateur, derrière une interface unique qui isole les
-            seules opérations dépendantes de la plateforme, une seule implémentation, deux adaptateurs</li>
-          <li>Lecture du score de manches pour déduire le vainqueur, avec plusieurs passes de renforcement de contraste
-            en cascade lorsque le score est peu lisible</li>
-          <li>Documentation d'intégration rédigée pour l'équipe cliente, sur un contrat figé tôt, afin qu'elle
-            développe sa partie en parallèle sans attendre</li>
-          <li>Mise en place de contrôles automatisés bloquants : vérification que le paquet publié s'installe et
-            s'importe réellement, et refus de toute contribution contenant un secret</li>
+          <li>Service d'ingestion et son API</li>
+          <li>Détection des colonnes par leur contenu, pas par leur position</li>
+          <li>Lecture exécutée dans le navigateur : aucune image envoyée</li>
+          <li>Lecture du score de manches pour déduire le vainqueur</li>
+          <li>Documentation d'intégration et CI bloquante (GitHub Actions)</li>
         </ul>
       </div>
       <div class="proj-part">
-        <h4>Résultats mesurés</h4>
+        <h4>Résultats</h4>
         <ul class="stat-row">
           <li class="stat">
             <span class="stat-value">114 / 114</span>
-            <span class="stat-label">Statistiques de joueurs lues correctement</span>
+            <span class="stat-label">Statistiques lues correctement</span>
           </li>
           <li class="stat">
             <span class="stat-value">4 / 4</span>
-            <span class="stat-label">Scores de manches lus et vainqueur déduit</span>
+            <span class="stat-label">Vainqueurs déduits</span>
           </li>
           <li class="stat">
             <span class="stat-value">4,5 s</span>
-            <span class="stat-label">Pour lire une capture de bout en bout</span>
+            <span class="stat-label">Par capture</span>
           </li>
           <li class="stat">
             <span class="stat-value">0</span>
-            <span class="stat-label">Image transmise ou conservée</span>
+            <span class="stat-label">Image transmise</span>
           </li>
         </ul>
-        <p class="stat-note">Mesures relevées le 31 juillet 2026 par exécution sur quatre captures de référence,
-          couvrant deux familles d'appareils (tablette et téléphone). Le projet est en cours : plusieurs lots sont
-          encore en revue.</p>
+        <p class="stat-note">Mesuré le 31/07/2026 sur 4 captures de référence (tablette et téléphone).</p>
       </div>
       <div class="proj-part">
-        <h4>L'écran d'enregistrement : exécution réelle</h4>
+        <h4>Exécution réelle</h4>
         <figure class="shot">
           <a href="img/ocr-scan.jpg" target="_blank" rel="noopener" aria-label="Ouvrir la capture en grand">
           <img src="img/ocr-scan.jpg" width="1258" height="1790" loading="lazy" decoding="async"
             alt="Écran d'enregistrement d'un match : la capture de fin de partie déposée en haut, le temps de lecture affiché, puis les deux équipes avec leurs statistiques lues et modifiables, les cellules de faible confiance surlignées, les manches pré-remplies et le vainqueur déduit en bas.">
           </a>
-          <figcaption>Exécution réelle, pas une maquette. La capture est lue en 4,5 s ; les cellules dont la
-            lecture est peu sûre sont surlignées, et tout reste corrigeable avant enregistrement. Les pseudos des
-            joueurs sont floutés ici  les chiffres sont ceux effectivement lus. Ouvrir l'image en grand.</figcaption>
+          <figcaption>Les cellules peu sûres sont surlignées et restent corrigeables. Pseudos floutés.</figcaption>
         </figure>
       </div>
       <div class="proj-part">
-        <h4>Apports</h4>
-        <p class="outcome">Une capture d'écran devient une <strong>feuille de match validée en quelques secondes</strong>,
-          là où les résultats étaient ressaisis à la main. La lecture s'exécute sur l'appareil de l'organisateur :
-          aucune image ne circule ni n'est conservée, et le service ne manipule aucune donnée personnelle, le seul
-          point de contact avec la plateforme est le pseudo affiché en jeu, rendu tel quel et jamais « corrigé »
-          automatiquement.</p>
-      </div>
-      <div class="proj-part">
-        <h4>Une difficulté représentative</h4>
-        <p>Dans ce mode de jeu, ni les éliminations ni le score individuel ne désignent le gagnant : seul le score de
-          manches, affiché en haut de l'écran, compte. Sur l'une des captures de référence, <strong>le meilleur joueur
-          du match  14 éliminations pour 1 mort  appartient à l'équipe qui a perdu 0-5</strong>. Déduire le vainqueur
-          des statistiques l'aurait attribué au mauvais camp. Il a donc fallu lire ce score, en écartant l'horodatage
-          qui lui ressemble, et le renforcer quand il est peu contrasté. Quand il reste illisible, le service
-          <strong>n'invente rien</strong> : il laisse le champ vide et signale une saisie manuelle.</p>
-      </div>
-      <div class="proj-part">
-        <h4>Chaîne de traitement  schéma de principe</h4>
+        <h4>Schéma</h4>
         <figure class="schema-image">
           <div class="schema-image-fond">
             <img src="img/schema-ocr.png" width="567" height="212" loading="lazy" decoding="async"
-              alt="Sur l'appareil de l'organisateur : une capture d'écran du tableau de fin de match est lue localement par OCR classique et géométrie mesurée, ce qui produit des chiffres relus, corrigeables avant l'envoi. Seuls ces chiffres sortent de l'appareil pour rejoindre le service d'ingestion, qui valide le format et attache un indice de confiance par cellule avant de produire la feuille de match validée.">
+              alt="Sur l'appareil de l'organisateur : une capture d'écran du tableau de fin de match est lue localement par OCR, ce qui produit des chiffres relus, corrigeables avant l'envoi. Seuls ces chiffres rejoignent le service d'ingestion, qui valide le format et attache un indice de confiance par cellule avant de produire la feuille de match validée.">
           </div>
-          <figcaption>Schéma de principe : le trajet de la donnée et la frontière de l'appareil. La capture est lue
-            sur l'appareil de l'organisateur et n'en sort pas ; seuls les chiffres relus rejoignent le service
-            d'ingestion.</figcaption>
         </figure>
       </div>
       <ul class="tags">
         <li>TypeScript</li><li>Next.js</li><li>React</li><li>OCR (Tesseract)</li><li>API REST</li>
-        <li>Validation de schéma</li><li>Tests automatisés</li><li>GitHub Actions</li>
+        <li>Tests automatisés</li><li>GitHub Actions</li>
       </ul>
     </div>
   </section>
 
   <section class="block container" id="esbanque">
     <div class="section-head">
-      <span class="kicker">Stage · Juin – Sept 2026 · en cours</span>
-      <h2>Outil de centralisation et de supervision des journaux d'activité</h2>
-      <p class="place" style="color:var(--text-faint);">ESBanque, Nanterre : Développement / Data</p>
+      <span class="kicker">Stage · Juin – Sept 2026</span>
+      <h2>Supervision des journaux d'activité (logs)</h2>
+      <p class="place" style="color:var(--text-faint);">ESBanque, Nanterre · Développement / Data</p>
     </div>
     <div class="card project-card">
       <div class="proj-part">
-        <h4>Contexte</h4>
-        <p>Les traitements automatisés de l'entreprise produisent des journaux d'activité  les « logs » — dispersés
-          entre plusieurs sources,
-          ce qui rend difficile le suivi des incidents et la mesure de la fiabilité du système d'information.
-          La mission, encadrée par un chef de projet côté maîtrise d'œuvre l'équipe qui définit le besoin et pilote le projet sans écrire le code + la DSI qui est l'équipe de production, consiste à centraliser, analyser et visualiser ces
-          logs afin d'en faire un outil de pilotage.</p>
+        <h4>Problème</h4>
+        <p>Les logs des traitements automatisés étaient <strong>dispersés</strong> : difficile de suivre les incidents et de mesurer la fiabilité.</p>
       </div>
       <div class="proj-part">
-        <h4>Rôle et contributions</h4>
+        <h4>Ce que j'ai fait</h4>
         <ul class="details">
-          <li>Identification et analyse des différentes sources de logs existantes</li>
-          <li>Mise en place d'une solution de centralisation</li>
-          <li>Structuration et normalisation des données collectées</li>
-          <li>Développement d'un système de suivi des statuts (OK / erreur)</li>
-          <li>Conception d'une interface de visualisation des logs</li>
-          <li>Définition d'indicateurs de suivi : taux de succès des traitements, erreurs remontées</li>
+          <li>Analyse des sources de logs existantes</li>
+          <li>Centralisation et normalisation des données</li>
+          <li>Suivi des statuts OK / erreur</li>
+          <li>Interface de visualisation et indicateurs (taux de succès, erreurs)</li>
         </ul>
       </div>
       <div class="proj-part">
-        <h4>Apports</h4>
-        <p class="outcome">Des logs jusqu'ici éparpillés deviennent une <strong>source unique et normalisée</strong>,
-          exploitable par la maîtrise d'œuvre pour piloter la fiabilité des traitements, sans consultation manuelle de chaque
-          système.</p>
+        <h4>Résultat</h4>
+        <p class="outcome">Une <strong>source unique</strong> pour piloter la fiabilité des traitements, sans consulter chaque système.</p>
       </div>
       <div class="proj-part">
-        <h4>Chaîne de traitement  schéma de principe</h4>
-        <div class="diagram-wrap">
-          <svg class="diagram" viewBox="0 0 720 210" role="img" aria-label="Chaîne de traitement : des sources de logs multiples alimentent une centralisation, puis une normalisation, puis un suivi des statuts OK ou erreur, et enfin des indicateurs restitués dans une interface de visualisation destinée à la maîtrise d'œuvre.">
-            <defs>
-              <marker id="ar-esb" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
-            </defs>
-            <rect class="d-box" x="9" y="26" width="110" height="60" rx="8" opacity="0.5"/>
-            <rect class="d-box" x="5" y="32" width="110" height="60" rx="8" opacity="0.75"/>
-            <rect class="d-box" x="1" y="38" width="110" height="60" rx="8"/>
-            <text class="d-title" x="56" y="62" text-anchor="middle">Sources</text>
-            <text class="d-sub" x="56" y="78" text-anchor="middle">traitements auto.</text>
-            <path class="d-line" d="M115 68 H 145" marker-end="url(#ar-esb)"/>
-            <rect class="d-box" x="151" y="38" width="118" height="60" rx="8"/>
-            <text class="d-title" x="210" y="62" text-anchor="middle">Centralisation</text>
-            <text class="d-sub" x="210" y="78" text-anchor="middle">collecte unique</text>
-            <path class="d-line" d="M269 68 H 295" marker-end="url(#ar-esb)"/>
-            <rect class="d-box" x="301" y="38" width="118" height="60" rx="8"/>
-            <text class="d-title" x="360" y="62" text-anchor="middle">Normalisation</text>
-            <text class="d-sub" x="360" y="78" text-anchor="middle">format commun</text>
-            <path class="d-line" d="M419 68 H 445" marker-end="url(#ar-esb)"/>
-            <rect class="d-box" x="451" y="38" width="118" height="60" rx="8"/>
-            <text class="d-title" x="510" y="62" text-anchor="middle">Statuts</text>
-            <text class="d-sub" x="510" y="78" text-anchor="middle">OK / erreur</text>
-            <path class="d-line" d="M569 68 H 595" marker-end="url(#ar-esb)"/>
-            <rect class="d-box-accent" x="601" y="38" width="118" height="60" rx="8"/>
-            <text class="d-title" x="660" y="62" text-anchor="middle">Indicateurs</text>
-            <text class="d-sub" x="660" y="78" text-anchor="middle">taux de succès</text>
-            <path class="d-line" d="M660 98 V 138" marker-end="url(#ar-esb)"/>
-            <rect class="d-box-alt" x="301" y="144" width="418" height="52" rx="8"/>
-            <text class="d-title" x="510" y="168" text-anchor="middle">Interface de visualisation</text>
-            <text class="d-sub" x="510" y="184" text-anchor="middle">pilotage de la fiabilité par la maîtrise d'œuvre</text>
-          </svg>
-          <p class="diagram-note">Schéma de principe : étapes de la chaîne de traitement, sans nommer les systèmes internes ni exposer de donnée.</p>
-        </div>
+        <h4>Schéma</h4>
+        <figure class="schema-image">
+          <div class="schema-image-fond">
+            <img src="img/log.drawio.png" width="712" height="162" loading="lazy" decoding="async"
+              alt="Chaîne de traitement : sources de logs, centralisation, normalisation, suivi des statuts OK ou erreur, indicateurs de taux de succès, puis interface de visualisation pour la maîtrise d'œuvre et la DSI.">
+          </div>
+        </figure>
       </div>
       <ul class="tags">
-        <li>Centralisation de logs</li><li>Monitoring</li><li>Normalisation de données</li><li>Dashboard</li><li>Indicateurs / KPI</li><li>SQL</li>
+        <li>Centralisation de logs</li><li>Monitoring</li><li>Normalisation</li><li>Dashboard</li><li>KPI</li><li>SQL</li>
       </ul>
     </div>
   </section>
 
   <section class="block container" id="iam">
     <div class="section-head">
-      <span class="kicker">Projet de fin d'études · depuis sept. 2025</span>
-      <h2>Plateforme no-code de gouvernance des identités (IAM)</h2>
-      <p class="place" style="color:var(--text-faint);">Projet de fin d'études (BUT3) — IUT de Créteil-Vitry, mené avec LISSI, Evidian et Maidis</p>
+      <span class="kicker">Projet de fin d'études · Sept 2025 – Juin 2026</span>
+      <h2>Plateforme no-code de gestion des identités (IAM)</h2>
+      <p class="place" style="color:var(--text-faint);">IUT de Créteil-Vitry · avec LISSI, Evidian et Maidis</p>
     </div>
     <div class="card project-card">
       <div class="proj-part">
-        <h4>Contexte</h4>
-        <p>Dans une organisation, créer, modifier ou supprimer un compte utilisateur suppose d'intervenir sur
-          six systèmes distincts qui ne communiquent pas entre eux. L'objectif du projet : permettre de construire
-          ces processus d'identité sous forme de <strong>parcours paramétrables sans écrire de code</strong>
-          (approche « no-code »), sans développement
-          d'intégration spécifique à chaque opération.</p>
+        <h4>Problème</h4>
+        <p>Créer ou supprimer un compte impose d'intervenir sur <strong>6 systèmes</strong> qui ne communiquent pas entre eux.</p>
       </div>
       <div class="proj-part">
-        <h4>Rôle et contributions</h4>
+        <h4>Ce que j'ai fait</h4>
         <ul class="details">
-          <li>Développement de la plateforme permettant de construire ces parcours d'identité sans écrire de code</li>
-          <li>Orchestration multi-systèmes : Active Directory, LDAP, SQL, Odoo, GLPI, Keycloak</li>
-          <li>Conception d'une gateway transactionnelle — un point de passage unique par lequel transite toute
-            opération — capable d'annuler l'ensemble des étapes déjà effectuées (rollback) en cas d'échec, et de
-            journaliser chacune d'elles</li>
-          <li>Description des processus métier en BPMN / CMMN, deux notations standard pour représenter un
-            enchaînement d'étapes de façon lisible par des non-développeurs</li>
-          <li>Intégration de MidPoint et d'agents IA (LLM) pour la réconciliation des identités et
-            l'adaptation automatique de ces parcours</li>
+          <li>Parcours d'identité configurables sans code</li>
+          <li>Gateway unique vers AD, LDAP, SQL, Odoo, GLPI et Keycloak</li>
+          <li>Annulation automatique (rollback) et journalisation de chaque étape</li>
+          <li>Processus modélisés en BPMN / CMMN</li>
+          <li>Intégration de MidPoint et d'agents IA (LLM)</li>
         </ul>
       </div>
       <div class="proj-part">
-        <h4>Apports</h4>
-        <p class="outcome">Une opération d'identité qui échoue à mi-parcours ne laisse plus le SI dans un état
-          incohérent : le point de passage central <strong>annule l'ensemble de l'opération et journalise chaque
-          étape</strong>,
-          à travers six systèmes hétérogènes.</p>
+        <h4>Résultat</h4>
+        <p class="outcome">Une opération qui échoue est <strong>annulée partout</strong> : les 6 systèmes restent cohérents.</p>
       </div>
       <div class="proj-part">
-        <h4>Architecture — schéma de principe</h4>
-        <div class="diagram-wrap">
-          <svg class="diagram" viewBox="0 0 720 300" role="img" aria-label="Un parcours décrit sans code alimente un point de passage unique, qui pilote six systèmes : Active Directory, LDAP, SQL, Odoo, GLPI et Keycloak. En cas d'échec sur l'un d'eux, l'opération est annulée en totalité.">
-            <defs>
-              <marker id="ar-iam" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
-              <marker id="ar-iam-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow-alt"/></marker>
-            </defs>
-            <rect class="d-box-alt" x="210" y="8" width="300" height="50" rx="8"/>
-            <text class="d-title" x="360" y="30" text-anchor="middle">Parcours paramétré sans code</text>
-            <text class="d-sub" x="360" y="46" text-anchor="middle">processus métier modélisé en BPMN / CMMN</text>
-            <path class="d-line" d="M360 58 V 94" marker-end="url(#ar-iam)"/>
-            <rect class="d-box-accent" x="160" y="100" width="400" height="64" rx="8"/>
-            <text class="d-title" x="360" y="128" text-anchor="middle">Point de passage unique</text>
-            <text class="d-sub" x="360" y="146" text-anchor="middle">tout ou rien · annulation en cas d'échec · trace de chaque étape</text>
-            <path class="d-line" d="M360 164 V 190 H 80 V 214" marker-end="url(#ar-iam)"/>
-            <path class="d-line" d="M360 164 V 190 H 192 V 214" marker-end="url(#ar-iam)"/>
-            <path class="d-line" d="M360 164 V 190 H 304 V 214" marker-end="url(#ar-iam)"/>
-            <path class="d-line" d="M360 164 V 190 H 416 V 214" marker-end="url(#ar-iam)"/>
-            <path class="d-line" d="M360 164 V 190 H 528 V 214" marker-end="url(#ar-iam)"/>
-            <path class="d-line" d="M360 164 V 190 H 640 V 214" marker-end="url(#ar-iam)"/>
-            <rect class="d-box" x="30" y="220" width="100" height="44" rx="8"/>
-            <text class="d-title" x="80" y="240" text-anchor="middle">Active</text>
-            <text class="d-title" x="80" y="255" text-anchor="middle">Directory</text>
-            <rect class="d-box" x="142" y="220" width="100" height="44" rx="8"/>
-            <text class="d-title" x="192" y="247" text-anchor="middle">LDAP</text>
-            <rect class="d-box" x="254" y="220" width="100" height="44" rx="8"/>
-            <text class="d-title" x="304" y="247" text-anchor="middle">SQL</text>
-            <rect class="d-box" x="366" y="220" width="100" height="44" rx="8"/>
-            <text class="d-title" x="416" y="247" text-anchor="middle">Odoo</text>
-            <rect class="d-box" x="478" y="220" width="100" height="44" rx="8"/>
-            <text class="d-title" x="528" y="247" text-anchor="middle">GLPI</text>
-            <rect class="d-box" x="590" y="220" width="100" height="44" rx="8"/>
-            <text class="d-title" x="640" y="247" text-anchor="middle">Keycloak</text>
-            <path class="d-line-dash" d="M30 242 H 14 V 132 H 154" marker-end="url(#ar-iam-a)"/>
-            <text class="d-tag" x="360" y="288" text-anchor="middle">Échec sur un système → l'opération est annulée en totalité, partout</text>
-          </svg>
-          <p class="diagram-note">Schéma de principe : rôle du point de passage central et sens des échanges. Les six systèmes représentés sont ceux effectivement pilotés.</p>
-        </div>
+        <h4>Schéma</h4>
+        <figure class="schema-image">
+          <div class="schema-image-fond">
+            <img src="img/iam.drawio.png" width="792" height="262" loading="lazy" decoding="async"
+              alt="Un parcours paramétré sans code, modélisé en BPMN ou CMMN, alimente un point de passage unique en tout ou rien, qui pilote Active Directory, LDAP, SQL, Odoo, GLPI et Keycloak, avec annulation en cas d'échec.">
+          </div>
+        </figure>
       </div>
       <ul class="tags">
         <li>IAM</li><li>Active Directory</li><li>LDAP</li><li>Keycloak</li><li>MidPoint</li><li>Odoo</li><li>GLPI</li><li>BPMN / CMMN</li><li>LLM</li>
@@ -316,78 +203,39 @@
   <section class="block container" id="rakedd">
     <div class="section-head">
       <span class="kicker">Stage · Juin – Juil 2025</span>
-      <h2>Architecture de données d'une application mobile</h2>
-      <p class="place" style="color:var(--text-faint);">Rakedd Consulting, Le Pecq : Développement web &amp; mobile</p>
+      <h2>Données et backend d'une application mobile</h2>
+      <p class="place" style="color:var(--text-faint);">Rakedd Consulting, Le Pecq · Développement web &amp; mobile</p>
     </div>
     <div class="card project-card">
       <div class="proj-part">
-        <h4>Contexte</h4>
-        <p>Conception d'une application de lexique multilingue (mots, traductions, catégories) destinée à
-          plusieurs utilisateurs, avec un enjeu central : une structure de données capable d'évoluer sans
-          remettre en cause l'existant, et une synchronisation fiable entre le terminal mobile et le serveur.</p>
+        <h4>Problème</h4>
+        <p>Une application de lexique multilingue devait avoir un modèle de données <strong>évolutif</strong> et se synchroniser entre mobile et serveur.</p>
       </div>
       <div class="proj-part">
-        <h4>Rôle et contributions</h4>
+        <h4>Ce que j'ai fait</h4>
         <ul class="details">
-          <li>Conception et modélisation de la structure de données (mots, traductions, catégories)</li>
-          <li>Définition d'un schéma évolutif intégrant les relations entre entités et des métadonnées
-            (langue, date d'ajout, niveau de difficulté, notes)</li>
-          <li>Étude et mise en place d'une solution de stockage serveur avec Supabase</li>
-          <li>Architecture backend pour la persistance et la synchronisation avec le stockage local</li>
-          <li>Gestion des catégories personnalisées : création, modification, suppression, validations</li>
-          <li>Préparation d'un système de gestion des utilisateurs et d'authentification</li>
-          <li>Structuration des données pour un environnement multi-utilisateurs</li>
-          <li>Conception d'une base dédiée au suivi statistique (évolution des mots, catégories les plus utilisées)</li>
-          <li>Développement de l'interface mobile en React Native</li>
+          <li>Modèle de données : mots, traductions, catégories, métadonnées</li>
+          <li>Stockage serveur avec Supabase et synchronisation avec le stockage local</li>
+          <li>Multi-utilisateurs et préparation de l'authentification</li>
+          <li>Base de suivi statistique des usages</li>
+          <li>Interface mobile en React Native</li>
         </ul>
       </div>
       <div class="proj-part">
-        <h4>Apports</h4>
-        <p class="outcome">L'application repose sur un <strong>schéma évolutif et multi-utilisateurs</strong> :
-          l'ajout d'une langue, d'une métadonnée ou d'un type de catégorie ne nécessite pas de reprendre le
-          modèle de données.</p>
+        <h4>Résultat</h4>
+        <p class="outcome">Ajouter une langue ou une catégorie <strong>ne demande pas de modifier le modèle</strong>.</p>
       </div>
       <div class="proj-part">
-        <h4>Architecture : schéma de principe</h4>
-        <div class="diagram-wrap">
-          <svg class="diagram" viewBox="0 0 720 260" role="img" aria-label="À gauche, le schéma de données : l'entité Mot relie Traduction, Catégorie et Métadonnées. À droite, la synchronisation entre le stockage local de l'application mobile et le stockage serveur Supabase.">
-            <defs>
-              <marker id="ar-rak" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow"/></marker>
-              <marker id="ar-rak-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-arrow-alt"/></marker>
-              <marker id="ar-rak-b" viewBox="0 0 8 8" refX="1" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M8 0 L0 4 L8 8 z" class="d-arrow-alt"/></marker>
-            </defs>
-            <text class="d-tag" x="8" y="14">Schéma de données évolutif</text>
-            <text class="d-tag" x="420" y="14">Persistance &amp; synchronisation</text>
-            <line class="d-line-dash" x1="375" y1="24" x2="375" y2="240" opacity="0.4"/>
-            <rect class="d-box-accent" x="110" y="30" width="120" height="42" rx="8"/>
-            <text class="d-title" x="170" y="56" text-anchor="middle">Mot</text>
-            <path class="d-line" d="M170 72 V 91"/>
-            <path class="d-line" d="M170 91 H 85 V 104" marker-end="url(#ar-rak)"/>
-            <path class="d-line" d="M170 91 H 245 V 104" marker-end="url(#ar-rak)"/>
-            <path class="d-line" d="M170 91 V 184" marker-end="url(#ar-rak)"/>
-            <rect class="d-box" x="20" y="110" width="130" height="42" rx="8"/>
-            <text class="d-title" x="85" y="130" text-anchor="middle">Traduction</text>
-            <text class="d-sub" x="85" y="145" text-anchor="middle">1 mot → n langues</text>
-            <rect class="d-box" x="180" y="110" width="130" height="42" rx="8"/>
-            <text class="d-title" x="245" y="130" text-anchor="middle">Catégorie</text>
-            <text class="d-sub" x="245" y="145" text-anchor="middle">dont personnalisées</text>
-            <rect class="d-box" x="80" y="190" width="200" height="48" rx="8"/>
-            <text class="d-title" x="180" y="210" text-anchor="middle">Métadonnées</text>
-            <text class="d-sub" x="180" y="226" text-anchor="middle">langue · date · niveau · notes</text>
-            <rect class="d-box" x="420" y="30" width="280" height="56" rx="8"/>
-            <text class="d-title" x="560" y="54" text-anchor="middle">Application mobile</text>
-            <text class="d-sub" x="560" y="70" text-anchor="middle">stockage local (React Native)</text>
-            <path class="d-line-dash" d="M560 92 V 154" marker-end="url(#ar-rak-a)" marker-start="url(#ar-rak-b)"/>
-            <text class="d-tag" x="576" y="126">synchronisation</text>
-            <rect class="d-box-alt" x="420" y="160" width="280" height="56" rx="8"/>
-            <text class="d-title" x="560" y="184" text-anchor="middle">Supabase</text>
-            <text class="d-sub" x="560" y="200" text-anchor="middle">stockage serveur · multi-utilisateurs</text>
-          </svg>
-          <p class="diagram-note">Schéma de principe reconstitué : structure du modèle et sens des flux, sans donnée applicative.</p>
-        </div>
+        <h4>Schéma</h4>
+        <figure class="schema-image">
+          <div class="schema-image-fond">
+            <img src="img/rakedd.png" width="683" height="333" loading="lazy" decoding="async"
+              alt="À gauche, le schéma de données évolutif : l'entité Mot relie Traduction (1 mot vers n langues), Catégorie (dont personnalisées) et Métadonnées (langues, dates, niveaux, notes). À droite, la persistance et la synchronisation entre l'application mobile et le stockage serveur Supabase.">
+          </div>
+        </figure>
       </div>
       <ul class="tags">
-        <li>Supabase</li><li>Modélisation de données</li><li>React Native</li><li>Authentification</li><li>Multi-utilisateurs</li><li>Synchronisation</li>
+        <li>Supabase</li><li>Modélisation</li><li>React Native</li><li>Authentification</li><li>Synchronisation</li>
       </ul>
     </div>
   </section>
@@ -395,24 +243,14 @@
   <section class="block container" id="meteo">
     <div class="section-head">
       <span class="kicker">Projet scolaire · Sept 2024 – Jan 2025</span>
-      <h2>Application web météo en architecture MVC</h2>
-      <p class="place" style="color:var(--text-faint);">IUT Créteil-Vitry</p>
+      <h2>Application web météo (MVC)</h2>
     </div>
     <div class="card project-card">
-      <div class="proj-part">
-        <h4>Contexte</h4>
-        <p>Développer une application web consommant des données météorologiques dynamiques, avec une séparation
-          rigoureuse des responsabilités entre les données (modèle), l'affichage (vue) et la logique (contrôleur)
-           c'est ce que désigne l'architecture MVC.</p>
-      </div>
-      <div class="proj-part">
-        <h4>Rôle et contributions</h4>
-        <ul class="details">
-          <li>Conception de la base de données SQL</li>
-          <li>Développement du backend PHP structuré selon le modèle MVC</li>
-          <li>Intégration de données météorologiques dynamiques</li>
-        </ul>
-      </div>
+      <ul class="details">
+        <li>Base de données SQL</li>
+        <li>Backend PHP en architecture MVC</li>
+        <li>Intégration de données météo dynamiques</li>
+      </ul>
       <ul class="tags">
         <li>PHP</li><li>MVC</li><li>SQL</li>
       </ul>
@@ -423,22 +261,13 @@
     <div class="section-head">
       <span class="kicker">Projet scolaire · Nov – Déc 2023</span>
       <h2>Infrastructure réseau virtualisée</h2>
-      <p class="place" style="color:var(--text-faint);">IUT Créteil-Vitry</p>
     </div>
     <div class="card project-card">
-      <div class="proj-part">
-        <h4>Contexte</h4>
-        <p>Mettre en place, depuis l'installation initiale, une infrastructure de serveurs virtualisés et les
-          services réseau associés, sous Linux.</p>
-      </div>
-      <div class="proj-part">
-        <h4>Rôle et contributions</h4>
-        <ul class="details">
-          <li>Mise en place d'une infrastructure virtuelle et clonage de serveurs</li>
-          <li>Mise en place d'un service DHCP</li>
-          <li>Configuration des services SSH, FTP et web sous Linux</li>
-        </ul>
-      </div>
+      <ul class="details">
+        <li>Serveurs virtualisés et clonage</li>
+        <li>Service DHCP</li>
+        <li>SSH, FTP et serveur web sous Linux</li>
+      </ul>
       <ul class="tags">
         <li>VirtualBox</li><li>Linux</li><li>DHCP</li><li>SSH</li><li>FTP</li>
       </ul>
@@ -448,8 +277,7 @@
   <section class="block container">
     <div class="section-head">
       <span class="kicker">Contact</span>
-      <h2>Prendre contact</h2>
-      <p>Je reste disponible pour détailler l'architecture de chacun de ces projets.</p>
+      <h2>Un projet vous intéresse ?</h2>
     </div>
     <div class="cta-row" style="display:flex; flex-wrap:wrap; gap:0.75rem;">
       <a href="mailto:hawambo89@gmail.com" class="btn btn-primary">hawambo89@gmail.com</a>
@@ -465,8 +293,8 @@
       <a href="https://www.linkedin.com/in/hawa-mbodj-503229300" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:hawambo89@gmail.com">Email</a>
     </div>
-    <p style="margin:0;">Hawa M'Bodj  BUT Informatique, parcours Données · UPEC · 2025–2026</p>
-    <p class="footer-annex"><a href="competences.html">Compétences visées en fin de BUT  analyse et preuves</a></p>
+    <p style="margin:0;">Hawa M'Bodj — BUT Informatique, parcours Données · UPEC · 2025–2026</p>
+    <p class="footer-annex"><a href="competences.html">Compétences visées en fin de BUT — analyse et preuves</a></p>
   </div>
 </footer>
 

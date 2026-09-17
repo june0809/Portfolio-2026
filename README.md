@@ -6,7 +6,7 @@ et mes projets, à destination des recruteurs.
 ## Structure
 
 ```
-index.html              Profil : positionnement, savoir-faire (avec preuves), formation → terrain, stack
+index.html              Profil : accroche, savoir-faire (avec preuves), expériences, stack
 projets.html            Expériences & projets : contexte / rôle / résultat pour chacun
 parcours.html           Chronologie, diplômes, langues
 competences.html        Vue d'ensemble des 3 compétences terminales, auto-évaluation, preuves
