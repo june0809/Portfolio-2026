@@ -110,11 +110,11 @@
       <div class="ac-eval-head">
         <span class="num">1</span>
         <h3>Mesurer les impacts d'un projet</h3>
-        <span class="level level-open">À développer</span>
+        <span class="level level-mid">En consolidation</span>
       </div>
-      <p><strong>Preuve :</strong> analyse hébergement interne / cloud de la plateforme IAM (coût, souveraineté).</p>
-      <p><strong>Appris :</strong> je pose les bonnes questions, mais je n'ai jamais chiffré un coût.</p>
-      <p><strong>Prochaine étape :</strong> chiffrer le coût de la centralisation des logs chez ESBanque.</p>
+      <p><strong>Preuve :</strong> comparaison chiffrée entre une solution hébergée à l'extérieur et une installation interne, présentée à l'entreprise (ESBanque) ; la solution étudiée a été retenue sur cette base.</p>
+      <p><strong>Appris :</strong> un arbitrage de ce type ne se joue pas que sur le prix — la sensibilité des données qui sortent du SI et la dépendance au fournisseur pèsent autant que le montant.</p>
+      <p><strong>Prochaine étape :</strong> élargir aux impacts que je n'ai pas encore traités : empreinte écologique du stockage, coût dans la durée quand le volume augmente.</p>
     </div>
 
     <div class="ac-eval">
@@ -123,9 +123,9 @@
         <h3>Intégrer un projet dans un SI existant</h3>
         <span class="level level-solid">Maîtrisé</span>
       </div>
-      <p><strong>Preuve :</strong> outil de supervision ajouté aux traitements existants (ESBanque), gateway entre 6 systèmes — <a href="projets.html#iam">voir le schéma</a>.</p>
-      <p><strong>Appris :</strong> c'est la solution qui s'adapte à l'existant, pas l'inverse.</p>
-      <p><strong>Prochaine étape :</strong> anticiper plus tôt l'exploitation et la maintenance.</p>
+      <p><strong>Preuve :</strong> supervision greffée sur des serveurs déjà en service (ESBanque) : règles de pare-feu, flux sortants, filtrage des données avant qu'elles quittent le SI ; et gateway entre 6 systèmes sur l'IAM — <a href="projets.html#iam">voir le schéma</a>.</p>
+      <p><strong>Appris :</strong> c'est la solution qui s'adapte à l'existant, pas l'inverse — et la contrainte de sécurité arrive avant la fonctionnalité.</p>
+      <p><strong>Prochaine étape :</strong> porter moi-même la phase de recette et de bascule, pas seulement la mise en place.</p>
     </div>
 
     <div class="ac-eval">
@@ -134,9 +134,9 @@
         <h3>Adapter un système d'information</h3>
         <span class="level level-mid">En consolidation</span>
       </div>
-      <p><strong>Preuve :</strong> parcours no-code (IAM), catégories personnalisées (Rakedd).</p>
-      <p><strong>Appris :</strong> je conçois des systèmes adaptables, sans avoir encore accompagné les utilisateurs.</p>
-      <p><strong>Prochaine étape :</strong> participer à un déploiement auprès d'utilisateurs non techniques.</p>
+      <p><strong>Preuve :</strong> dashboards et alertes retouchés plusieurs fois suite aux retours de la maîtrise d'œuvre et de la production (ESBanque) ; parcours no-code (IAM) et catégories personnalisées (Rakedd).</p>
+      <p><strong>Appris :</strong> livrer une première version et la corriger avec ses utilisateurs va plus vite que viser juste du premier coup.</p>
+      <p><strong>Prochaine étape :</strong> adapter un SI pour des utilisateurs métier non informaticiens — mes utilisateurs actuels sont des équipes techniques.</p>
     </div>
   </section>
 
@@ -187,7 +187,7 @@
     </div>
     <div class="trace-card">
       <span class="source-tag">Stage : ESBanque</span>
-      <p>Besoin de pilotage traduit en indicateurs, outil intégré aux traitements existants.</p>
+      <p>Besoin de pilotage traduit en indicateurs, outil intégré aux traitements existants, et comparaison chiffrée hébergé / interne présentée à l'entreprise.</p>
     </div>
     <div class="trace-card">
       <span class="source-tag">Projet : Plateforme IAM</span>
@@ -205,8 +205,8 @@
       <h2>Pour aller plus loin</h2>
     </div>
     <ul class="improve-list">
-      <li>Méthodes agiles et outils de suivi (backlog, board).</li>
-      <li>Chiffrer les impacts : coût d'infrastructure, ROI.</li>
+      <li>Formaliser une méthode de gestion de projet, au-delà du suivi partagé que je tiens déjà.</li>
+      <li>Aller au-delà du coût : empreinte écologique et retour sur investissement dans la durée.</li>
       <li>Anticiper le RGPD dès la conception.</li>
       <li>Demander des retours en cours de projet, pas seulement à la fin.</li>
     </ul>
